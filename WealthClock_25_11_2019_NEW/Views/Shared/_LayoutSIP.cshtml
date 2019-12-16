@@ -1,0 +1,393 @@
+﻿
+<!DOCTYPE html>
+@{
+    var title = ViewBag.Title;
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    @if (title == "RiskAnalyzer")
+    {
+        <title>Financial Risk Analyzer in India | WealthClock Advisors</title>
+        <meta name="description" content="WealthClock Advisors provides Financial Risk Analyzer with Risk Capacity,Risk Behaviour,Risk Profile.Know more visit us." />
+        <meta name="keywords" content="Financial Risk Analyzer in India" />
+    }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    @if (title == "RightAmountForYourSIP")
+    {
+        <title>Invest the RIGHT SIP amount In India | WealthClock Advisors</title>
+        <meta name="description" content="Invest the RIGHT SIP amount helps you to save money for monthly mutual fund investments.Get higher returns than any other tax saving schemes." />
+        <meta name="keywords" content="Invest the RIGHT SIP amount In India" />
+    }
+
+    @if (title == "SipCalculator")
+    {
+        <title>Sip return calculator in India | WealthClock Advisors</title>
+        <meta name="description" content="Use WealthClock Advisors Sip return calculator and make small investment at regular intervals to help you achieve your dreams." />
+        <meta name="keywords" content="Sip return calculator in India" />
+    }
+    @if (title == "DelayedSIP")
+    {
+        <title>What is the Delay Cost of SIP investment | WealthClock Advisors</title>
+        <meta name="description" content="Are you planning to delay investing? Check how much your delay can cost you. Find out the increase in SIP amount needed to achieve a goal from WealthClock Advisors." />
+
+    }
+    @if (title == "CuttingExtraExpenses")
+    {
+        <title>Improving financial health in India | WealthClock Advisors</title>
+        <meta name="description" content="Do you have change your financial status ? Visit WealthClock Advisors , we are help you to Plan for expenses. Reduce or eliminate expenses. Save for future goals." />
+
+    }
+    @if (title == "GoodTimeToInvest")
+    {
+        <title>Right Time For Investing In Mutual Funds In India | WealthClock Advisors</title>
+        <meta name="description" content="Do you know Your Right Time For Investing In Mutual Funds? Our financial adviser helps to you how to Invest In Mutual Funds." />
+        <meta name="keywords" content="Right Time For Investing In Mutual Funds In India" />
+    }
+
+    <meta name="author" content="admin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+    <link rel="shortcut icon" href="@Url.Content("~/images/favicon.gif")" />
+
+    <link rel="stylesheet" href="@Url.Content("~/css/bootstrap.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/font-awesome.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/animate.css")" media="all" />
+
+    <link href="@Url.Content("~/css/css_Dashboard/jquery-confirm.min.css")" rel="stylesheet" />
+    <!--slider-->
+    <link href="@Url.Content("~/css/ion.rangeSlider.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/ion.rangeSlider.skinFlat.css")" rel="stylesheet" />
+
+    <link rel="stylesheet" href="@Url.Content("~/css/owl.carousel.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/owl.theme.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/bootstrap-select.css")" type="text/css">
+
+    @*<link rel="stylesheet" href="@Url.Content("~/css/reset.css")" type="text/css" />
+        <link rel="stylesheet" href="@Url.Content("~/css/global.css")" type="text/css">*@
+    <link rel="stylesheet" href="@Url.Content("~/css/jquery-ui.css")" type="text/css" />
+    <link rel="stylesheet" href="@Url.Content("~/css/Forms/easy-responsive-tabs.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/Forms/woco-accordion.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/custom.css")" />
+    @*<link rel="stylesheet" href="@Url.Content("~/css/easy-responsive-tabs.css")">*@
+    <link rel="stylesheet" href="@Url.Content("~/css/money-tools.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/animation.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/responsive.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/style.css")" type="text/css">
+    <link rel="stylesheet" href="@Url.Content("~/css/style-responsive.css")" type="text/css">
+    <link rel="stylesheet" href="@Url.Content("~/css/Backend_Developer.css")" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        .ftr-copy {
+            margin-bottom: 19px;
+        }
+    </style>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114660248-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-114660248-1');
+    </script>
+</head>
+<body>
+
+    <a href="javascript:" id="return-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    <!-- header -->
+    <a href="javascript:" id="return-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    <!-- header -->
+    <header class="top-header">
+        <div class="container-fluid">
+            <div class="top-tble">
+                <div class="logo">
+                    <a href="@Url.Content("~/")"><img src="@Url.Content("~/images/logo.png")" alt="" /></a>
+                </div>
+                <!-- == -->
+                <div class="rght-menu right-side-menu h-header">
+                    <div class="sign-in">
+                        <a class="commn-bttn" href="@Url.Action("login", "Account")">LOG IN</a>
+                        <a class="register-bttn" href="@Url.Action("Registration", "Account")">Register now</a>
+                    </div>
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar">&nbsp;</span>
+                            <span class="icon-bar">&nbsp;</span>
+                            <span class="icon-bar">&nbsp;</span>
+                        </button>
+                        <nav class="collapse navbar-collapse top_nav">
+                            <ul id="demo-1">
+                                <li class="active">
+                                    <a href="@Url.Content("~/")">Home</a>
+                                    <!-- <ul class="dropdown-menu">
+                                        <li><a href="why-us.html">Why Us</a></li>
+                                        <li><a href="how-it-works.html">How It Works</a></li>
+                                    </ul> -->
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="@Url.Content("~/AboutUs")">About<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="@Url.Content("~/AboutUs/WhyUs")">Why Us</a></li>
+                                        <li><a href="@Url.Content("~/AboutUs/HowItWorks")">How It Works</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="@Url.Content("~/Solutions")">
+                                        Solutions <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="@Url.Content("~/Solutions/FinancialPlanning")">Financial Planning</a></li>
+                                        <li><a href="@Url.Content("~/Solutions/RetirementPlanning")">Retirement Planning</a></li>
+                                        <li><a href="@Url.Content("~/Solutions/GoalPlanning")">Goal Planning</a></li>
+                                        <li><a href="@Url.Content("~/Solutions/TaxPlanning")">Tax Planning</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="@Url.Content("~/Index/WealthclockRecommended")">WEALTHCLOCK PICKS</a></li>
+                                <li class="dropdown">
+                                    <a href="@Url.Content("~/MoneyTools")">Money Tools<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="@Url.Content("~/MoneyTools/SipCalculator")">Sip Calculator</a></li>
+                                        <li><a href="@Url.Content("~/MoneyTools/AssetAllocation")">Asset Allocation</a></li>
+                                        <li><a href="@Url.Content("~/MoneyTools/CuttingExtraExpenses")">Cutting extra expenses</a></li>
+                                        <li><a href="@Url.Content("~/MoneyTools/RiskAnalyzer")">Risk Analyzer</a></li>
+                                        <li><a href="@Url.Content("~/MoneyTools/GoodTimeToInvest")">Is it Good time to invest</a></li>
+                                        <li><a href="@Url.Content("~/MoneyTools/DelayedSIP")">Delayed SIP</a></li>
+                                        <li><a href="@Url.Content("~/MoneyTools/RightAmountForYourSIP")">Right Amount for your SIP</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="@Url.Content("~/Insights")">Insight<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="@Url.Content("~/Insights/Blog")">Blog</a></li>
+                                        <li><a href="@Url.Content("~/Insights/KnowledgeBytes")">Knowledge Bytes</a></li>
+                                        <li><a href="@Url.Content("~/Insights/Infographic")">Infographic</a></li>
+                                        <li><a href="@Url.Content("~/Insights/Trending")">Trending</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="@Url.Content("~/ContactUs")">Support </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
+    <script type="text/javascript">
+        FreshWidget.init("", { "queryString": "&widgetType=popup&submitThanks=Thanks+for+writing+to+us.+We+shall+get+back+to+you+shortly.&captcha=yes&searchArea=no", "utf8": "?", "widgetType": "popup", "buttonType": "text", "buttonText": "Need Help ?", "buttonColor": "white", "buttonBg": "#39444F", "alignment": "3", "offset": "30px", "submitThanks": "Thanks for writing to us. We shall get back to you shortly.", "formHeight": "500px", "captcha": "yes", "url": "https://wealthclockadvisors.freshdesk.com" });
+    </script>
+    <script id='_webengage_script_tag' type='text/javascript'>
+        var webengage; !function (w, e, b, n, g) {
+            function o(e, t) {
+                e[t[t.length - 1]] = function () {
+                    r.__queue.push([t.join("."),
+                    arguments])
+                }
+            } var i, s, r = w[b], z = " ", l = "init options track screen onReady".split(z), a = "feedback survey notification".split(z), c = "options render clear abort".split(z), p = "Open Close Submit Complete View Click".split(z), u = "identify login logout setAttribute".split(z); if (!r || !r.__v) { for (w[b] = r = { __queue: [], __v: "6.0", user: {} }, i = 0; i < l.length; i++) o(r, [l[i]]); for (i = 0; i < a.length; i++) { for (r[a[i]] = {}, s = 0; s < c.length; s++) o(r[a[i]], [a[i], c[s]]); for (s = 0; s < p.length; s++) o(r[a[i]], [a[i], "on" + p[s]]) } for (i = 0; i < u.length; i++) o(r.user, ["user", u[i]]); setTimeout(function () { var f = e.createElement("script"), d = e.getElementById("_webengage_script_tag"); f.type = "text/javascript", f.async = !0, f.src = ("https:" == e.location.protocol ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/webengage-min-v-6.0.js", d.parentNode.insertBefore(f, d) }) }
+        }(window, document, "webengage"); webengage.init("8261817c");
+    </script>
+
+    <!-- end header -->
+    @RenderBody()
+    <div class="text-center">
+        <div class="ui-loader ui-loader-default hide">
+            <span class="ui-icon ui-icon-loading"></span>
+        </div>
+    </div>
+    <!-- footer -->
+    <section class="ftr-sec">
+        <div class="container">
+            <div class="commn-outr clearfix">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-6">
+                        <div class="ftr-inn">
+                            <h5>about us</h5>
+                            <p>
+                                Wealthclock makes investing simple, safe and convenient. We offer mutual fund investment and financial markets advisory over the friendly and interactive online platform that makes investing fun for all first-time investors. With the help of advance tools, detailed market analysis and team of expert advisors, Wealthclock ensures that the users are on top of their game. Come and watch your investment grow.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- == -->
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="ftr-inn xtra">
+                            <h5>important links</h5>
+                            <ul>
+                                <li>
+                                    <a href="@Url.Content("~/AboutUs")">- About Us</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Content("~/Solutions")">- Solutions</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Content("~/WealthclockPicks")">- Wealthclock Picks</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Content("~/MoneyTools")">- Money Tools</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Content("~/Insights")">- Insights</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Content("~/ContactUs")">- Contact us</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Content("~/DownloadForms/DownloadForms")">- Download Forms</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Content("~/DownloadForms/Ebooks")">- Ebooks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- == -->
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="ftr-inn xtra-rght">
+                            <h5>contact details</h5>
+                            <div class="ftr-add">
+                                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                <p>
+                                    Wealthclock Advisors, Manish<br /> Mahal, Off Veera Desai Road, <br />Jeevan Nagar, Andheri West, <br />Mumbai - 400053 Maharashtra
+
+                                </p>
+                            </div>
+                            <div class="ftr-add">
+                                <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                <a href="tel:+9112345678"> +91 9702233617 </a>
+                            </div>
+                            <div class="ftr-add">
+                                <span><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+                                <a href="mailto:contact@wealthclock.com "> contact@wealthclock.com </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- == -->
+                    <div class="col-sm-2 col-xs-6">
+                        <div class="ftr-inn">
+                            <h5>get in touch</h5>
+                            <a href="https://www.facebook.com/wealthclock/" class="social">
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                <p>facebook</p>
+                            </a>
+                            <a href="https://twitter.com/wealthclock?lang=en" class="social">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <p>twitter</p>
+                            </a>
+                            <a href="https://www.linkedin.com/company/wealthclockadvisors" class="social">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                <p>LinkedIn</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftr-sec-new">
+        <div class="container">
+            <div class="certify-inn">
+                <div class="certify-cell">
+                    <div class="certify-image">
+                        <a href="https://www.amfiindia.com/" target="_blank" class="certify-image">
+                            <img src="@Url.Content("images/AMFI-Logo.png")" alt="" width="60" />
+                        </a>
+                    </div>
+                    <p>
+                        ASSOCIATION OF MUTUAL FUNDS OF INDIA<br />REGISTERED MUTUAL FUND DISTRIBUTOR <br />ARN:115995
+                    </p>
+                </div>
+                <div class="certify-cell">
+                    <div class="certify-image">
+                        <a href="https://www.bseindia.com/" target="_blank" class="certify-image">
+                            <img src="@Url.Content("images/Bombay_Stock_Exchange_logo.png")" alt="" width="100" />
+                        </a>
+                    </div>
+                    <p>
+                        BSE REGISTERED MUTUAL FUND <br />DISTRIBUTOR MUTUAL FUND <br />CODE NO:11946
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="ftr-outr clearfix">
+                <h6>Disclaimer</h6>
+                <p>
+                    Mutual fund investments are subject to market risks. Please read the scheme information and other related documents carefully before investing. Past performance is not indicative of future returns. Please consider your specific investment requirements before choosing a fund, or designing a portfolio that suits your needs
+                </p>
+                <p>Wealthclock Advisors with ARN code 115995 makes no warranties or representations, express or implied, on products offered through the platform. It accepts no liability for any damages or losses, however caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable. </p>
+            </div>
+            <div class="ftr-copy">
+                <p>2019 Copyright &copy; <a href="@Url.Content("~/")">Wealth Clock</a>. All rights reserved.</p>
+                <ul>
+                    <li>
+                        <a href="@Url.Content("~/Index/PrivacyPolicy")">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Content("~/Index/TermsAndConditions")">Terms &amp; Condition</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Content("~/Index/Disclosure")">Disclosure</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <script type="text/javascript">
+        FreshWidget.init("", { "queryString": "&widgetType=popup&submitThanks=Thanks+for+writing+to+us.+We+shall+get+back+to+you+shortly.&captcha=yes&searchArea=no", "utf8": "?", "widgetType": "popup", "buttonType": "text", "buttonText": "Need Help ?", "buttonColor": "white", "buttonBg": "#39444F", "alignment": "3", "offset": "30px", "submitThanks": "Thanks for writing to us. We shall get back to you shortly.", "formHeight": "500px", "captcha": "yes", "url": "https://wealthclockadvisors.freshdesk.com" });
+    </script>
+    <script id='_webengage_script_tag' type='text/javascript'>
+        var webengage; !function (w, e, b, n, g) {
+            function o(e, t) {
+                e[t[t.length - 1]] = function () {
+                    r.__queue.push([t.join("."),
+                    arguments])
+                }
+            } var i, s, r = w[b], z = " ", l = "init options track screen onReady".split(z), a = "feedback survey notification".split(z), c = "options render clear abort".split(z), p = "Open Close Submit Complete View Click".split(z), u = "identify login logout setAttribute".split(z); if (!r || !r.__v) { for (w[b] = r = { __queue: [], __v: "6.0", user: {} }, i = 0; i < l.length; i++) o(r, [l[i]]); for (i = 0; i < a.length; i++) { for (r[a[i]] = {}, s = 0; s < c.length; s++) o(r[a[i]], [a[i], c[s]]); for (s = 0; s < p.length; s++) o(r[a[i]], [a[i], "on" + p[s]]) } for (i = 0; i < u.length; i++) o(r.user, ["user", u[i]]); setTimeout(function () { var f = e.createElement("script"), d = e.getElementById("_webengage_script_tag"); f.type = "text/javascript", f.async = !0, f.src = ("https:" == e.location.protocol ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/webengage-min-v-6.0.js", d.parentNode.insertBefore(f, d) }) }
+        }(window, document, "webengage"); webengage.init("8261817c");
+    </script>
+    <script src="@Url.Content("~/js/jquery-1.11.3.js")"></script>
+    <script src="@Url.Content("~/css/Forms/jquery-2.2.4.js")"></script>
+    @*<script src="@Url.Content("~/js/jquery.js")" type="text/javascript"></script>*@
+    <script src="@Url.Content("~/js/bootstrap.js")"></script>
+
+    <script src="@Url.Content("~/js/owl.carousel.js")"></script>
+    <script src="@Url.Content("~/js/equalheight.js")"></script>
+    <script src="@Url.Content("~/js/wow.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/js/responsive-tabs.js")"></script>
+    <script src="@Url.Content("~/js/jquery-ui.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/js/ion.rangeSlider.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/js/jquery.steps.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/js/bootstrap-select.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/js/js_Dashboard/jquery-confirm.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/js/jquery.themepunch.plugins.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/js/jquery.themepunch.revolution.min.js")" type="text/javascript"></script>
+    @*<script src="@Url.Content("~/js/common.js")" type="text/javascript"></script>*@
+    <script src="@Url.Content("~/js/money-tools.js")" type="text/javascript"></script>
+    <!-- custom scripts -->
+
+    <script src="@Url.Content("~/css/Forms/woco.accordion.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/css/Forms/easyResponsiveTabs.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/js/custom1.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/js/custom.js")" type="text/javascript"></script>
+
+
+    @*<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>*@
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+
+<section class="inner-page swp-sec">
+    <div class="container">
+        <ul class="breadcrumb all-outr">
+            <li>
+                <a href="#">My Account</a>
+            </li>
+            <li>
+                Active SIP/STP/SWP
+            </li>
+        </ul>
+        <div class="mons-outr">
+            <div class="header-t head head-margin">
+                <h2>Active SIP/STP/SWP</h2>
+            </div>
+            <div class="monsip_in mon-btn">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Buy New Funds
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/Dashboard/SipOrder">Purchase SIP</a>
+                        <a class="dropdown-item" href="/Dashboard/Stporder">Initiate STP</a>
+                        <a class="dropdown-item" href="/Dashboard/SwpOrder">Initiate SWP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="al-fnd clearfix">
+
+
+            <div class="siptop_mat">
+
+
+
+            </div>
+
+            <div class="active_monsip row">
+                <div class="monsip_in col-md-4">
+                    <div class="mono_sip_innr">
+                        <a href="javascript:void(0)" id="btnSIP">
+                            <div class="invst-icn-innr">
+                                <div class="invst-icn">
+                                    <img src="/images/images_Dashboard/invst-icn1.png" />
+                                </div>
+                            </div>
+                            <h6>Total<em> SIP</em></h6>
+                            <span><sup><i class="fa fa-inr" aria-hidden="true"></i></sup>0</span>
+                            <p>for the month Nov 2019</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="monsip_in col-md-4">
+                    <div class="mono_sip_innr">
+                        <a href="javascript:void(0)" id="btnSTP">
+                            <div class="invst-icn-innr">
+                                <div class="invst-icn">
+                                    <img src="/images/images_Dashboard/invst-icn2.png" />
+                                </div>
+                            </div>
+                            <h6>Total <em>STP</em></h6>
+                            <span><sup><i class="fa fa-inr" aria-hidden="true"></i></sup>0</span>
+                            <p>for the month Nov 2019</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="monsip_in col-md-4">
+                    <div class="mono_sip_innr">
+                        <a href="javascript:void(0)" id="btnSWP">
+                            <div class="invst-icn-innr">
+                                <div class="invst-icn">
+                                    <img src="/images/images_Dashboard/invst-icn3.png" />
+                                </div>
+                            </div>
+                            <h6>Total <em>SWP</em></h6>
+                            <span><sup><i class="fa fa-inr" aria-hidden="true"></i></sup>0</span>
+                            <p>for the month Nov 2019</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="act_sips swp-table-inn" id="SIP">
+
+                <div class="actout_sip">
+                    <div class="acttbl">
+                        <div class="actrow actrowhdr">
+                            <div class="actcell">
+                                Sl. No.
+                            </div>
+                            <div class="actcell">
+                                SIP Date
+                            </div>
+                            <div class="actcell">
+                                Scheme
+                            </div>
+                            <div class="actcell">
+                                Registration Date
+                            </div>
+                            <div class="actcell">
+                                Installment Amount
+                            </div>
+                            <div class="actcell">
+                                Action
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="act_sips hide swp-table-inn" id="STP">
+
+                <div class="actout_sip">
+                    <div class="acttbl">
+                        <div class="actrow actrowhdr">
+                            <div class="actcell">
+                                Serial No
+                            </div>
+                            <div class="actcell">
+                                STP Date
+                            </div>
+                            <div class="actcell">
+                                From Scheme
+                            </div>
+                            <div class="actcell">
+                                To Scheme
+                            </div>
+                            <div class="actcell">
+                                Amount
+                            </div>
+                            <div class="actcell">
+                                Action
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+
+    $('.sipcancel').change(function () {
+        debugger;
+        if ($(this).find(':selected').attr('data-type') == 'C') {
+
+            //$('.ui-loader').removeClass('hide');
+            var schemecode = $(this).val();
+            var RegNo = $(this).find(':selected').attr('data-no');
+            $.confirm({
+                title: 'Confirm!',
+                content: 'Do you want to cancel this?',
+                buttons: {
+                    confirm: function () {
+                        $('.ui-loader').removeClass('hide');
+                        debugger;
+                        $.post("/DashBoard/CancelSip", { Schemecode: schemecode, RegNo: RegNo }, function (data) {
+                            $('.ui-loader').addClass('hide');
+                            if (data != "") {
+                                debugger;
+                                jResult = data.split('|');
+                                if (jResult[0] == "Success") {
+                                    $.confirm({
+                                        title: 'Confirm!',
+                                        content: jResult[1],
+                                        buttons: {
+                                            Ok: function () {
+                                                location.reload();
+                                            },
+                                        }
+                                    });
+
+                                }
+                                else {
+                                    debugger;
+                                    $.confirm({
+                                        title: 'Message!',
+                                        content: jResult[1],
+                                        buttons: {
+                                            Ok: function () {
+                                                location.reload();
+                                            },
+                                        }
+                                    });
+                                }
+                            }
+                        })
+
+                    },
+                    cancel: function () {
+                        location.reload();
+                    },
+                }
+            });
+
+        }
+    })
+    $('.stpcancel').change(function () {
+        debugger;
+        if ($(this).find(':selected').attr('data-type') == 'C') {
+
+            //$('.ui-loader').removeClass('hide');
+            var schemecode = $(this).val();
+            var RegNo = $(this).find(':selected').attr('data-no');
+            $.confirm({
+                title: 'Confirm!',
+                content: 'Do you want to cancel this?',
+                buttons: {
+                    confirm: function () {
+                        $('.ui-loader').removeClass('hide');
+                        debugger;
+                        $.post("/DashBoard/CancelStp", { Schemecode: schemecode, RegNo: RegNo }, function (data) {
+                            $('.ui-loader').addClass('hide');
+                            if (data != "") {
+                                debugger;
+                                jResult = data.split('|');
+                                if (jResult[0] == "Success") {
+                                    $.confirm({
+                                        title: 'Confirm!',
+                                        content: jResult[1],
+                                        buttons: {
+                                            Ok: function () {
+                                                location.reload();
+                                            },
+                                        }
+                                    });
+
+                                }
+                                else {
+                                    debugger;
+                                    $.confirm({
+                                        title: 'Message!',
+                                        content: jResult[1],
+                                        buttons: {
+                                            Ok: function () {
+                                                location.reload();
+                                            },
+                                        }
+                                    });
+                                }
+                            }
+                        })
+
+                    },
+                    cancel: function () {
+                        location.reload();
+                    },
+                }
+            });
+
+        }
+    })
+    $('#btnSTP').click(function () {
+
+        $('#SIP').addClass('hide');
+        $('#STP').removeClass('hide');
+    });
+    $('#btnSIP').click(function () {
+
+        $('#STP').addClass('hide');
+        $('#SIP').removeClass('hide');
+    });
+</script>
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>
+

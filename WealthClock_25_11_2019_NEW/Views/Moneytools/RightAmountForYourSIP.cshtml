@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "RightAmountForYourSIP";
+    Layout = "~/Views/Shared/_LayoutSIP.cshtml";
+}
+<style>
+    li.current-menu-item > a {
+        color: #0caea3 !important;
+    }
+
+    .RAFYS {
+        text-align: center;
+    }
+</style>
+<link href="@Url.Content("~/css/ion.rangeSlider.css")" rel="stylesheet" />
+<link href="@Url.Content("~/css/ion.rangeSlider.skinFlat.css")" rel="stylesheet" />
+<div class="money-top">
+    <!-- long-term -->
+    <section class="hm long-term text-center">
+        <div class="container">
+            <div class="long-outr commn-outr">
+                <h3>Right Amount For Your SIP</h3>
+                <p>
+                    A Systematic Investment Plan (SIP) makes sense only when the amount invested
+
+                    helps in realizing your dream. Therefore, it is important to arrive at The Right SIP
+
+                    Amount. The clarity on the these 3 questions will make it better to achieve the
+
+                    goals - What am I investing for?, How long should I invest for? And what should
+
+                    be the RIGHT SIP Amount to achieve my goal?
+                </p>
+                <!-- <a class="commn-bttn whte wow fadeInUp" data-wow-delay="0.5s" href="javascript:void(0)">read more</a> -->
+            </div>
+        </div>
+    </section>
+    <!-- end long-term -->
+    <section class="inner-page RAFYS">
+        <div class="container">
+            <div class="rounded-box delayed">
+                <div class="header-t">
+                    <h2>Right Amount For Your SIP</h2>
+                </div>
+                <div class="sip-right-time">
+                    <div class="icon-top-sip"><img src="../images/sip-icon-1.png" alt="" /></div>
+                    <h3>How much does your goal cost today?</h3>
+                    <div class="slider-outer">
+
+                        <input type="text" id="goal_slider" value="" name="range" />
+                        <label class="errormsg hide" id="spngoalcost">Please insert goal cost today</label>
+                    </div>
+                    <div class="text-amount">
+
+                        <input type="text" class="yearbox" id="txt_goalValue" value="500" />
+                    </div>
+
+                </div>
+                <div class="singlerow-per sing-sipright clearfix">
+                    <a class="commn-bttn" id="btnnext1" href="#">next</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="@Url.Content("~/js/jquery-1.11.3.js")"></script>
+<script src="@Url.Content("~/js/ion.rangeSlider.min.js")"></script>
+<script src="@Url.Content("~/js/rangepage.js")"></script>
+
+<script type="text/javascript">
+    $('.rght-menu').addClass('inn-menu');
+    var goalvalue = '@ViewBag.Goal';
+
+    var $range = $("#goal_slider"),
+    $input = $("#txt_goalValue"),
+    instance,
+    min = 0,
+    max = 1000;
+
+    if (goalvalue != "") {
+        $("#goal_slider").ionRangeSlider({
+            min: 500,
+            max: 200000000,
+            from: goalvalue,
+            to: 200000000,
+            type: 'single',
+            //prefix: "+",
+            prefix: "",
+            grid: true,
+            grid_num: 10,
+            prettify_enabled: true,
+            onChange: function (data) {
+                $("#txt_goalValue").val(data.from);
+            },
+            prettify: function (num) {
+                return num.toFixed(0);
+            }
+        })
+    }
+    else {
+        $("#goal_slider").ionRangeSlider({
+            min: 500,
+            max: 200000000,
+            from: 500,
+            to: 200000000,
+            type: 'single',
+            //prefix: "+",
+            prefix: "",
+            grid: true,
+            grid_num: 10,
+            prettify_enabled: true,
+            onChange: function (data) {
+                $("#txt_goalValue").val(data.from);
+            },
+            prettify: function (num) {
+                return num.toFixed(0);
+            }
+        })
+
+        instance = $range.data("ionRangeSlider");
+
+        $input.on("change keyup", function () {
+            var val = $(this).prop("value");
+
+            // validate
+            if (val < min) {
+                val = min;
+            }
+
+            instance.update({
+                from: val
+            });
+        });
+    }
+
+    $(document).ready(function () {
+        $(".footmenu").each(function (e) {
+            if (e == '3') {
+                $(this).addClass('current-menu-item');
+            }
+        });
+
+        $(".headmenu").each(function (e) {
+            if (e == '3') {
+                $(this).addClass('current-menu-item');
+            }
+        });
+        $("#btnnext1").click(function (e) {
+
+            var g = $("#goal_slider").val();
+            location.href = '@Url.Content("~/MoneyTools/RightAmountForYourSIPStep2?g=")' + g;
+            //}
+        });
+    });
+</script>

@@ -1,0 +1,1565 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+
+
+
+
+
+
+<style>
+    .switch-field {
+        margin: 0 0 20px;
+    }
+
+        .switch-field input {
+            position: absolute !important;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            width: 1px;
+            border: 0;
+            overflow: hidden;
+        }
+
+        .switch-field label {
+            float: left;
+        }
+
+        .switch-field label {
+            display: inline-block;
+            width: 100px;
+            background-color: #e4e4e4;
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+            text-shadow: none;
+            padding: 9px 14px;
+            margin-bottom: 0;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -ms-transition: all 0.1s ease-in-out;
+            -o-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+        }
+
+            .switch-field label:hover {
+                cursor: pointer;
+            }
+
+        .switch-field input:checked + label {
+            background-color: #129b92;
+            color: #ffffff;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .switch-field label:first-of-type {
+            border-radius: 4px 0 0 4px;
+        }
+
+        .switch-field label:last-of-type {
+            border-radius: 0 4px 4px 0;
+        }
+</style>
+<section class="inner-page">
+    <div class="container-fluid">
+        <ul class="breadcrumb all-outr">
+            <li><a href="#">My Account</a></li>
+            <li>Portfolio View</li>
+        </ul>
+        <div class="">
+            <div class="header-t head">
+                <h2>Portfolio View</h2>
+            </div>
+            <section class="blue-btn-sec">
+
+
+                <div class="blue-outr">
+                    <div class="btn-sec1">
+                        <a href="https://www.wealthclockadvisors.com/Myaccount/PortfolioView" class="">
+                            Individual Portfolio
+                        </a>
+                        <a href="https://www.wealthclockadvisors.com/Myaccount/FamilyAccountView" class="">
+                            Family Portfolio
+                        </a>
+                    </div>
+                    <div class="btn-sec1 bl-arw btn-group">
+
+                        <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" data-id="dd_SelectFundType" title="Select Fund Type"><span class="filter-option pull-left">Reports</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/MyReports/PortfolioPerformance">Portfolio Performance</a>
+                            </li>
+                            <li>
+                                <a href="/MyReports/FamilyPortfolio">Family Portfolio</a>
+                            </li>
+
+                            <li>
+                                <a href="/MyReports/Dividend">Dividend Details</a>
+                            </li>
+
+                            <li>
+                                <a target="_blank" href="https://www.karvymfs.com/platformservice/">Consolidated Transaction Details</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.camsonline.com/InvestorServices/COL_ISGainStmt.aspx"> Consolidated Realised Gain Statement</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <!-- == -->
+            <!-- == -->
+            <!-- == -->
+
+
+
+
+
+
+
+
+
+
+            <section class="incep-graph incep">
+                <div class="container-fluid">
+                    <div class="row outtr">
+                        <div class="col-md-6">
+                            <div class="invest-txt-outr">
+                                <div class="invest-inner rtn-flx">
+                                    <div class="kjy-inn">
+                                        <div class="in-img">
+                                            <img src="/images/images_Dashboard/icon1.png" alt="">
+                                        </div>
+                                        <div class="in-amt">
+                                            <label class="lb">8,480</label>
+
+
+                                            <h3>Current Gains</h3>
+                                        </div>
+                                    </div>
+                                    <div class="port-return-innr">
+
+
+                                        <div class="up-arrow up">
+
+
+
+
+                                            <i class="fa fa-arrow-up" aria-hidden="true" style="color:green"></i>
+                                        </div>
+                                        <label class="alg">6.1%</label>
+                                        <h3>Total Portfolio Returns</h3>
+
+                                    </div>
+                                </div>
+                                <div class="invest-in">
+                                    <table>
+
+
+
+                                        <tr>
+                                            <td>Invested Value</td>
+                                            <td class="gggg"> <label>89,000</label></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Current Value</td>
+                                            <td class="gggg"><label>97,480</label></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="invest-para">
+                                    <h4>
+                                        Have any questions about your Portfolio ?
+                                    </h4>
+                                    <p>
+                                        If you have any querries about your portfolio please feel free to reach out to us.
+                                    </p>
+                                    <div class="btn-sec1">
+                                        <a href="https://www.meetingbird.com/l/wealthclock/advisory" target="_blank" class="">
+                                            Schedule
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div>
+                            <img src=" images />inception.jpg" alt="" />
+                        </div> -->
+                        <div class="col-md-6">
+                            <div class="incep-port port">
+                                <div class="tab-sec">
+                                    <div class="incep-pie-inn">
+                                        <div id="container"></div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
+
+
+
+            <figure>
+                <div class="clearfix filter-sec">
+                    <div class="fltr-srch clearfix" id="serdivforcurhold">
+                        search
+                        <input type="search" id="curholdsrch">
+                    </div>
+                    <div class="fltr-srch clearfix hide" id="serdivforinsp">
+                        search
+                        <input type="search" id="inspsrch">
+                    </div>
+                    <div class="fltr-group clearfix">
+                        Group by
+                        <a href="javascript:void(0)" id="anc_folioGroup">Folio</a>
+                        <a href="javascript:void(0)" id="anc_schemeName">Scheme</a>
+                    </div>
+                    <div class="fltr-outr clearfix">
+                        <p>Filter</p>
+                        <ul>
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" title="Filter Column">
+                                    <i class="fa fa-filter" aria-hidden="true"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <div class="remember-me">
+                                            <input class="filter_TableType" type="checkbox" value="Category" id="opening" name="check" data-name="category" checked />
+                                            <label for="opening"><span></span>Category</label>
+                                        </div>
+                                        <div class="remember-me">
+                                            <input class="filter_TableType" type="checkbox" value="Folio No." id="opening1" name="check" data-name="foliono" checked />
+                                            <label for="opening1"><span></span>Folio No</label>
+                                        </div>
+                                        <div class="remember-me">
+                                            <input class="filter_TableType" type="checkbox" value="Unit Balance" id="opening2" name="check" data-name="unitbalance" checked />
+                                            <label for="opening2"><span></span>Balance Units</label>
+                                        </div>
+                                        <div class="remember-me">
+                                            <input class="filter_TableType" type="checkbox" value="Nav/Date" id="opening3" name="check" data-name="navDate" checked />
+                                            <label for="opening3"><span></span>Latest NAV (Rs.) / NAV Date</label>
+                                        </div>
+                                        <div class="remember-me">
+                                            <input class="filter_TableType" type="checkbox" value="Net Investment" id="opening4" name="check" data-name="netinvest" checked />
+                                            <label for="opening4"><span></span>Invested (Rs.)</label>
+                                        </div>
+                                        <div class="remember-me">
+                                            <input class="filter_TableType" type="checkbox" value="Dividend Reinvested (Rs.)" id="opening5" data-name="dividendReinvestment" name="check" checked />
+                                            <label for="opening5"><span></span>Dividend Reinvested (Rs.)</label>
+                                        </div>
+                                        <div class="remember-me">
+                                            <input class="filter_TableType" type="checkbox" value="Dividend Received (Rs.)" id="opening6" name="check" data-name="dividendReceived" checked />
+                                            <label for="opening6"><span></span>Dividend Received (Rs.)</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" id="anc_Clipboard"><i class="fa fa-clipboard" title="Copy to Clipboard" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" id="anc_Excel"><i class="fa fa-file-excel-o" title="Portfolio Summary" aria-hidden="true" style=" color: brown;"></i></a>
+                            </li>
+                            <li>
+                                <a href="/Myaccount/PdfViewForPortfolio" id="anc_PDF" target="_blank"><i class="fa fa-file-pdf-o" title="Download as a PDF" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </figure>
+
+            <figure class="tab-sec">
+                <ul class="nav nav-tabs responsive bck">
+                    <li class="active"><a data-toggle="tab" href="#menu1" id="mencurhold">Current Holding</a></li>
+                    <li><a data-toggle="tab" href="#menu2" id="anc_sinceInception">Since Inception</a></li>
+                </ul>
+                <div class="tab-content responsive" style="margin-top:10px">
+                    <div id="menu1" class="tab-pane fade in active">
+                        <div class="record-outr" id="first_div">
+
+                            <style>
+                                #current_holding_filter {
+                                    display: none;
+                                }
+
+                                .transactt {
+                                    background: #63b751;
+                                    border-radius: 4px;
+                                    color: #ffffff;
+                                    display: block;
+                                    font-size: 12px;
+                                    height: 28px;
+                                    line-height: 28px;
+                                    padding: 0;
+                                    text-align: center;
+                                    text-transform: capitalize;
+                                }
+
+                                .dropdown-menu {
+                                    border-radius: 0;
+                                    -moz-border-radius: 0;
+                                    -webkit-border-radius: 0;
+                                }
+
+                                .dropdown-menu {
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 0;
+                                    z-index: 1000;
+                                    display: none;
+                                    float: left;
+                                    min-width: 160px;
+                                    padding: 5px 0;
+                                    margin: 2px 0 0;
+                                    font-size: 14px;
+                                    text-align: left;
+                                    list-style: none;
+                                    background-color: #fff;
+                                    -webkit-background-clip: padding-box;
+                                    background-clip: padding-box;
+                                    border: 1px solid #ccc;
+                                    border: 1px solid rgba(0, 0, 0, .15);
+                                    border-radius: 4px;
+                                    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                                    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                                }
+
+                                table {
+                                    width: 100% !important;
+                                }
+
+                                    table#current_holding th {
+                                        width: auto !important;
+                                    }
+                            </style>
+
+                            <table id="current_holding" class="ui celled table" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th class="record-area-cellhead">Scheme</th>
+                                        <th class="record-area-cellhead category">Category</th>
+                                        <th class="record-area-cellhead foliono">Folio</th>
+                                        <th class="record-area-cellhead netinvest">Investment</th>
+                                        <th class="record-area-cellhead unitbalance">Unit</th>
+                                        <th class="record-area-cellhead">Current Value</th>
+                                        <th class="record-area-cellhead navDate">Nav/Date</th>
+                                        <th class="record-area-cellhead">Returns</th>
+
+                                        <th class="record-area-cellhead">Gain%</th>
+                                        <th class="record-area-cellhead">Transact</th>
+                                        <th class="record-area-cellhead">Goal</th>
+                                        <th class="record-area-cellhead">Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="record-area-row">
+                                    <tr>
+                                        <td class="record-area-cell" style="text-align:left !important">
+                                            <!--scheme name-->
+                                            <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="Aditya Birla SunLife Frontline Equity Fund (G)" data-original-title="Aditya Birla SunLife Frontline Equity Fund (G)" class="red-tooltip">
+                                                Aditya Birla SunLife Frontline Equity Fund (G)
+                                            </a>
+
+                                        </td>
+                                        <td class="record-area-cell category">
+
+                                            Large cap
+
+                                        </td>
+                                        <td class="record-area-cell foliono">
+                                            <!--units-->
+                                            1036132079
+                                        </td>
+
+                                        <td class="record-area-cell netinvest">25000.0</td>
+
+                                        <td class="record-area-cell unitbalance">115.0</td>
+                                        <td class="record-area-cell">26612.6</td>
+                                        <td class="record-area-cell navDate">
+                                            <span>231.4 <br />-------- <br /> 26 Nov, 19</span>
+                                        </td>
+
+                                        <td class="record-area-cell">1612.6</td>
+
+
+                                        <td class="record-area-cell">
+                                            <span>3.2</span>
+                                        </td>
+
+                                        <td class="record-area-cell text-center">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" class="transactt dropdown-toggle" data-toggle="dropdown">Transact<em class="caret"></em></a>
+                                                <ul class="dropdown-menu" style="min-width:0;">
+                                                    <li><a href="javascript:void(0)" class="anc_fundpruchase" data-encrpyed_code="92" data-foliono="1036132079">Purchase</a></li>
+                                                    <li><a href="javascript:void(0)" class="anc_fundSwitch" data-encrpyed_code="92" data-foliono="1036132079" data-unit="115.027">Switch</a></li>
+                                                    <li><a href="javascript:void(0)" class="anc_fundStp" data-encrpyed_code="92" data-foliono="1036132079" data-amount="26612.65">STP</a></li>
+                                                    <li><a href="javascript:void(0)" class="anc_fundSwp" data-encrpyed_code="92" data-foliono="1036132079">SWP</a></li>
+                                                    <li>
+
+                                                        <a href="javascript:void(0)" class="anc_fundRedeem" data-encrpyed_code="92" data-foliono="1036132079">Redeem</a>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+
+                                        <td class="record-area-cell">
+                                            <a class="trans-link anc_addGoal" href="/GoalTracker/GoalDetails" data-schemecode="92">Link</a>
+                                        </td>
+                                        <td class="record-area-cell">
+                                            <a href="javascript:void(0)" class="anc_details" data-schemecode="92" data-foliono="1036132079"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="record-area-cell" style="text-align:left !important">
+                                            <!--scheme name-->
+                                            <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="Nippon India Large Cap Fund (G)" data-original-title="Nippon India Large Cap Fund (G)" class="red-tooltip">
+                                                Nippon India Large Cap Fund (G)
+                                            </a>
+
+                                        </td>
+                                        <td class="record-area-cell category">
+
+                                            Large cap
+
+                                        </td>
+                                        <td class="record-area-cell foliono">
+                                            <!--units-->
+                                            423168635163
+                                        </td>
+
+                                        <td class="record-area-cell netinvest">31000.0</td>
+
+                                        <td class="record-area-cell unitbalance">963.7</td>
+                                        <td class="record-area-cell">34028.2</td>
+                                        <td class="record-area-cell navDate">
+                                            <span>35.3 <br />-------- <br /> 26 Nov, 19</span>
+                                        </td>
+
+                                        <td class="record-area-cell">3028.2</td>
+
+
+                                        <td class="record-area-cell">
+                                            <span>7.0</span>
+                                        </td>
+
+                                        <td class="record-area-cell text-center">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" class="transactt dropdown-toggle" data-toggle="dropdown">Transact<em class="caret"></em></a>
+                                                <ul class="dropdown-menu" style="min-width:0;">
+                                                    <li><a href="javascript:void(0)" class="anc_fundpruchase" data-encrpyed_code="EARG" data-foliono="423168635163">Purchase</a></li>
+                                                    <li><a href="javascript:void(0)" class="anc_fundSwitch" data-encrpyed_code="EARG" data-foliono="423168635163" data-unit="963.683">Switch</a></li>
+                                                    <li><a href="javascript:void(0)" class="anc_fundStp" data-encrpyed_code="EARG" data-foliono="423168635163" data-amount="34028.22">STP</a></li>
+                                                    <li><a href="javascript:void(0)" class="anc_fundSwp" data-encrpyed_code="EARG" data-foliono="423168635163">SWP</a></li>
+                                                    <li>
+
+                                                        <a href="javascript:void(0)" class="anc_fundRedeem" data-encrpyed_code="EARG" data-foliono="423168635163">Redeem</a>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+
+                                        <td class="record-area-cell">
+                                            <a class="trans-link anc_addGoal" href="/GoalTracker/GoalDetails" data-schemecode="EARG">Link</a>
+                                        </td>
+                                        <td class="record-area-cell">
+                                            <a href="javascript:void(0)" class="anc_details" data-schemecode="EARG" data-foliono="423168635163"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="record-area-cell" style="text-align:left !important">
+                                            <!--scheme name-->
+                                            <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="DSP Equity &amp; Bond Fund (G)" data-original-title="DSP Equity &amp; Bond Fund (G)" class="red-tooltip">
+                                                DSP Equity &amp; Bond Fund (G)
+                                            </a>
+
+                                        </td>
+                                        <td class="record-area-cell category">
+
+                                            Hybrid: Equity-Oriented
+
+                                        </td>
+                                        <td class="record-area-cell foliono">
+                                            <!--units-->
+                                            4171446/20
+                                        </td>
+
+                                        <td class="record-area-cell netinvest">33000.0</td>
+
+                                        <td class="record-area-cell unitbalance">227.6</td>
+                                        <td class="record-area-cell">36838.9</td>
+                                        <td class="record-area-cell navDate">
+                                            <span>161.9 <br />-------- <br /> 26 Nov, 19</span>
+                                        </td>
+
+                                        <td class="record-area-cell">3838.9</td>
+
+
+                                        <td class="record-area-cell">
+                                            <span>8.4</span>
+                                        </td>
+
+                                        <td class="record-area-cell text-center">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" class="transactt dropdown-toggle" data-toggle="dropdown">Transact<em class="caret"></em></a>
+                                                <ul class="dropdown-menu" style="min-width:0;">
+                                                    <li><a href="javascript:void(0)" class="anc_fundpruchase" data-encrpyed_code="DSP01-GR" data-foliono="4171446/20">Purchase</a></li>
+                                                    <li><a href="javascript:void(0)" class="anc_fundSwitch" data-encrpyed_code="DSP01-GR" data-foliono="4171446/20" data-unit="227.575">Switch</a></li>
+                                                    <li><a href="javascript:void(0)" class="anc_fundStp" data-encrpyed_code="DSP01-GR" data-foliono="4171446/20" data-amount="36838.93">STP</a></li>
+                                                    <li><a href="javascript:void(0)" class="anc_fundSwp" data-encrpyed_code="DSP01-GR" data-foliono="4171446/20">SWP</a></li>
+                                                    <li>
+
+                                                        <a href="javascript:void(0)" class="anc_fundRedeem" data-encrpyed_code="DSP01-GR" data-foliono="4171446/20">Redeem</a>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+
+                                        <td class="record-area-cell">
+                                            <a class="trans-link anc_addGoal" href="/GoalTracker/GoalDetails" data-schemecode="DSP01-GR">Link</a>
+                                        </td>
+                                        <td class="record-area-cell">
+                                            <a href="javascript:void(0)" class="anc_details" data-schemecode="DSP01-GR" data-foliono="4171446/20"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- ==2nd== -->
+                    <div id="menu2" class="tab-pane fade">
+                        <div class="record-outr sincepage" id="second_div">
+
+
+                            <style>
+                                #since_incept_length, #since_incept_filter {
+                                    display: none;
+                                }
+                                /*.row {
+                                            margin-top: -18px;
+                                        }*/
+                                ._noDisplay .record-area-cell {
+                                    display: none;
+                                }
+
+                                tfoot input {
+                                    width: 100%;
+                                    padding: 3px;
+                                    box-sizing: border-box;
+                                }
+
+                                th {
+                                    text-align: center !important;
+                                    background: #f0f5f5 !important;
+                                    font-weight: bold !important;
+                                    border-right: 1px solid #e9eaeb !important;
+                                    border-bottom: 1px solid #e9eaeb !important;
+                                    position: relative !important;
+                                }
+
+                                td {
+                                    text-align: center !important;
+                                }
+
+                                tfoot {
+                                    display: table-header-group;
+                                }
+
+                                table {
+                                    width: 100% !important;
+                                }
+
+                                    table#since_incept th {
+                                        width: auto !important;
+                                    }
+                            </style>
+
+                            <table id="since_incept" class="ui celled table" cellspacing="0">
+
+                                <thead>
+                                    <tr>
+                                        <th>Scheme</th>
+                                        <th class="foliono">Folio</th>
+                                        <th class="unitbalance">Units</th>
+                                        <th>Investment</th>
+                                        <th>Div.Reinvest</th>
+                                        <th>Dividend</th>
+                                        <th>Sold</th>
+                                        <th>Value</th>
+                                        <th>Nav/Date</th>
+                                        <th>Gains</th>
+                                        <th>Returns</th>
+                                        <th>Details</th>
+                                    </tr>
+                                </thead>
+
+                                <tfoot>
+                                    <tr>
+                                        <th>Scheme</th>
+                                        <th>Folio No.</th>
+                                        <th>Unit Balance</th>
+                                        <th class="netinvest">Net Investment</th>
+                                        <th class="dividendReinvestment">Dividend Reinvested</th>
+                                        <th class="dividendReceived">Dividend Received</th>
+                                        <th>Redeemed</th>
+                                        <th>Current</th>
+                                        <th class="navDate">Nav/Date</th>
+                                        <th>Returns Dividend</th>
+                                        <th>Returns</th>
+                                        <th class="_noDisplay">Details</th>
+                                    </tr>
+                                </tfoot>
+
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:left !important">
+                                            <!--scheme name-->
+                                            <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="Aditya Birla SunLife Frontline Equity Fund (G)" data-original-title="Aditya Birla SunLife Frontline Equity Fund (G)" class="red-tooltip">
+                                                <span>Aditya Birla SunLife Frontline Equity Fund (G)</span>
+                                            </a>
+
+                                        </td>
+                                        <td class="foliono">
+                                            <!--folio-->
+                                            1036132079
+                                        </td>
+                                        <td class="unitbalance">
+                                            <!--units-->
+                                            <span>115.0</span>
+                                        </td>
+                                        <td class="netinvest">
+
+
+                                            <!--invested-->
+                                            <span>25000.0</span>
+
+                                        </td>
+                                        <td>
+                                            <span>0</span>
+
+                                        </td>
+                                        <td>
+                                            <span>0</span>
+
+                                        </td>
+                                        <td>
+                                            <!--Redeemed-->
+                                            <span>0</span>
+                                        </td>
+                                        <td>
+                                            <!--Value-->
+                                            <span>26612.6</span>
+
+                                        </td>
+                                        <td class="navDate">
+                                            <span>231.4 <br />-------- <br /> 26 Nov, 19</span>
+                                        </td>
+                                        <td>
+                                            <span>1612.6</span>
+                                        </td>
+                                        <td>
+                                            <span> 1612.6</span>
+
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0)" data-schemecode="92" data-foliono="1036132079" class="anc_details"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:left !important">
+                                            <!--scheme name-->
+                                            <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="DSP Equity &amp; Bond Fund (G)" data-original-title="DSP Equity &amp; Bond Fund (G)" class="red-tooltip">
+                                                <span>DSP Equity &amp; Bond Fund (G)</span>
+                                            </a>
+
+                                        </td>
+                                        <td class="foliono">
+                                            <!--folio-->
+                                            4171446/20
+                                        </td>
+                                        <td class="unitbalance">
+                                            <!--units-->
+                                            <span>227.6</span>
+                                        </td>
+                                        <td class="netinvest">
+
+
+                                            <!--invested-->
+                                            <span>33000.0</span>
+
+                                        </td>
+                                        <td>
+                                            <span>0</span>
+
+                                        </td>
+                                        <td>
+                                            <span>0</span>
+
+                                        </td>
+                                        <td>
+                                            <!--Redeemed-->
+                                            <span>0</span>
+                                        </td>
+                                        <td>
+                                            <!--Value-->
+                                            <span>36838.9</span>
+
+                                        </td>
+                                        <td class="navDate">
+                                            <span>161.9 <br />-------- <br /> 26 Nov, 19</span>
+                                        </td>
+                                        <td>
+                                            <span>3838.9</span>
+                                        </td>
+                                        <td>
+                                            <span> 3838.9</span>
+
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0)" data-schemecode="DSP01-GR" data-foliono="4171446/20" class="anc_details"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:left !important">
+                                            <!--scheme name-->
+                                            <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="Nippon India Large Cap Fund (G)" data-original-title="Nippon India Large Cap Fund (G)" class="red-tooltip">
+                                                <span>Nippon India Large Cap Fund (G)</span>
+                                            </a>
+
+                                        </td>
+                                        <td class="foliono">
+                                            <!--folio-->
+                                            423168635163
+                                        </td>
+                                        <td class="unitbalance">
+                                            <!--units-->
+                                            <span>963.7</span>
+                                        </td>
+                                        <td class="netinvest">
+
+
+                                            <!--invested-->
+                                            <span>31000.0</span>
+
+                                        </td>
+                                        <td>
+                                            <span>0</span>
+
+                                        </td>
+                                        <td>
+                                            <span>0</span>
+
+                                        </td>
+                                        <td>
+                                            <!--Redeemed-->
+                                            <span>0</span>
+                                        </td>
+                                        <td>
+                                            <!--Value-->
+                                            <span>34028.2</span>
+
+                                        </td>
+                                        <td class="navDate">
+                                            <span>35.3 <br />-------- <br /> 26 Nov, 19</span>
+                                        </td>
+                                        <td>
+                                            <span>3028.2</span>
+                                        </td>
+                                        <td>
+                                            <span> 3028.2</span>
+
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0)" data-schemecode="EARG" data-foliono="423168635163" class="anc_details"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                            <script type="text/javascript">
+                                $(document).ready(function () {
+                                    $("a").tooltip();
+
+                                    // Setup - add a text input to each footer cell
+                                    $('#since_incept tfoot th').each(function () {
+                                        var title = $(this).text();
+                                        $(this).html('<div class="record-area-cell"><input type="text" placeholder="Search" /></div>');
+                                    });
+
+
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal -->
+<button id="anc_openModal" data-toggle="modal" data-target="#myModal" class="hide"></button>
+
+
+<div class="modal fade port-modal" id="myModal" role="dialog">
+
+</div>
+
+
+<script src="/js/highcharts.js"></script>
+<script src="/js/highcharts-3d.js"></script>
+<script src="/js/exporting.js"></script>
+<script src="/js/highcharts-more.js"></script>
+<script src="/js/solid-gauge.src.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<script>
+    var json = JSON.parse("[{&quot;name&quot;:&quot;Hybrid: Equity-Oriented&quot;,&quot;y&quot;:37.80,&quot;color&quot;:null},{&quot;name&quot;:&quot;Large cap&quot;,&quot;y&quot;:62.20,&quot;color&quot;:null}]".replace(/&quot;/g, '"'));
+    var data = [];
+    for (var i in json) {
+        var serie = new Array(json[i].name, json[i].y, json[i].color);
+        data.push(serie);
+    }
+
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie',
+            backgroundColor: '#fff',
+            height: 250,
+            margin: [0, 0, 10, 0],
+            spacingTop: 0,
+            spacingBottom: -7,
+            spacingLeft: 0,
+            spacingRight: 0,
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Investment Portfolio Allocation',
+            style: {
+                fontWeight: 'bold',
+            }
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                colors: [
+                    '#4BFAA5', '#42C6EA', '#AA42EA', '#EA5B42', '#42EA5B', '#E242EA', '#428EEA', '#29658E',
+                    '#B2D7F5', '#F9F379', '#D1F16D', '#5E790A', '#3F2C7A', '#953881', '#AD86A3', '#2C5034',
+                    '#2F7F95', '#DA0844', '#B1F9C0', '#035FC6', '#978AAE', '#B74997', '#DA0808', '#FAEB4B',
+
+                ],
+                allowPointSelect: true,
+                cursor: 'pointer',
+                size: 240,
+                depth: 20,
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            },
+
+        },
+        series: [{
+            type: 'pie',
+            name: 'Total Investment',
+            data: data
+        }]
+    });
+
+</script>
+
+<!--open details modal-->
+<script type="text/javascript">
+    $('body').on('click', '.anc_details', function (result) {
+        $('.ui-loader').removeClass('hide');
+        $.post("/Myaccount/getOrderDetails", { schemecode: $(this).data('schemecode'), foliono: $(this).data('foliono') }, function (result) {
+            if (result != "") {
+                $('#myModal').html('');
+                $('#myModal').html(result);
+                $('.ui-loader').addClass('hide');
+                $('#anc_openModal').trigger('click');
+            }
+        })
+    })
+</script>
+
+<!---->
+<script type="text/javascript">
+    var chtab;
+    var table;
+    $(document).ready(function (e) {
+        var monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+
+        var today = dd + '-' + monthNames[today.getMonth()] + '-' + yyyy;
+
+        $('.headerbottom li.active').removeClass('active');
+        $('.account-menu').addClass('active');
+        $('[data-toggle="tooltip"]').tooltip();
+
+        chtab = $('#current_holding').DataTable({
+            /* No ordering applied by DataTables during initialisation */
+            dom: 'Bfrtip', //export Data
+            "order": [],
+            "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+            buttons: [
+                'copy', 'excel',
+                {
+                    extend: 'pdfHtml5',
+                    title: 'Summary Holding Of Paridhi Sokal',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                        stripNewlines: true
+                    },
+                    customize: function (doc) {
+                        doc.content.splice(1, 0, {
+                            fontSize: 12,
+                            margin: [0, 0, 10, 12],
+                            alignment: 'right',
+                            bold: true,
+                            text: 'Statement Date: ' + today
+                        });
+
+                        doc.content.splice(1, 0, {
+                            fontSize: 12,
+                            margin: [0, 0, 10, 12],
+                            alignment: 'right',
+                            text: 'Mumbai, Maharashtra - 400047'
+                        });
+                        doc.content.splice(1, 0, {
+                            fontSize: 12,
+                            margin: [0, 0, 10, 0],
+                            alignment: 'right',
+                            text: 'Opp Veera Desai Andheri(West)'
+                        });
+                        doc.content.splice(1, 0, {
+                            fontSize: 12,
+                            margin: [0, 0, 10, 0],
+                            alignment: 'right',
+                            text: '505 - Manish Mahal Jeevan Nagar'
+                        });
+                        doc.content.splice(1, 0, {
+                            margin: [0, 0, 10, 12],
+                            alignment: 'right',
+                            fontSize: 15,
+                            bold: true,
+                            text: 'Wealthclock Advisors:',
+                        });
+                        doc.content.splice(1, 0, {
+                            fontSize: 12,
+                            margin: [0, 0, 0, 12],
+                            alignment: 'centre',
+                            image: 'data:image/jpeg;base64,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',
+
+                        });
+                        doc['footer'] = (function (page, pages) {
+                            return {
+                                columns: [
+                                    {
+                                        // This is the right column
+                                        alignment: 'right',
+                                        text: ['Disclaimer: The portfolio report contains both absolute returns and annualized returns (XIRR). It is highly recommended that XIRR (annualized return) must be seen in the long term context i.e more than 1 year investments only. The returns shown in this report is based upon the latest available NAV of respective schemes, and we do not guarantee any return under any category. The above report output is generated by computer, using the mailback data received from the respective registrars. Please report to the administrator, immediately, for any discrepancy found in the statement.']
+                                    }
+                                ],
+                                margin: [100, 0, 100, 500]
+                            }
+                        });
+                    }
+                }
+            ]
+        });
+
+    });
+    $('#anc_sinceInception').click(function (e) {
+        if (!$(this).parent('li').hasClass('active')) {
+            //sinceinception  DataTable
+            table = $('#since_incept').DataTable({
+                /* No ordering applied by DataTables during initialisation */
+                /* No ordering applied by DataTables during initialisation */
+                dom: 'Bfrtip', //export Data
+                "order": [],
+                "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                buttons: [
+                    'copy', 'excel',
+                    {
+                        extend: 'pdfHtml5',
+                        title: 'WealthClock Advisors Since Inception Paridhi Sokal',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL',
+                        exportOptions: {
+                            columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                        }
+                    }
+                ]
+            });
+
+            // Apply the search
+            table.columns().every(function () {
+                var that = this;
+
+                $('input', this.footer()).on('keyup change', function () {
+                    console.log('search value ' + this.value)
+
+                    if (that.search() !== this.value) {
+                        that
+                            .search(this.value)
+                            .draw();
+                    }
+                });
+            });
+
+            $('#serdivforinsp').removeClass('hide');
+            $('#serdivforcurhold').addClass('hide');
+            $("#inspsrch").val('');
+            $("#curholdsrch").val('');
+            //chtab.search($("#curholdsrch").val()).draw();
+            chtab.destroy();
+            table.search($("#inspsrch").val()).draw();
+        }
+    });
+
+    $('#mencurhold').click(function (e) {
+        if (!$(this).parent('li').hasClass('active')) {
+            chtab = $('#current_holding').DataTable({
+                /* No ordering applied by DataTables during initialisation */
+                dom: 'Bfrtip', //export Data
+                "order": [],
+                "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                buttons: [
+                    'copy',
+                    {
+                        extend: 'excel',
+                        exportOptions: {
+                            columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                        }
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL',
+                        exportOptions: {
+                            columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                        }
+                    }
+                ]
+            });
+
+            $('#serdivforinsp').addClass('hide');
+            $('#serdivforcurhold').removeClass('hide');
+            $("#inspsrch").val('');
+            $("#curholdsrch").val('');
+            chtab.search($("#curholdsrch").val()).draw();
+            table.destroy();
+            //table.search($("#inspsrch").val()).draw();
+        }
+    });
+
+    $("#curholdsrch").keyup(function () {
+        chtab.search(this.value).draw();
+    });
+
+    $("#inspsrch").keyup(function () {
+        table.search(this.value).draw();
+    });
+</script>
+
+<!--filter checkbix-->
+<script type="text/javascript">
+    $(".filter_TableType").change(function () {
+        var ischecked = $(this).is(':checked');
+
+        var $tbl = $("#current_holding");
+        var $_tbl = $("#since_incept");
+
+        $($tbl.find("." + $(this).data("name"))).toggle();
+        $($_tbl.find("." + $(this).data("name"))).toggle();
+    });
+</script>
+
+<script type="text/javascript">
+    $('#anc_Excel').click(function (e) {
+        e.preventDefault();
+        $('.buttons-excel').trigger('click');
+    })
+    //$('#anc_PDF').click(function (e) {
+    //    e.preventDefault();
+    //    $('.buttons-pdf').trigger('click');
+    //})
+    $('#anc_Clipboard').click(function (e) {
+        e.preventDefault();
+        $('.buttons-copy').trigger('click');
+    })
+</script>
+
+<!--group by folio-->
+<script type="text/javascript">
+    $('#anc_folioGroup').click(function (e) {
+        e.preventDefault();
+        $('.ui-loader').removeClass('hide');
+        $.post("/Myaccount/_groupbyFoli", function (result) {
+            if (result != "") {
+                $("#first_div").html('');
+                $('#first_div').html(result);
+                $('#current_holding').DataTable({
+                    /* No ordering applied by DataTables during initialisation */
+                    dom: 'Bfrtip', //export Data
+                    "order": [],
+                    "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                    buttons: [
+                        'copy', 'excel', 'pdf'
+                    ]
+                });
+            }
+        })
+
+        $.post("/Myaccount/_groupbyFoliSinceinception", function (result) {
+            if (result != "") {
+                $("#second_div").html('');
+                $('#second_div').html(result);
+                var table = $('#since_incept').DataTable({
+                    /* No ordering applied by DataTables during initialisation */
+                    "order": [],
+                    "pageLength": 5
+                });
+                $('.ui-loader').addClass('hide');
+            }
+        })
+    })
+
+
+    $('#anc_schemeName').click(function (e) {
+        e.preventDefault();
+        $('.ui-loader').removeClass('hide');
+        $.post("/Myaccount/_groupbyScheme", function (result) {
+            if (result != "") {
+                $("#first_div").html('');
+                $('#first_div').html(result);
+                $('#current_holding').DataTable({
+                    /* No ordering applied by DataTables during initialisation */
+                    dom: 'Bfrtip', //export Data
+                    "order": [],
+                    "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                    buttons: [
+                        'copy', 'excel', 'pdf'
+                    ]
+                });
+            }
+        })
+
+        $.post("/Myaccount/_groupBySchemeSinceInception", function (result) {
+            if (result != "") {
+                $("#second_div").html('');
+                $('#second_div').html(result);
+                $('#since_incept').DataTable({
+                    /* No ordering applied by DataTables during initialisation */
+                    "order": [],
+                    "pageLength": 5
+                });
+                $('.ui-loader').addClass('hide');
+            }
+        })
+    })
+</script>
+
+
+<!--Transact button click-->
+<script type="text/javascript">
+    $('body').on('click', '.anc_fundpruchase', function (e) {
+        e.preventDefault();
+        var schemecode = $.trim($(this).data('encrpyed_code'));
+        var folio = $.trim($(this).data('foliono'));
+        if (schemecode != "") {
+            $('.ui-loader').removeClass('hide');
+            $.post("/Myaccount/_OpenModalforpurchasefund", { schemecode: schemecode, folio: folio }, function (result) {
+                if (result != "") {
+                    $('#myModal').html('');
+                    $('#myModal').html(result);
+                    $('.ui-loader').addClass('hide');
+                    $('#anc_openModal').trigger('click');
+                }
+            })
+        }
+
+    })
+
+    //Swp Button
+    $('body').on('click', '.anc_fundSwp', function (e) {
+        e.preventDefault();
+        var schemecode = $.trim($(this).data('encrpyed_code'));
+        var Folio = $.trim($(this).data('foliono'));
+        if (schemecode != "") {
+            $('.ui-loader').removeClass('hide');
+            $.post("/Myaccount/_OpenModalForSwp", { schemecode: schemecode, Folio: Folio }, function (result) {
+                if (result != "") {
+                    $('#myModal').html('');
+                    $('#myModal').html(result);
+                    $('.ui-loader').addClass('hide');
+                    $('#anc_openModal').trigger('click');
+                }
+            })
+        }
+
+    })
+</script>
+
+<!--Redeem button clikc-->
+<script type="text/javascript">
+    $('body').on('click', '.anc_fundRedeem', function (e) {
+        e.preventDefault();
+        var schemecode = $.trim($(this).data('encrpyed_code'));
+        var folioNo = $.trim($(this).data('foliono'));
+
+        if (schemecode != "") {
+            $('.ui-loader').removeClass('hide');
+            $.post("/Myaccount/_OpenModalforRedeemfund", { schemecode: schemecode, folio: folioNo }, function (result) {
+                if (result != "") {
+                    $('#myModal').html('');
+                    $('#myModal').html(result);
+                    $('.ui-loader').addClass('hide');
+                    $('#anc_openModal').trigger('click');
+                }
+            })
+        }
+    })
+</script>
+
+<!--switch button click-->
+<script type="text/javascript">
+    $('body').on('click', '.anc_fundSwitch', function (e) {
+        e.preventDefault();
+        var schemecode = $.trim($(this).data('encrpyed_code'));
+        var folioNo = $.trim($(this).data('foliono'));
+        var unitBal = $(this).data('unit');
+
+        if (schemecode != "") {
+            $('.ui-loader').removeClass('hide');
+            $.post("/Myaccount/_OpenModalforSwitchfund", { schemecode: schemecode, folio: folioNo, unitBal: unitBal }, function (result) {
+                if (result != "") {
+                    $('#myModal').html('');
+                    $('#myModal').html(result);
+                    $('.ui-loader').addClass('hide');
+                    $('#anc_openModal').trigger('click');
+                }
+            })
+        }
+    })
+</script>
+
+<!--Stp Fund-->
+<script type="text/javascript">
+    $('body').on('click', '.anc_fundStp', function (e) {
+        e.preventDefault();
+        var schemecode = $.trim($(this).data('encrpyed_code'));
+        var folioNo = $.trim($(this).data('foliono'));
+        var amount = $(this).data('amount');
+
+        if (schemecode != "") {
+            $('.ui-loader').removeClass('hide');
+            $.post("/Myaccount/_OpenModalForStp", { schemecode: schemecode, folio: folioNo, Amount: amount }, function (result) {
+                debugger;
+                if (result != "") {
+
+                    $('#myModal').html('');
+                    $('#myModal').html(result);
+                    $('.ui-loader').addClass('hide');
+                    $('#anc_openModal').trigger('click');
+                }
+            })
+        }
+    })
+
+    $('body').on('click', '#btn_stpFund', function (e) {
+        if ($('#dd_schemeType').val() == "") {
+
+            $('#span_redeemType').removeClass('hide');
+        }
+        else if ($('#dd_schemeName').val() == "") {
+            $('#span_scheme').removeClass('hide');
+        }
+        else if ($('#txt_unit').val() == "") {
+            $('#span_units').removeClass('hide');
+        }
+        else if ($('#txt_NumberofYear').val() == "") {
+            $('#span_NumberofYear').removeClass('hide');
+        }
+        else {
+            $('.ui-loader').removeClass('hide');
+            $.post("/Myaccount/StpFund", { OldSchemecode: $(this).data('oldschemecode'), NewSchemecode: $('#dd_schemeName').find(':selected').data('schemecode'), Amount: $('#txt_unit').val(), Folionumber: $('#txt_folioNumber').val(), NumberofYear: $('#txt_NumberofYear').val() }, function (data) {
+                debugger;
+                jsonresult = data.split('|');
+                $('.ui-loader').addClass('hide');
+                if (jsonresult[0] == "Success") {
+                    $.alert({
+                        title: 'STP Successful',
+                        content: "STP Initiated"
+                    });
+
+                    setTimeout(function () {
+                        location.href = '/MyAccount/TransactionHistory'
+                    }, 2000);
+
+                }
+                if (jsonresult[0] == "Failed") {
+                    $.alert({
+                        title: 'Alert!',
+                        content: jsonresult[1],
+                    });
+                }
+            })
+        }
+    })
+
+</script>
+
+<!--Buy fund & Send data to controller-->
+<script type="text/javascript">
+    $('body').on('click', '#btn_buybtnMutualFund', function (e) {
+        $("#btn_buybtnMutualFund").attr("disabled", true);
+        e.preventDefault();
+        if ($('input:radio[name="switch_2"]:checked').val() != "no" && $('input:radio[name="switch_2"]:checked').val() != "yes") {
+            $.alert({
+                title: 'Alert!',
+                theme: 'black',
+                content: 'Please Select Payment Mode.',
+            })
+            return false;
+        }
+        if ($('#txt_PurchaseAmount').val() == "") {
+            $.alert({
+                title: 'Alert!',
+                theme: 'black',
+                content: 'Enter amount please.',
+            })
+        }
+        else {
+            $('.ui-loader').removeClass('hide');
+            var folio = "";
+            if ($('#dd_folioNumber').val() == "add") {
+                folio = $.trim($('#txt_newfolio').val())
+            }
+            else {
+                folio = $('#dd_folioNumber').val()
+            }
+            debugger
+
+            $.post("/Transact/BuyMutualFund", { SchemeCode: $(this).data('schemcode'), Amount: $.trim($('#txt_PurchaseAmount').val()), Folio: folio, PaymentMode: $('input:radio[name="switch_2"]:checked').val() }, function (data) {
+                console.log(data);
+                debugger;
+                jsonresult = data.split('|');
+                $('.ui-loader').addClass('hide');
+                if (jsonresult[0] == "Success") {
+                    debugger;
+                    // $('#div_success').removeClass('hide');
+                    //$('#txt_success').text("Your purchase is Done.!");
+                    //$("#btn_oder").attr("disabled", false);
+                    //$('#txt_amount').val('');
+                    //setTimeout(function () {
+                    //    $('#div_success').addClass('hide');
+                    //    $('#txt_success').text('');
+                    //}, 10000);
+                    //window.open(jsonresult[1], '_blank');
+                    //$("#ancher_pay").on("click", function () {
+                    //    window.open(jsonresult[1], '_blank');
+                    //});
+                    // $("#ancher_pay").removeClass('hide');
+                    if ($('input:radio[name="switch_2"]:checked').val() == "yes") {
+                        location.href = '/Transact/renderPaymentPage';
+                    }
+                    else {
+                        $.confirm({
+
+                            title: 'Purchase Initiated',
+                            content: 'Your order has been successfully processed. Kindly check your registered email ID for details and link for payment. You may choose to make the payment via Cheque or One TIme Manadate.',
+                            buttons: {
+                                Done: function () {
+                                    $("#btn_buybtnMutualFund").attr("disabled", false);
+                                    location.href = '/MyAccount/TransactionHistory';
+                                }
+                                //cancel: function () {
+                                //    $("#btn_switchFund").attr("enabled", true);
+                                //    //$.alert('Canceled!');
+                                //},
+                            }
+                        });
+                    }
+                    // $("#ancher_pay").trigger('click');
+                    //$("#ancher_pay").data("_url", jsonresult[1]);
+                    //$('#dd_SelectFundType').prop('selectedIndex', 0);
+                    //$('#dd_SelectFundType').selectpicker('refresh');
+                    //$('#dd_SelectAMC').prop('selectedIndex', 0);
+                    //$('#dd_SelectAMC').selectpicker('refresh');
+                    //$('#dd_folioNumber').selectpicker('refresh');
+                    //resetallData();
+                    //$("#btn_Purchase").attr("disabled", false);
+                }
+                if (jsonresult[0] == "Failed") {
+                    debugger;
+                    $.alert({
+                        title: 'Alert!',
+                        content: jsonresult[1],
+                        buttons: {
+                            Ok: function () {
+                                location.reload();
+
+                            }
+
+                        }
+                    });
+
+                    //$("#btn_Purchase").attr("disabled", false);
+                }
+            })
+        }
+
+    })
+</script>
+
+<!--Redeem fund & Send data to controller-->
+<!--Swp Fund and Send Data-->
+<script type="text/javascript">
+    $('body').on('click', '#btn_buybtnSwp', function (e) {
+        e.preventDefault();
+        if ($('#dd_FrequencySip').val() == "0") {
+            $('#span_SelectFrequency').removeClass('hide');
+        }
+        else if ($('#txt_installmentamount').val() == "") {
+            $('#span_instlmntamount').removeClass('hide');
+        }
+        else if ($('#txt_numberofwithdrawls').val() == "") {
+            $('#span_withdrawlsno').removeClass('hide');
+        }
+        else {
+            $('.ui-loader').removeClass('hide');
+            $.post("/Myaccount/SwpFund", { schemecode: $(this).data('schemcode'), Frequency: $('#dd_FrequencySip').val(), Amount: $('#txt_installmentamount').val(), NumberofWithdrawl: $('#txt_numberofwithdrawls').val() }, function (result) {
+                jsonresult = result.split('|');
+                $('.ui-loader').addClass('hide');
+                if (jsonresult[0] == "Success") {
+                    $.confirm({
+                        title: 'SWP Successful',
+                        content: 'SWP Initiated',
+                        buttons: {
+                            Done: function () {
+                                btnClass: 'btn-blue',
+                                    location.href = '/MyAccount/TransactionHistory';
+                            },
+                            cancel: function () {
+                                $.alert('Canceled!');
+                            },
+                        }
+                    });
+                }
+                if (jsonresult[0] == "Failed") {
+                    $.alert({
+                        title: 'Alert!',
+                        content: jsonresult[1],
+                    });
+                }
+            })
+        }
+    })
+</script>
+
+<!--Order dettails by folio by-->
+<script type="text/javascript">
+    $('body').on('change', '#dd_orderFolioDropdown', function (e) {
+        e.preventDefault();
+        var scheme = $(this).find(':selected').data('schemecode');
+        $('.ui-loader').removeClass('hide');
+        if ($('#dd_orderFolioDropdown').val() != "") {
+            $.post("/Myaccount/getOrderDetailsbyFolio", { schemecode: scheme, folioNumber: $(this).val() }, function (result) {
+                if (result != "") {
+                    $('#data_div').html('');
+                    $('#data_div').html(result);
+                    $('.ui-loader').addClass('hide');
+                }
+            })
+        }
+        else {
+            $.post("/Myaccount/getOrderDetailsNormal", { schemecode: scheme }, function (result) {
+                if (result != "") {
+                    $('#data_div').html('');
+                    $('#data_div').html(result);
+                    $('.ui-loader').addClass('hide');
+                }
+            })
+        }
+
+    })
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.record-area-cellhead').css('color', 'red');
+    });
+</script>
+
+<!--SCroll down-->
+<script type="text/javascript">
+    $("._div_anchertag").on('click', function () {
+        $('html, body').animate({
+            'scrollTop': $("#menu1").position().top
+        }, 1000);
+    });
+</script>
+
+<!--Link Goal-->
+<script type="text/javascript">
+    anc_addGoal
+    $('body').on('change', '.anc_addGoal', function (e) {
+        var schemecode = $(this).data('schemecode');
+
+    })
+</script>
+
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>
+

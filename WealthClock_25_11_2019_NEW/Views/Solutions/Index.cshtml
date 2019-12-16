@@ -1,0 +1,142 @@
+﻿@{
+    ViewBag.Title = "Solutions";
+    Layout = "~/Views/Shared/_LayoutAbout.cshtml";
+}
+
+<!-- banner -->
+<section class="bannr-sec solution-bannr">
+    <div class="bannr-outr">
+        <div class="container">
+            <div class="bannr-innr wow fadeInUp" data-wow-delay="0.5s">
+                <h1>Solutions</h1>
+            </div>
+        </div>
+    </div>
+    <!-- new mouse start -->
+    <div class="ng-scope" id="content-view">
+        <div style="display: block;" class="ng-scope" id="mouse-scroll">
+            <div><span class="unu"> </span> <span class="doi"> </span> <span class="trei"> </span> </div>
+        </div>
+    </div>
+    <!-- new mouse ends -->
+</section>
+<!-- end banner -->
+<!-- long-term -->
+<section class="hm long-term text-center">
+    <div class="container">
+        <div class="long-outr commn-outr">
+            <p>
+                Our comprehensive private wealth management services provide our clients the freedom to pursue their dreams and delegate the less interesting task of managing their wealth, to us. Armed with extensive experience and pinpoint precision, we provide our clients with efficient solutions to a wide range of problems.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- end long-term -->
+<!-- solutions -->
+<section class="sol-sec">
+    <div class="seperate-sec">
+        <img src="@Url.Content("~/images/financial-bg1.jpg")" alt="" />
+        <div class="seperate-outr">
+            <div class="container">
+                <div class="seperate-innr wow fadeInRight" data-wow-delay="0.5s">
+                    <div class="seperate-pic">
+                        <div class="seperate-pic-innr">
+                            <img src="@Url.Content("~/images/finance-icon.png")" alt="" />
+                        </div>
+                    </div>
+                    <div class="seperate-txt">
+                        <h5>Financial Planning</h5>
+                        <p>
+                            Different people have different financial and investment goals. The goal for some is to save away for a rainy day, while others might seek to build a retirement savings nest egg. Partnering with Wealthclock Advisors ensures that no matter what your goal is, you will have the best picks of a myriad of financial products to take your financial and investment plans to the next level.
+                        </p>
+                        <a class="commn-bttn whte" href="@Url.Content("~/Solutions/FinancialPlanning")">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==== -->
+    <div class="seperate-sec">
+        <img src="@Url.Content("~/images/goal-bg1.jpg")" alt="" />
+        <div class="seperate-outr">
+            <div class="container">
+                <div class="seperate-innr wow fadeInLeft" data-wow-delay="0.5s">
+                    <div class="seperate-pic">
+                        <div class="seperate-pic-innr">
+                            <img src="@Url.Content("~/images/goal-icon.png")" alt="" />
+                        </div>
+                    </div>
+                    <div class="seperate-txt">
+                        <h5>Goal Planning</h5>
+                        <p>
+                            Most people don’t bother to set goals and subconsciously rely on luck to fulfill their dreams. Goals-based planning allows for a combined, coordinated and organized route to your shot at achieving essential goals that go well beyond the cliched "Retirement Fund" and "Rainy-day Fund" goals.
+                        </p>
+                        <a class="commn-bttn" href="@Url.Content("~/Solutions/GoalPlanning")">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==== -->
+    <div class="seperate-sec">
+        <img src="@Url.Content("~/images/investing-bg1.jpg")" alt="" />
+        <div class="seperate-outr">
+            <div class="container">
+                <div class="seperate-innr wow fadeInRight" data-wow-delay="0.5s">
+                    <div class="seperate-pic">
+                        <div class="seperate-pic-innr">
+                            <img src="@Url.Content("~/images/invest-icon.png")" alt="" />
+                        </div>
+                    </div>
+                    <div class="seperate-txt">
+                        <h5>Retirement Planning</h5>
+                        <p>
+                            Retirement planning is one of the most common forms of financial planning and even the most happy-go-lucky people in the world have at some point considered the idea of planning for life after retirement. It involves the consideration of a number of factors such as the age of retirement, the amount of money one will need to cover the living expenses, the lifestyle he/she plans to have once they have retired, and so on.
+                        </p>
+                        <a class="commn-bttn whte" href="@Url.Content("~/Solutions/RetirementPlanning")">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==== -->
+    <div class="seperate-sec">
+        <img src="@Url.Content("~/images/tax-bg1.jpg")" alt="" />
+        <div class="seperate-outr">
+            <div class="container">
+                <div class="seperate-innr wow fadeInLeft" data-wow-delay="0.5s">
+                    <div class="seperate-pic">
+                        <div class="seperate-pic-innr">
+                            <img src="@Url.Content("~/images/tax-icon.png")" alt="" />
+                        </div>
+                    </div>
+                    <div class="seperate-txt">
+                        <h5>Tax Planning</h5>
+                        <p>
+                            The purpose of tax planning is to ensure tax efficiency. Most people handle their taxes in a reactive manner rather than a proactive effort. Taxes being an integral part of your financial planning, all the elements of your financial plan should work together in the most tax-efficient manner possible, to maximize your after tax returns.
+                        </p>
+                        <a class="commn-bttn" href="@Url.Content("~/Solutions/TaxPlanning")">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end solutions -->
+
+<script src="@Url.Content("~/js/jquery-1.11.3.js")"></script>
+<script>
+    $(document).ready(function () {
+        $(".footmenu").each(function (e) {
+            if (e == '1') {
+                $(this).addClass('current-menu-item');
+            }
+        });
+
+        $(".headmenu").each(function (e) {
+            if (e == '1') {
+                $(this).addClass('current-menu-item');
+            }
+        });
+    });
+</script>

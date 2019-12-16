@@ -1,0 +1,239 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+
+<style>
+    .errborder {
+        border: 1px solid red !important;
+    }
+</style>
+<section class="inner-page">
+    <div class="container">
+        <ul class="breadcrumb all-outr">
+            <li>
+                <a href="#">My Account</a>
+            </li>
+            <li>
+                Add/Delete Family Members
+            </li>
+        </ul>
+        <div class="header-t head">
+            <h2>Add/Delete Family Members</h2>
+        </div>
+        <div class="rounded-box al-fnd add-famil-inn round1 space clearfix">
+
+            <div class="add-family">
+                <a href="javascript:void(0)" id="showdiv">
+                    Add Family Member <span id="plussign">+</span> <span class="hide" id="minsign">-</span>
+                </a>
+            </div>
+            <div class="row-custom addd-innr clearfix hide" id="divAddFM">
+                <div class="col-sm-3 ad-del select-box">
+                    <label>PAN Number</label>
+                    <input type="text" class="but txt-type" style="text-transform:uppercase" id="txtPNum" maxlength="10" />
+                    <label id="span_PNum" class="errormsg hide">Please insert pan number.</label>
+                    <label id="span_VPNum" class="errormsg hide">Please insert valid pan number.</label>
+                </div>
+                <div class="col-sm-2 select-box">
+                    <label>Client Code<sup style="color:red;">*</sup></label>
+                    <input type="text" class="but txt-type" id="txtCCode" maxlength="20" />
+                    <label id="span_CCode" class="errormsg hide">Please insert client code.</label>
+                </div>
+                <div class="col-sm-3 select-box">
+                    <label>Name<sup style="color:red;">*</sup></label>
+                    <input type="text" class="but txt-type" id="txtName" maxlength="150" />
+                    <label id="span_Name" class="errormsg hide">Please insert name.</label>
+                </div>
+                <div class="col-sm-3 select-box change arrow">
+                    <label>Relationship<sup style="color:red;">*</sup></label>
+                    <select class="selectpicker" id="ddRelationship">
+                        <option selected value="">Select</option>
+                        <option value="Father">Father</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Wife">Wife</option>
+                        <option value="Husband">Husband</option>
+                        <option value="Son">Son</option>
+                        <option value="Daughter">Daughter</option>
+                        <option value="Sister">Sister</option>
+                        <option value="Brother">Brother</option>
+                        <option value="Grand Father">Grand Father</option>
+                        <option value="Grand Mother">Grand Mother</option>
+                        <option value="Brother in law">Brother in law</option>
+                        <option value="Aunty">Aunty</option>
+                        <option value="Uncle">Uncle</option>
+                        <option value="HUF">HUF</option>
+                        <option value="Niece">Niece</option>
+                        <option value="Nephew">Nephew</option>
+                        <option value="Friend">Friend</option>
+                    </select>
+                    <label id="span_ddRelationship" class="errormsg hide">Please select relationship.</label>
+                </div>
+                <div class="col-sm-1 select-box clearfix">
+                    <label>&nbsp;</label>
+                    <a class="bttns torqu" href="javascript:void(0)" id="btnsubmit">Submit</a>
+                </div>
+            </div>
+            <!-- ==== -->
+            <p>No Family Member Present.</p>
+        </div>
+        <div class="alert alert-danger hide" id="div_error" role="alert" style="margin-top:1%;text-align:center">
+            <strong>Failed!</strong><span id="txt_error"></span>
+        </div>
+        <div class="alert alert-success hide" id="div_success" role="alert" style="margin-top:1%;text-align:center">
+            <strong>Success!</strong><span id="txt_success"></span>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    function validatepan(panno) {
+        var regpan = /^[\w]{3}(p|P|c|C|h|H|f|F|a|A|t|T|b|B|l|L|j|J|g|G)[\w][\d]{4}[\w]$/;
+        if (regpan.test(panno)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    $('body').on('click', '#btnsubmit', function (e) {
+        var Isvalid = true;
+        $('#span_ddRelationship').addClass('hide');
+        $('#span_Name').addClass('hide');
+        $('#span_CCode').addClass('hide');
+        $('#span_PNum').addClass('hide');
+        $('#span_VPNum').addClass('hide');
+        $('#txtName').removeClass('errborder');
+        $('#txtCCode').removeClass('errborder');
+        $('#txtPNum').removeClass('errborder');
+        $('.bootstrap-select').removeClass('errborder');
+
+        if ($('#ddRelationship').val() == "") {
+            $('#span_ddRelationship').removeClass('hide');
+            $('.bootstrap-select').addClass('errborder');
+            $('#ddRelationship').focus();
+            Isvalid = false;
+        }
+        if ($('#txtName').val() == "") {
+            $('#span_Name').removeClass('hide');
+            $('#txtName').addClass('errborder');
+            $('#txtName').focus();
+            Isvalid = false;
+        }
+        if ($('#txtCCode').val() == "") {
+            $('#span_CCode').removeClass('hide');
+            $('#txtCCode').addClass('errborder');
+            $('#txtCCode').focus();
+            Isvalid = false;
+        }
+        //if ($('#txtPNum').val() == "") {
+        //    $('#span_PNum').removeClass('hide');
+        //    $('#txtPNum').addClass('errborder');
+        //    $('#txtPNum').focus();
+        //    Isvalid = false;
+        //}
+        //else if (!validatepan($.trim($("#txtPNum").val()))) {
+        //    $('#span_VPNum').removeClass('hide');
+        //    $('#txtPNum').addClass('errborder');
+        //    $('#txtPNum').focus();
+        //    Isvalid = false;
+        //}
+
+        if (Isvalid) {
+            $('.ui-loader').removeClass('hide');
+            $('#btnsubmit').prop('disabled', true);
+            var Data =
+            {
+                PanNo: $('#txtPNum').val(),
+                ClientCode: $('#txtCCode').val(),
+                Name: $('#txtName').val(),
+                Relationship: $('#ddRelationship').val()
+            }
+            $.post("/Myaccount/AddFamilyMember", { JsonData: JSON.stringify(Data) }, function (data) {
+                Jsonresult = data.split('|');
+                $('.ui-loader').addClass('hide');
+                if (Jsonresult[0] == "Success") {
+                    $('#div_success').removeClass('hide');
+                    $('#txt_success').text(Jsonresult[1]);
+                    setTimeout(function () {
+                        $('#div_success').addClass('hide');
+                        $('#txt_success').text('');
+                        location.reload();
+                    }, 8000);
+                }
+                else if (Jsonresult[0] == "Failed") {
+                    $('#div_error').removeClass('hide');
+                    $('#txt_error').text(Jsonresult[1]);
+                    $('#btnsubmit').prop('disabled', false);
+                    setTimeout(function () {
+                        $('#div_error').addClass('hide');
+                        $('#txt_error').text('');
+                    }, 15000);
+                }
+            });
+        }
+
+
+    });
+
+    $('body').on('click', '.only-del', function (e) {
+        $('.ui-loader').removeClass('hide');
+        $(this).prop('disabled', true);
+        $.post("/Myaccount/DeleteFamilyMember", { id: $(this).data("id") }, function (data) {
+            Jsonresult = data.split('|');
+            $('.ui-loader').addClass('hide');
+            if (Jsonresult[0] == "Success") {
+                $('#div_success').removeClass('hide');
+                $('#txt_success').text(Jsonresult[1]);
+                setTimeout(function () {
+                    $('#div_success').addClass('hide');
+                    $('#txt_success').text('');
+                    location.reload();
+                }, 8000);
+            }
+            else if (Jsonresult[0] == "Failed") {
+                $('#div_error').removeClass('hide');
+                $('#txt_error').text(Jsonresult[1]);
+                $(this).prop('disabled', false);
+                setTimeout(function () {
+                    $('#div_error').addClass('hide');
+                    $('#txt_error').text('');
+                }, 15000);
+            }
+        });
+
+
+    });
+
+
+    $('body').on('click', '#showdiv', function (e) {
+
+        $('#span_ddRelationship').addClass('hide');
+        $('#span_Name').addClass('hide');
+        $('#span_CCode').addClass('hide');
+        $('#span_PNum').addClass('hide');
+        $('#span_VPNum').addClass('hide');
+        $('#txtName').removeClass('errborder');
+        $('#txtCCode').removeClass('errborder');
+        $('#txtPNum').removeClass('errborder');
+
+        $('.bootstrap-select').removeClass('errborder');
+        if ($('#plussign').hasClass('hide')) {
+            $('#plussign').removeClass('hide');
+            $('#minsign').addClass('hide');
+            $('#divAddFM').addClass('hide');
+        }
+        else {
+            $('#plussign').addClass('hide');
+            $('#minsign').removeClass('hide');
+            $('#divAddFM').removeClass('hide');
+        }
+
+    });
+</script>
+
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>

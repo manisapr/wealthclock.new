@@ -1,0 +1,182 @@
+﻿@{
+    ViewBag.Title = "WhyUs";
+    Layout = "~/Views/Shared/_LayoutAbout.cshtml";
+
+}
+
+<!-- banner -->
+<section class="bannr-sec why-us">
+    <div class="bannr-outr">
+        <div class="container">
+            <div class="bannr-innr wow fadeInUp" data-wow-delay="0.5s">
+                <h1>Why Us</h1>
+                <!-- <h5>Proin gravida nibh vel velit auctor alique enean sollicitudin</h5> -->
+            </div>
+        </div>
+    </div>
+    <!-- end banner -->
+    <!-- new mouse start -->
+    <div class="ng-scope" id="content-view">
+        <div style="display: block;" class="ng-scope" id="mouse-scroll">
+            <div><span class="unu"> </span> <span class="doi"> </span> <span class="trei"> </span> </div>
+        </div>
+    </div>
+    <!-- new mouse ends -->
+</section>
+
+<!-- long-term -->
+<section class="hm long-term text-center">
+    <div class="container">
+        <div class="long-outr commn-outr">
+            <p>
+                The financial market can be overwhelming. Why fight alone?
+                Finding the best investment option is a gamble. Think of us as your safe bet.
+                You don’t have to make financial decisions alone. We offer our expert just a click away. Sign up for free and gain access to all the latest happenings of financial market.
+            </p>
+            <!-- <a class="commn-bttn whte wow fadeInUp" data-wow-delay="0.5s" href="javascript:void(0)">read more</a> -->
+        </div>
+    </div>
+</section>
+<!-- end long-term -->
+<!-- why-us -->
+<figure class="why-main">
+    <section class="why-us-sec">
+        <div class="container">
+            <div class="why-us-innr wow fadeInUp">
+                <div class="why-txt" id="WhyDiv1">
+
+                </div>
+                <div class="why-pic">
+                    <img src="@Url.Content("~/images/prof-pic01.png")" alt="" />
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- == -->
+    <section class="why-us-sec">
+        <div class="container">
+            <div class="why-us-innr wow fadeInUp">
+                <div class="why-pic">
+                    <img src="@Url.Content("~/images/prof-pic02.png")" alt="" />
+
+                </div>
+                <div class="why-txt" id="WhyDiv2">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- == -->
+    <section class="why-us-sec">
+        <div class="container">
+            <div class="why-us-innr wow fadeInUp">
+                <div class="why-txt" id="WhyDiv3">
+
+                </div>
+                <div class="why-pic">
+                    <img src="@Url.Content("~/images/prof-pic03.png")" alt="" />
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- == -->
+    <section class="why-us-sec">
+        <div class="container">
+            <div class="why-us-innr wow fadeInUp">
+                <div class="why-pic">
+                    <img src="@Url.Content("~/images/prof-pic04.png")" alt="" />
+
+                </div>
+                <div class="why-txt" id="WhyDiv4">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- == -->
+    <section class="why-us-sec">
+        <div class="container">
+            <div class="why-us-innr wow fadeInUp">
+                <div class="why-txt" id="WhyDiv5">
+
+                </div>
+                <div class="why-pic">
+                    <img src="@Url.Content("~/images/prof-pic05.png")" alt="" />
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- == -->
+    <section class="why-us-sec">
+        <div class="container">
+            <div class="why-us-innr wow fadeInUp">
+                <div class="why-pic">
+                    <img src="@Url.Content("~/images/prof-pic06.png")" alt="" />
+
+                </div>
+                <div class="why-txt" id="WhyDiv6">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- == -->
+    <section class="why-us-sec">
+        <div class="container">
+            <div class="why-us-innr wow fadeInUp">
+                <div class="why-txt" id="WhyDiv7">
+
+                </div>
+                <div class="why-pic">
+                    <img src="@Url.Content("~/images/prof-pic07.png")" alt="" />
+
+                </div>
+            </div>
+        </div>
+    </section>
+</figure>
+<!-- end why-us -->
+
+<script src="@Url.Content("~/js/jquery-1.11.3.js")"></script>
+<script>
+
+    $(document).ready(function () {
+
+        $.get("@Url.Content("~/AboutUs/WhyDiv1")", function (data) {
+            $("#WhyDiv1").html(data);
+        });
+        $.get("@Url.Content("~/AboutUs/WhyDiv2")", function (data) {
+            $("#WhyDiv2").html(data);
+        });
+        $.get("@Url.Content("~/AboutUs/WhyDiv3")", function (data) {
+            $("#WhyDiv3").html(data);
+        });
+        $.get("@Url.Content("~/AboutUs/WhyDiv4")", function (data) {
+            $("#WhyDiv4").html(data);
+        });
+        $.get("@Url.Content("~/AboutUs/WhyDiv5")", function (data) {
+            $("#WhyDiv5").html(data);
+        });
+        $.get("@Url.Content("~/AboutUs/WhyDiv6")", function (data) {
+            $("#WhyDiv6").html(data);
+        });
+        $.get("@Url.Content("~/AboutUs/WhyDiv7")", function (data) {
+            $("#WhyDiv7").html(data);
+        });
+        $(".footmenu").each(function (e) {
+            if ($(this).text().trim() == '- About Us') {
+                $(this).addClass('current-menu-item');
+            }
+        });
+        $(".headmenu").each(function (e) {
+            if (e == '0') {
+                $(this).addClass('current-menu-item');
+            }
+        });
+
+    });
+</script>
+

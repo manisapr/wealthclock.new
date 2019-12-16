@@ -1,0 +1,1751 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+
+<section class="inner-page">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li><a href="#">My Account</a></li>
+            <li>Transaction History</li>
+        </ul>
+        <div class="rounded-box al-fnd clearfix">
+            <div class="header-t">
+                <h2>Transaction History</h2>
+            </div>
+            <div class="hist-status">
+                <div class="process active">
+                    <p>Processed</p>
+                    <span>67</span>
+                </div>
+                <div class="process">
+                    <p>In Process</p>
+                    <span>0</span>
+                </div>
+
+                <div class="process">
+                    <p>All</p>
+                </div>
+            </div>
+            <div class="row-custom clearfix">
+                <div class="col-sm-3 select-box">
+                    <label>Filter transactions:</label>
+                    <select class="selectpicker" id="dd_AmcName">
+                        <option value="">Select Amc</option>
+                        <option value="DSP_MF">DSP BlackRock Mutual Fund</option>
+                        <option value="NipponIndiaMutualFund_MF">Nippon India Mutual Fund</option>
+                        <option value="BirlaSunLifeMutualFund_MF">Aditya Birla Sunlife Mutul Fund</option>
+                    </select>
+                </div>
+                <div class="col-sm-2 select-box">
+                    <label>&nbsp;</label>
+                    <input type="text" class="but txt-type" placeholder="By Scheme Name" id="txt_schemeName" />
+                </div>
+                <div class="col-sm-2 select-box">
+                    <label>&nbsp;</label>
+                    <input type="text" class="but txt-type" placeholder="By Amount" id="txt_Amount" />
+                </div>
+                <div class="col-sm-3 select-box for_dv">
+                    <label>&nbsp;</label>
+                    <div class="selec-tbl">
+                        <p>For:</p>
+                        <input type="text" class="but txt-type" placeholder="By Date" id="txt_dateSearch" />
+                    </div>
+                </div>
+                <div class="col-sm-2 select-box clearfix">
+                    <label>&nbsp;</label>
+                    <input class="logbut" value="Submit" type="button" id="anc_submit">
+                </div>
+            </div>
+
+            <div class="row-custom clearfix">
+                <div class="col-sm-3 select-box">
+                    <input class="logbut hide" value="Reset" type="button" id="btn_ResetData">
+                </div>
+            </div>
+
+            <!-- ==== -->
+            <div class="record-outr">
+                <div id="maintable">
+                    <table class="ui celled table" cellspacing="0" width="100%" id="orderTable">
+                        <thead>
+                            <tr>
+                                <th>Transact Date</th>
+                                <th>Transaction ID</th>
+                                <th>Order Value</th>
+                                <th>Scheme</th>
+                                <th>Order Type</th>
+                                <th>Folio</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-11-25</td>
+                                <td class="record-area-cell">
+                                    <span>87490339</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 33/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-11-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847790</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-11-18</td>
+                                <td class="record-area-cell">
+                                    <span>21071503</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> -1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SIP REJECTION</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-10-25</td>
+                                <td class="record-area-cell">
+                                    <span>85468344</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 32/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-10-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847789</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-09-25</td>
+                                <td class="record-area-cell">
+                                    <span>83508524</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 31/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-09-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847788</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-08-26</td>
+                                <td class="record-area-cell">
+                                    <span>81514240</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 30/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-08-19</td>
+                                <td class="record-area-cell">
+                                    <span>13847787</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-07-25</td>
+                                <td class="record-area-cell">
+                                    <span>79451607</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 29/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-07-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847786</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-06-25</td>
+                                <td class="record-area-cell">
+                                    <span>77239443</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 28/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-06-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847785</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-05-27</td>
+                                <td class="record-area-cell">
+                                    <span>75196964</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 27/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-05-20</td>
+                                <td class="record-area-cell">
+                                    <span>13847784</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-04-25</td>
+                                <td class="record-area-cell">
+                                    <span>73062228</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 26/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-04-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847783</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-03-25</td>
+                                <td class="record-area-cell">
+                                    <span>70843686</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 25/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-03-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847782</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-02-25</td>
+                                <td class="record-area-cell">
+                                    <span>68710308</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 24/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-02-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847781</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-01-25</td>
+                                <td class="record-area-cell">
+                                    <span>66496967</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 23/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2019-01-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847780</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-12-26</td>
+                                <td class="record-area-cell">
+                                    <span>63978657</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 22/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-12-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847779</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-11-26</td>
+                                <td class="record-area-cell">
+                                    <span>61782608</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 21/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-11-19</td>
+                                <td class="record-area-cell">
+                                    <span>13847778</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-10-25</td>
+                                <td class="record-area-cell">
+                                    <span>59459690</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 20/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-10-19</td>
+                                <td class="record-area-cell">
+                                    <span>13847777</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-09-25</td>
+                                <td class="record-area-cell">
+                                    <span>57304802</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 19/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-09-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847776</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-08-27</td>
+                                <td class="record-area-cell">
+                                    <span>54907433</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 18/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-08-20</td>
+                                <td class="record-area-cell">
+                                    <span>13847775</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-07-25</td>
+                                <td class="record-area-cell">
+                                    <span>52539891</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 17/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-07-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847774</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-06-25</td>
+                                <td class="record-area-cell">
+                                    <span>50241072</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 16/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-06-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847773</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-05-25</td>
+                                <td class="record-area-cell">
+                                    <span>47926784</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 15/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-05-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847772</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-04-25</td>
+                                <td class="record-area-cell">
+                                    <span>45557942</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 14/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-04-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847771</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-03-26</td>
+                                <td class="record-area-cell">
+                                    <span>43135771</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 13/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-03-19</td>
+                                <td class="record-area-cell">
+                                    <span>13847770</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-02-26</td>
+                                <td class="record-area-cell">
+                                    <span>40531532</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 12/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-02-19</td>
+                                <td class="record-area-cell">
+                                    <span>13847769</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-01-25</td>
+                                <td class="record-area-cell">
+                                    <span>35132779</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 11/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2018-01-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847768</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-12-26</td>
+                                <td class="record-area-cell">
+                                    <span>30329979</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 10/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-12-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847767</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-11-27</td>
+                                <td class="record-area-cell">
+                                    <span>26610778</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 9/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-11-23</td>
+                                <td class="record-area-cell">
+                                    <span>53569323</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 25000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    ADITYA BIRLA SUNLIFE FRONTLINE EQUITY FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>FRESH PURCHASE</span>
+                                </td>
+                                <td class="record-area-cell">1036132079</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-11-20</td>
+                                <td class="record-area-cell">
+                                    <span>13847766</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-10-25</td>
+                                <td class="record-area-cell">
+                                    <span>24019997</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 8/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-10-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847765</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-09-25</td>
+                                <td class="record-area-cell">
+                                    <span>21658201</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 7/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-09-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847764</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-08-28</td>
+                                <td class="record-area-cell">
+                                    <span>19371863</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 6/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-08-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847763</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-07-25</td>
+                                <td class="record-area-cell">
+                                    <span>17099081</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 5/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-07-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847762</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-06-27</td>
+                                <td class="record-area-cell">
+                                    <span>15251702</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 4/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-06-19</td>
+                                <td class="record-area-cell">
+                                    <span>13847761</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-05-25</td>
+                                <td class="record-area-cell">
+                                    <span>13472599</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 3/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-05-18</td>
+                                <td class="record-area-cell">
+                                    <span>13847760</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC INVESTMENT</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-04-25</td>
+                                <td class="record-area-cell">
+                                    <span>11714811</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - INSTALMENT 2/994 - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-03-22</td>
+                                <td class="record-area-cell">
+                                    <span>9959741</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    DSP EQUITY &amp; BOND FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>SYSTEMATIC - ARN-115995/E172987</span>
+                                </td>
+                                <td class="record-area-cell">4171446/20</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                            <tr class="record-area-row">
+                                <td class="record-area-cell">2017-03-21</td>
+                                <td class="record-area-cell">
+                                    <span>13837860</span>
+                                </td>
+                                <td class="record-area-cell">
+                                    <span> 1000</span>
+                                </td>
+
+
+
+                                <td class="record-area-cell">
+                                    NIPPON INDIA LARGE CAP FUND (G)
+                                </td>
+
+                                <td class="record-area-cell">
+                                    <span>FRESH PURCHASE</span>
+                                </td>
+                                <td class="record-area-cell">423168635163</td>
+                                <td class="record-area-cell">
+                                    <p style="color:green">Done</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/DataTable/jquery-1.12.4.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $('.dashboard-menu').removeClass('active');
+    $('#anc_myaccount').addClass('active');
+
+    $(document).ready(function () {
+        $('.headerbottom li.active').removeClass('active');
+        $('.account-menu').addClass('active');
+
+        var d = new Date();
+        var day = d.getDate();
+        var month = d.getMonth();
+        var year = d.getFullYear();
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+        var finaldate = [year, month, day].join('-');
+
+        console.log("date is " + finaldate);
+
+        $('#txt_dateSearch').daterangepicker({
+            autoUpdateInput: false,
+            locale: {
+                cancelLabel: 'Clear',
+            }
+        });
+
+        $('#orderTable').DataTable({
+            "order": [[0, "desc"]],
+            "pageLength": 10,
+            "scrollX": true
+        });
+
+        var msg = '';
+        if (msg != "") {
+            $.alert({
+                title: 'Alert!',
+                content: msg,
+            });
+        }
+    })
+
+    $('#btn_ResetData').click(function (e) {
+        e.preventDefault();
+        $('.ui-loader').removeClass('hide');
+        $.post("/Myaccount/getonlyTransactionTable", function (result) {
+            if (result != "") {
+                $('#dd_AmcName').prop('selectedIndex', 0);
+                $('#dd_AmcName').selectpicker('refresh');
+                $('#txt_schemeName').val('');
+                $('#txt_Amount').val('');
+                $('#txt_dateSearch').val('');
+                $('#maintable').html('');
+                $('#maintable').html(result);
+                $('#orderTable').DataTable({
+                    "order": [[0, "desc"]],
+                    "pageLength": 10,
+                    "scrollX": true
+                });
+                $('#btn_ResetData').addClass('hide');
+                $('.ui-loader').addClass('hide');
+            }
+        })
+    })
+
+
+
+
+
+
+
+
+
+
+    $('#txt_dateSearch').on('cancel.daterangepicker', function (ev, picker) {
+        $(this).val('');
+    });
+
+    $('#txt_dateSearch').on('apply.daterangepicker', function (ev, picker) {
+        $(this).val(picker.startDate.format('YYYY-MM-DD') + ' to ' + picker.endDate.format('YYYY-MM-DD'));
+    });
+
+    $('#anc_submit').click(function (e) {
+        e.preventDefault();
+        $('.ui-loader').removeClass('hide');
+        $.post("/Myaccount/FilterTransactionTable", { amccode: $('#dd_AmcName').val(), schemename: $.trim($('#txt_schemeName').val()), amount: $.trim($('#txt_Amount').val()), date: $.trim($('#txt_dateSearch').val()) }, function (result) {
+            $('.ui-loader').removeClass('hide');
+            if (result != "") {
+                $('#maintable').html('');
+                $('#maintable').html(result);
+                $('#orderTable').DataTable({
+                    "order": [[0, "desc"]],
+                    "pageLength": 10,
+                    "scrollX": true
+                });
+                $('.ui-loader').addClass('hide');
+                $('#btn_ResetData').removeClass('hide');
+                $('.ui-loader').addClass('hide');
+            }
+
+            else {
+                $('.ui-loader').addClass('hide');
+                $.alert({
+                    title: 'Alert!',
+                    theme: 'black',
+                    content: 'Sorry No Data Found!',
+                })
+            }
+        })
+    })
+</script>
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>
+

@@ -1,0 +1,1061 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+<style>
+    .modal {
+        position: fixed !important;
+        top: 0% !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        z-index: 1050 !important;
+    }
+
+    .ui.grid {
+        width: 100%;
+        margin-left: 1% !important;
+    }
+
+    .fade.in {
+        height: 200%;
+    }
+
+    .modal-content {
+        margin-top: 25%;
+    }
+
+    .red-tooltip + .tooltip > .tooltip-inner {
+        background-color: red !important;
+    }
+
+    th {
+        text-align: center !important;
+        background: #f0f5f5 !important;
+        color: #898989 !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        border-right: 1px solid #e9eaeb !important;
+        border-bottom: 1px solid #e9eaeb !important;
+        position: relative !important;
+        text-align: center !important;
+        background: #f0f5f5 !important;
+    }
+
+    td {
+        text-align: left;
+        font-size: 12px;
+        color: #000000;
+        padding: 8px;
+    }
+
+    .paginate_button {
+        color: #0CAEA3 !important;
+    }
+
+    .buttons-excel, .buttons-pdf, .buttons-copy {
+        display: none !important;
+    }
+
+    .dataTables_paginate {
+        margin-top: 10px;
+    }
+
+    .highcharts-contextbutton {
+        display: none;
+    }
+</style>
+
+<section class="inner-page">
+    <div class="container-fluid">
+        <ul class="breadcrumb all-outr">
+            <li><a href="#">My Account</a></li>
+            <li>Family Account View</li>
+        </ul>
+        <div class="">
+            <div class="header-t head">
+                <h2>Family View</h2>
+            </div>
+            <div class="btn-sec1  bt-sps">
+                <a href="https://www.wealthclockadvisors.com/Myaccount/PortfolioView" class="">
+                    Individual Portfolio
+                </a>
+                <a href="https://www.wealthclockadvisors.com/Myaccount/FamilyAccountView" class="">
+                    Family Portfolio
+                </a>
+            </div>
+            <div class="rounded-box round1 space">
+                <section class="incep-btn-sec">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <a href="javascript:void(0)">
+                                    <div class="incep-btn bg-blue">
+                                        <div class="incep-btn-pic">
+                                            <img src="/images/images_Dashboard/portfolio01.png" alt="" />
+                                        </div>
+                                        <span>`</span>
+                                        <div class="incep-btn-txt">
+
+                                            <h3>89000.00</h3>
+                                            <p>
+                                                Net Investment
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- == -->
+                            <div class="col-md-3 col-sm-6">
+                                <a href="javascript:void(0)">
+                                    <div class="incep-btn bg-brown">
+                                        <div class="incep-btn-pic">
+                                            <img src="/images/images_Dashboard/portfolio02.png" alt="" />
+                                        </div>
+                                        <span>`</span>
+                                        <div class="incep-btn-txt">
+                                            <h3>97479.80</h3>
+
+                                            <p>
+                                                Current Market Value
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- == -->
+                            <div class="col-md-3 col-sm-6">
+                                <a href="javascript:void(0)">
+                                    <div class="incep-btn bg-torqiuse no-aftr">
+                                        <div class="incep-btn-pic">
+                                            <img src="/images/images_Dashboard/portfolio03.png" alt="" />
+                                        </div>
+                                        <span>`</span>
+                                        <div class="incep-btn-txt">
+
+                                            <h3>8479.80</h3>
+                                            <p>
+                                                Unrealised Gain
+                                            </p>
+                                        </div>
+                                        <div class="up-arrow">
+
+
+                                            9.53%
+
+                                            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- == -->
+                            <div class="col-md-3 col-sm-6">
+                                <a href="#">
+                                    <div class="incep-btn bg-dr-grey no-aftr">
+                                        <div class="incep-btn-pic">
+                                            <img src="/images/images_Dashboard/portfolio01.png" alt="" />
+                                        </div>
+                                        <span>`</span>
+                                        <div class="incep-btn-txt">
+                                            <h3>6.1 %</h3>
+                                            <p>
+                                                Annualized Gain<i class="fa fa-info-circle " title="Annualized rate of return and XIRR has been calculated considering active units by Microsoft Excel methodology" aria-hidden="true"></i>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="fam_acc_view">
+                    <div class="container-fluid">
+                        <h5>Family Members</h5>
+                        <ul class="fam_view_out">
+                            <li>
+                                <div class="pic_names">
+                                    <div class="fam_pics">
+                                        <div class="fam_pics_in" id="up_img" data-id="WC08170072" title="Click here to upload image">
+
+
+                                            <img src="/images/woman1.jpg" alt="">
+
+                                        </div>
+                                    </div>
+                                    <div class="fammem_name">
+                                        Paridhi Sokal
+                                    </div>
+                                </div>
+                                <ul class="fam_inve_dtls">
+                                    <li>
+                                        <em>89000.00</em>
+                                        <span>Investments</span>
+                                    </li>
+                                    <li>
+                                        <em>97479.80</em>
+                                        <span>Current Market Value</span>
+                                    </li>
+                                    <li>
+                                        <em>8479.80</em>
+                                        <span>Gain</span>
+                                    </li>
+
+                                    <li>
+                                        <em>6.1</em>
+                                        <span>Annualized Gain</span>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                        <div class="dash_btn_mem hide" id="DownArrow">
+                            <a href="javascript:void(0)"><i class="fa fa-desktop" aria-hidden="true"></i>Family View Portfolio<i class="fa fa-caret-up" id="downarrow" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="dash_btn_mem" id="UpArrow">
+                            <a href="javascript:void(0)"><i class="fa fa-desktop" aria-hidden="true"></i>Family View Portfolio<i class="fa fa-caret-down" id="uparrow" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <figure id="figSearch" class="hide">
+                    <div class="clearfix filter-sec">
+                        <div class="fltr-srch clearfix" id="serdivforcurhold">
+                            search
+                            <input type="search" id="curholdsrch">
+                        </div>
+                        <div class="fltr-srch clearfix hide" id="serdivforinsp">
+                            search
+                            <input type="search" id="inspsrch">
+                        </div>
+                        <div class="fltr-group clearfix">
+                            Group by
+                            <a href="javascript:void(0)" id="anc_folioGroup">Folio</a>
+                            <a href="javascript:void(0)" id="anc_schemeName">Scheme</a>
+                        </div>
+                        <div class="fltr-outr clearfix">
+                            <p>Filter</p>
+                            <ul>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-filter" aria-hidden="true" title="Filter Column"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="remember-me">
+                                                <input class="filter_TableType" type="checkbox" value="Category" id="opening" name="check" data-name="category" checked />
+                                                <label for="opening"><span></span>Category</label>
+                                            </div>
+                                            <div class="remember-me">
+                                                <input class="filter_TableType" type="checkbox" value="Folio No." id="opening1" name="check" data-name="foliono" checked />
+                                                <label for="opening1"><span></span>Folio No</label>
+                                            </div>
+                                            <div class="remember-me">
+                                                <input class="filter_TableType" type="checkbox" value="Unit Balance" id="opening2" name="check" data-name="unitbalance" checked />
+                                                <label for="opening2"><span></span>Balance Units</label>
+                                            </div>
+                                            <div class="remember-me">
+                                                <input class="filter_TableType" type="checkbox" value="Nav/Date" id="opening3" name="check" data-name="navDate" checked />
+                                                <label for="opening3"><span></span>Latest NAV (Rs.) / NAV Date</label>
+                                            </div>
+                                            <div class="remember-me">
+                                                <input class="filter_TableType" type="checkbox" value="Net Investment" id="opening4" name="check" data-name="netinvest" checked />
+                                                <label for="opening4"><span></span>Invested (Rs.)</label>
+                                            </div>
+                                            <div class="remember-me">
+                                                <input class="filter_TableType" type="checkbox" value="Dividend Reinvested (Rs.)" id="opening5" data-name="dividendReinvestment" name="check" checked />
+                                                <label for="opening5"><span></span>Dividend Reinvested (Rs.)</label>
+                                            </div>
+                                            <div class="remember-me">
+                                                <input class="filter_TableType" type="checkbox" value="Dividend Received (Rs.)" id="opening6" name="check" data-name="dividendReceived" checked />
+                                                <label for="opening6"><span></span>Dividend Received (Rs.)</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" id="anc_Clipboard" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">
+                                        <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" id="anc_Excel" data-toggle="tooltip" data-placement="top" title="Family View Portfolio Summary">
+                                        <i class="fa fa-file-excel-o" aria-hidden="true" style="color: brown;"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Myaccount/%20pdfviewforportfoliofamily" target="_blank" id="anc_PDF" data-toggle="tooltip" data-placement="top" title="Download as a PDF">
+                                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </figure>
+                <figure class="tab-sec hide" id="details">
+                    <ul class="nav nav-tabs responsive">
+                        <li class="active"><a data-toggle="tab" href="#menu1" id="mencurhold">Current Holding</a></li>
+                        <li><a data-toggle="tab" href="#menu2" id="anc_sinceInception">Since Inception</a></li>
+                    </ul>
+                    <div class="tab-content responsive" style="margin-top:10px">
+                        <div id="menu1" class="tab-pane fade in active">
+                            <div class="record-outr" id="first_div">
+
+
+                                <style>
+                                    #current_holding_filter {
+                                        display: none;
+                                    }
+
+                                    .transactt {
+                                        background: #63b751;
+                                        border-radius: 4px;
+                                        color: #ffffff;
+                                        display: block;
+                                        font-size: 14px;
+                                        height: 28px;
+                                        line-height: 28px;
+                                        padding: 0;
+                                        text-align: center;
+                                        text-transform: capitalize;
+                                    }
+
+                                    .dropdown-menu {
+                                        border-radius: 0;
+                                        -moz-border-radius: 0;
+                                        -webkit-border-radius: 0;
+                                    }
+
+                                    .dropdown-menu {
+                                        position: absolute;
+                                        top: 100%;
+                                        left: 0;
+                                        z-index: 1000;
+                                        display: none;
+                                        float: left;
+                                        min-width: 160px;
+                                        padding: 5px 0;
+                                        margin: 2px 0 0;
+                                        font-size: 14px;
+                                        text-align: left;
+                                        list-style: none;
+                                        background-color: #fff;
+                                        -webkit-background-clip: padding-box;
+                                        background-clip: padding-box;
+                                        border: 1px solid #ccc;
+                                        border: 1px solid rgba(0, 0, 0, .15);
+                                        border-radius: 4px;
+                                        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                                        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                                    }
+                                </style>
+
+                                <table id="current_holding" class="ui celled table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th class="record-area-cellhead">Scheme</th>
+                                            <th class="record-area-cellhead category">Category</th>
+                                            <th class="record-area-cellhead foliono">Folio</th>
+                                            <th class="record-area-cellhead netinvest">Investment</th>
+                                            <th class="record-area-cellhead unitbalance">Units</th>
+                                            <th class="record-area-cellhead">CurrentValue</th>
+                                            <th class="record-area-cellhead navDate">Nav/Date</th>
+                                            <th class="record-area-cellhead">Returns</th>
+                                            <th class="record-area-cellhead">Returns%</th>
+                                            <th class="record-area-cellhead">Gain%</th>
+                                            <th class="record-area-cellhead">Member Name</th>
+
+                                            <th class="record-area-cellhead">Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="record-area-row">
+                                        <tr>
+                                            <td class="record-area-cell" style="text-align:left !important">
+                                                <!--scheme name-->
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="Aditya Birla SunLife Frontline Equity Fund (G)" data-original-title="Aditya Birla SunLife Frontline Equity Fund (G)" class="red-tooltip">
+
+                                                    Aditya Birla SunLife Frontline Equity Fund (G)
+                                                </a>
+
+                                            </td>
+                                            <td class="record-area-cell category">
+
+                                                Large cap
+
+                                            </td>
+                                            <td class="record-area-cell foliono">
+                                                <!--units-->
+                                                1036132079
+                                            </td>
+                                            <td class="record-area-cell netinvest">25000.0</td>
+                                            <td class="record-area-cell unitbalance">115.0</td>
+                                            <td class="record-area-cell">26612.6</td>
+                                            <td class="record-area-cell navDate">
+                                                <span>231.4 <br />-------- <br /> 26 Nov, 19</span>
+                                            </td>
+                                            <td class="record-area-cell">1612.6</td>
+                                            <td class="record-area-cell">6.4</td>
+                                            <td class="record-area-cell">3.2</td>
+
+                                            <td class="record-area-cell text-center">
+                                                Paridhi Sokal
+                                            </td>
+
+
+                                            <td class="record-area-cell">
+                                                <a href="javascript:void(0)" class="anc_details" data-schemecode="92" data-clientcode="WC08170072" data-foliono="1036132079"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-area-cell" style="text-align:left !important">
+                                                <!--scheme name-->
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="Nippon India Large Cap Fund (G)" data-original-title="Nippon India Large Cap Fund (G)" class="red-tooltip">
+
+                                                    Nippon India Large Cap Fund (G)
+                                                </a>
+
+                                            </td>
+                                            <td class="record-area-cell category">
+
+                                                Large cap
+
+                                            </td>
+                                            <td class="record-area-cell foliono">
+                                                <!--units-->
+                                                423168635163
+                                            </td>
+                                            <td class="record-area-cell netinvest">31000.0</td>
+                                            <td class="record-area-cell unitbalance">963.7</td>
+                                            <td class="record-area-cell">34028.2</td>
+                                            <td class="record-area-cell navDate">
+                                                <span>35.3 <br />-------- <br /> 26 Nov, 19</span>
+                                            </td>
+                                            <td class="record-area-cell">3028.2</td>
+                                            <td class="record-area-cell">9.8</td>
+                                            <td class="record-area-cell">7.0</td>
+
+                                            <td class="record-area-cell text-center">
+                                                Paridhi Sokal
+                                            </td>
+
+
+                                            <td class="record-area-cell">
+                                                <a href="javascript:void(0)" class="anc_details" data-schemecode="EARG" data-clientcode="WC08170072" data-foliono="423168635163"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-area-cell" style="text-align:left !important">
+                                                <!--scheme name-->
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="DSP Equity &amp; Bond Fund (G)" data-original-title="DSP Equity &amp; Bond Fund (G)" class="red-tooltip">
+
+                                                    DSP Equity &amp; Bond Fund (G)
+                                                </a>
+
+                                            </td>
+                                            <td class="record-area-cell category">
+
+                                                Hybrid: Equity-Oriented
+
+                                            </td>
+                                            <td class="record-area-cell foliono">
+                                                <!--units-->
+                                                4171446/20
+                                            </td>
+                                            <td class="record-area-cell netinvest">33000.0</td>
+                                            <td class="record-area-cell unitbalance">227.6</td>
+                                            <td class="record-area-cell">36838.9</td>
+                                            <td class="record-area-cell navDate">
+                                                <span>161.9 <br />-------- <br /> 26 Nov, 19</span>
+                                            </td>
+                                            <td class="record-area-cell">3838.9</td>
+                                            <td class="record-area-cell">11.6</td>
+                                            <td class="record-area-cell">8.4</td>
+
+                                            <td class="record-area-cell text-center">
+                                                Paridhi Sokal
+                                            </td>
+
+
+                                            <td class="record-area-cell">
+                                                <a href="javascript:void(0)" class="anc_details" data-schemecode="DSP01-GR" data-clientcode="WC08170072" data-foliono="4171446/20"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- ==2nd== -->
+                        <div id="menu2" class="tab-pane fade">
+                            <div class="record-outr sincepage" id="second_div">
+
+
+                                <style>
+                                    #since_incept_length, #since_incept_filter {
+                                        display: none;
+                                    }
+
+                                    ._noDisplay .record-area-cell {
+                                        display: none;
+                                    }
+
+
+                                    tfoot input {
+                                        width: 100%;
+                                        padding: 3px;
+                                        box-sizing: border-box;
+                                    }
+
+                                    th {
+                                        text-align: center !important;
+                                        background: #f0f5f5 !important;
+                                        font-weight: bold !important;
+                                        border-right: 1px solid #e9eaeb !important;
+                                        border-bottom: 1px solid #e9eaeb !important;
+                                        position: relative !important;
+                                    }
+
+                                    td {
+                                        text-align: center !important;
+                                    }
+
+                                    tfoot {
+                                        display: table-header-group;
+                                    }
+                                </style>
+
+                                <table id="since_incept" class="ui celled table" cellspacing="0">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Scheme</th>
+                                            <th class="foliono">Folio No.</th>
+                                            <th class="unitbalance">Unit Balance</th>
+                                            <th>Net Investment</th>
+                                            <th>Dividend Reinvested (Rs.)</th>
+                                            <th>Dividend Received (Rs.)</th>
+                                            <th>Redeemed</th>
+                                            <th>Current Market Value</th>
+                                            <th>Nav/Date</th>
+                                            <th>Gains Including Dividend Received</th>
+                                            <th>Absolute Gains</th>
+                                            <th class="record-area-cellhead">Member Name</th>
+                                            <th>Detail</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tfoot>
+                                        <tr>
+                                            <th>Scheme</th>
+                                            <th class="foliono">Folio No.</th>
+                                            <th class="unitbalance">Unit Balance</th>
+                                            <th>Net Investment</th>
+                                            <th>Dividend Reinvested (Rs.)</th>
+                                            <th>Dividend Received (Rs.)</th>
+                                            <th>Redeemed</th>
+                                            <th>Current Market Value</th>
+                                            <th>Nav/Date</th>
+                                            <th>Gains Including Dividend Received</th>
+                                            <th>Absolute Gains</th>
+                                            <th>Member Name</th>
+                                            <th>Detail</th>
+                                        </tr>
+                                    </tfoot>
+
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:left !important">
+                                                <!--scheme name-->
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="DSP Equity &amp; Bond Fund (G)" data-original-title="DSP Equity &amp; Bond Fund (G)" class="red-tooltip">
+                                                    DSP Equity &amp; Bond Fund (G)
+                                                </a>
+
+                                            </td>
+                                            <td class="foliono">
+                                                <!--folio-->
+                                                4171446/20
+                                            </td>
+                                            <td class="unitbalance">
+                                                <!--units-->
+                                                <span> 227.575</span>
+                                            </td>
+                                            <td class="netinvest">
+                                                33000.0
+                                            </td>
+                                            <td>
+                                                <span>0.0</span>
+
+                                            </td>
+                                            <td>
+                                                <span>0.0</span>
+
+                                            </td>
+                                            <td>
+                                                <span>0.0</span>
+                                            </td>
+                                            <td>
+                                                <!--Value-->
+                                                <span> 36838.9 </span>
+                                            </td>
+                                            <td class="navDate">
+                                                <span>161.9 <br />-------- <br /> 26 Nov, 19</span>
+                                            </td>
+                                            <td>
+                                                <span> 3838.9</span>
+                                            </td>
+                                            <td>
+                                                <span> 3838.9</span>
+                                                <!--Returns-->
+                                            </td>
+                                            <td>
+                                                Paridhi Sokal
+                                            </td>
+                                            <td>
+                                                <a href="javascript:void(0)" data-schemecode="DSP01-GR" data-clientcode="WC08170072" data-foliono="4171446/20" class="anc_details"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:left !important">
+                                                <!--scheme name-->
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="Nippon India Large Cap Fund (G)" data-original-title="Nippon India Large Cap Fund (G)" class="red-tooltip">
+                                                    Nippon India Large Cap Fund (G)
+                                                </a>
+
+                                            </td>
+                                            <td class="foliono">
+                                                <!--folio-->
+                                                423168635163
+                                            </td>
+                                            <td class="unitbalance">
+                                                <!--units-->
+                                                <span> 963.683</span>
+                                            </td>
+                                            <td class="netinvest">
+                                                31000.0
+                                            </td>
+                                            <td>
+                                                <span>0.0</span>
+
+                                            </td>
+                                            <td>
+                                                <span>0.0</span>
+
+                                            </td>
+                                            <td>
+                                                <span>0.0</span>
+                                            </td>
+                                            <td>
+                                                <!--Value-->
+                                                <span> 34028.2 </span>
+                                            </td>
+                                            <td class="navDate">
+                                                <span>35.3 <br />-------- <br /> 26 Nov, 19</span>
+                                            </td>
+                                            <td>
+                                                <span> 3028.2</span>
+                                            </td>
+                                            <td>
+                                                <span> 3028.2</span>
+                                                <!--Returns-->
+                                            </td>
+                                            <td>
+                                                Paridhi Sokal
+                                            </td>
+                                            <td>
+                                                <a href="javascript:void(0)" data-schemecode="EARG" data-clientcode="WC08170072" data-foliono="423168635163" class="anc_details"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:left !important">
+                                                <!--scheme name-->
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="Aditya Birla SunLife Frontline Equity Fund (G)" data-original-title="Aditya Birla SunLife Frontline Equity Fund (G)" class="red-tooltip">
+                                                    Aditya Birla SunLife Frontline Equity Fund (G)
+                                                </a>
+
+                                            </td>
+                                            <td class="foliono">
+                                                <!--folio-->
+                                                1036132079
+                                            </td>
+                                            <td class="unitbalance">
+                                                <!--units-->
+                                                <span> 115.027</span>
+                                            </td>
+                                            <td class="netinvest">
+                                                25000.0
+                                            </td>
+                                            <td>
+                                                <span>0.0</span>
+
+                                            </td>
+                                            <td>
+                                                <span>0.0</span>
+
+                                            </td>
+                                            <td>
+                                                <span>0.0</span>
+                                            </td>
+                                            <td>
+                                                <!--Value-->
+                                                <span> 26612.6 </span>
+                                            </td>
+                                            <td class="navDate">
+                                                <span>231.4 <br />-------- <br /> 26 Nov, 19</span>
+                                            </td>
+                                            <td>
+                                                <span> 1612.6</span>
+                                            </td>
+                                            <td>
+                                                <span> 1612.6</span>
+                                                <!--Returns-->
+                                            </td>
+                                            <td>
+                                                Paridhi Sokal
+                                            </td>
+                                            <td>
+                                                <a href="javascript:void(0)" data-schemecode="92" data-clientcode="WC08170072" data-foliono="1036132079" class="anc_details"><img src="/images/images_Dashboard/details_open.png" alt=""></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                                <script type="text/javascript">
+                                    $(document).ready(function () {
+                                        $("a").tooltip();
+
+                                        // Setup - add a text input to each footer cell
+                                        $('#since_incept tfoot th').each(function () {
+                                            var title = $(this).text();
+                                            $(this).html('<div class="record-area-cell"><input type="text" placeholder="Search" /></div>');
+                                        });
+
+
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+
+        </div>
+</section>
+
+<!-- Modal -->
+<button id="anc_openModal" data-toggle="modal" data-target="#myModal" class="hide"></button>
+<button id="anc_openModalForPic" data-toggle="modal" data-target="#upld_pic_modal" class="hide"></button>
+<script src=" ~ /&gt;js/highcharts.js"></script>
+<script src=" ~ /&gt;js/highcharts-3d.js"></script>
+<script src=" ~ /&gt;js/exporting.js"></script>
+<script src=" ~ /&gt;js/highcharts-more.js"></script>
+<script src=" ~ /&gt;js/solid-gauge.src.js"></script>
+
+<script>
+    var json;
+
+    json = JSON.parse("".replace(/&quot;/g, '"'));
+
+
+    var data = [];
+    for (var i in json) {
+        var serie = new Array(json[i].name, json[i].y);
+        data.push(serie);
+    }
+
+
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie',
+            backgroundColor: '#d9eaea',
+            height: 330,
+            margin: [0, 0, 0, 0],
+            spacingTop: 0,
+            spacingBottom: 0,
+            spacingLeft: 0,
+            spacingRight: 0,
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Investment Family Member Allocation',
+            style: {
+                fontWeight: 'bold'
+            }
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                colors: [
+                    '#42EA5B', '#953881', '#AD86A3', '#2C5034', '#B2D7F5', '#F9F379', '#D1F16D', '#5E790A',
+                    '#4BFAA5', '#42C6EA', '#AA42EA', '#EA5B42', '#E242EA', '#428EEA', '#29658E', '#3F2C7A',
+                    '#2F7F95', '#DA0844', '#B1F9C0', '#035FC6', '#978AAE', '#B74997', '#DA0808', '#FAEB4B',
+
+                ],
+                allowPointSelect: true,
+                cursor: 'pointer',
+                size: 240,
+                depth: 20,
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Total Investment',
+            data: data
+        }]
+    });
+
+</script>
+
+<section class="inception-model">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+    </div>
+    <div id="upld_pic_modal" class="modal fade" role="dialog">
+    </div>
+</section>
+
+<script type="text/javascript">
+    $('body').on('click', '.anc_details', function (result) {
+
+        $('.ui-loader').removeClass('hide');
+        $.post("/Myaccount/getOrderDetailsForFamily", { schemecode: $(this).data('schemecode'), clietcode: $(this).data('clientcode'), foliono: $(this).data('foliono') }, function (result) {
+            if (result != "") {
+                $('#myModal').html('');
+                $('#myModal').html(result);
+                $('.ui-loader').addClass('hide');
+                $('#anc_openModal').trigger('click');
+            }
+        })
+    })
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function (e) {
+        $('.headerbottom li.active').removeClass('active');
+        $('.account-menu').addClass('active');
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+        var chtab = $('#current_holding').DataTable({
+            /* No ordering applied by DataTables during initialisation */
+            dom: 'Bfrtip', //export Data
+            "order": [],
+            "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+            buttons: [
+                'copy', 'excel', 'pdf'
+            ]
+        });
+        $("#curholdsrch").keyup(function () {
+            chtab.search(this.value).draw();
+        });
+
+        var table = $('#since_incept').DataTable({
+            /* No ordering applied by DataTables during initialisation */
+            "order": [],
+            "pageLength": 5
+        });
+        $("#inspsrch").keyup(function () {
+            table.search(this.value).draw();
+        });
+        // Apply the search
+        table.columns().every(function () {
+            var that = this;
+
+            $('input', this.footer()).on('keyup change', function () {
+                console.log('search value ' + this.value)
+
+                if (that.search() !== this.value) {
+                    that
+                        .search(this.value)
+                        .draw();
+                }
+            });
+        });
+        $('#anc_sinceInception').click(function (e) {
+            $('#serdivforinsp').removeClass('hide');
+            $('#serdivforcurhold').addClass('hide');
+            $("#inspsrch").val('');
+            $("#curholdsrch").val('');
+            chtab.search($("#curholdsrch").val()).draw();
+            table.search($("#inspsrch").val()).draw();
+        });
+        $('#mencurhold').click(function (e) {
+            $('#serdivforinsp').addClass('hide');
+            $('#serdivforcurhold').removeClass('hide');
+            $("#inspsrch").val('');
+            $("#curholdsrch").val('');
+            chtab.search($("#curholdsrch").val()).draw();
+            table.search($("#inspsrch").val()).draw();
+        });
+    })
+</script>
+
+<!--filter checkbix-->
+<script type="text/javascript">
+    $(".filter_TableType").change(function () {
+        var ischecked = $(this).is(':checked');
+
+        var $tbl = $("#current_holding");
+        var $_tbl = $("#since_incept");
+
+        $($tbl.find("." + $(this).data("name"))).toggle();
+        $($_tbl.find("." + $(this).data("name"))).toggle();
+    });
+</script>
+
+<!--Generate Document-->
+<script type="text/javascript">
+    $('#anc_Excel').click(function (e) {
+        e.preventDefault();
+        $('.buttons-excel').trigger('click');
+    })
+    //$('#anc_PDF').click(function (e) {
+    //    e.preventDefault();
+    //    $('.buttons-pdf').trigger('click');
+    //})
+    $('#anc_Clipboard').click(function (e) {
+        e.preventDefault();
+        $('.buttons-copy').trigger('click');
+    })
+</script>
+
+
+<!--group by folio-->
+<script type="text/javascript">
+    $('#anc_folioGroup').click(function (e) {
+        e.preventDefault();
+        $('.ui-loader').removeClass('hide');
+        $.post("/Myaccount/_groupbyFamilyFolio", function (result) {
+            if (result != "") {
+                $("#first_div").html('');
+                $('#first_div').html(result);
+                $('#current_holding').DataTable({
+                    /* No ordering applied by DataTables during initialisation */
+                    dom: 'Bfrtip', //export Data
+                    "order": [],
+                    "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                    buttons: [
+                        'copy', 'excel', 'pdf'
+                    ]
+                });
+            }
+        })
+
+        $.post("/Myaccount/_groupbyFamilyFoliSinceinception", function (result) {
+            if (result != "") {
+                $("#second_div").html('');
+                $('#second_div').html(result);
+                var table = $('#since_incept').DataTable({
+                    /* No ordering applied by DataTables during initialisation */
+                    "order": [],
+                    "pageLength": 5
+                });
+            }
+            $('.ui-loader').addClass('hide');
+        })
+    })
+
+    $('#anc_schemeName').click(function (e) {
+        e.preventDefault();
+        $('.ui-loader').removeClass('hide');
+        $.post("/Myaccount/_groupbyFamilyScheme", function (result) {
+            if (result != "") {
+                $("#first_div").html('');
+                $('#first_div').html(result);
+                $('#current_holding').DataTable({
+                    /* No ordering applied by DataTables during initialisation */
+                    dom: 'Bfrtip', //export Data
+                    "order": [],
+                    "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+                    buttons: [
+                        'copy', 'excel', 'pdf'
+                    ]
+                });
+            }
+        })
+
+        $.post("/Myaccount/_groupByFamilySchemeSinceInception", function (result) {
+            if (result != "") {
+                $("#second_div").html('');
+                $('#second_div').html(result);
+                var table = $('#since_incept').DataTable({
+                    /* No ordering applied by DataTables during initialisation */
+                    "order": [],
+                    "pageLength": 5
+                });
+                $('.ui-loader').addClass('hide');
+            }
+        })
+    })
+</script>
+
+<!--Order dettails by folio by-->
+<script type="text/javascript">
+    $('body').on('change', '#dd_orderFolioDropdown', function (e) {
+        e.preventDefault();
+        var scheme = $(this).find(':selected').data('schemecode');
+        $('.ui-loader').removeClass('hide');
+        if ($('#dd_orderFolioDropdown').val() != "") {
+            $.post("/Myaccount/getOrderDetailsbyFolio", { schemecode: scheme, folioNumber: $(this).val() }, function (result) {
+                if (result != "") {
+                    $('#data_div').html('');
+                    $('#data_div').html(result);
+                    $('.ui-loader').addClass('hide');
+                }
+            })
+        }
+        else {
+            $.post("/Myaccount/getOrderDetailsNormal", { schemecode: scheme }, function (result) {
+                if (result != "") {
+                    $('#data_div').html('');
+                    $('#data_div').html(result);
+                    $('.ui-loader').addClass('hide');
+                }
+            })
+        }
+
+    })
+    $('#DownArrow').click(function () {
+        $('#UpArrow').removeClass('hide');
+        $(this).addClass('hide');
+        $('#details').addClass('hide');
+        $('#figSearch').addClass('hide');
+    })
+    $('#UpArrow').click(function () {
+        $('#DownArrow').removeClass('hide');
+        $(this).addClass('hide');
+        $('#details').removeClass('hide');
+        $('#figSearch').removeClass('hide');
+    })
+    $('.fam_pics_in').click(function () {
+        debugger;
+        var clientCode = $(this).attr('data-id');
+        $.post("/Myaccount/ModalForProfilePic", { clientCode: clientCode }, function (result) {
+            $('#upld_pic_modal').html('');
+            $('#upld_pic_modal').html(result);
+            $('.ui-loader').addClass('hide');
+            $('#anc_openModalForPic').trigger('click');
+        })
+    })
+</script>
+
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>
+

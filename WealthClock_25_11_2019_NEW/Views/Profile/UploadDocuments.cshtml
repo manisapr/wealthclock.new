@@ -1,0 +1,267 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+
+<section class="inner-page">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li><a href="javascript:void(0)">Dashboard</a></li>
+            <li>With Wealthclock, you transact directly on BSE mutual fund platform</li>
+        </ul>
+        <div class="rounded-box">
+            <div class="header-t">
+                <h2>Upload Documents <sub>(pdf,doc,png only)</sub></h2>
+            </div>
+            <div class="doc-upload-area">
+                <ul>
+                    <li>
+                        <em>KYC forms </em>&nbsp;<i data-toggle="tooltip" title="We require self-attested copy for Offline CKYC"><img src="/images/images_Dashboard/info.png" style=" width: 12px;" /></i>
+
+                        <div class="up_sec_fol">
+                            <div class="custom-file-upload">
+                                <input type="file" id="flKYCform" name="myfiles[]" />
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <em>Cross Cheque</em>&nbsp;<i data-toggle="tooltip" title="We need to upload the documents to setup your account with BSE. This verifies that the payment is not coming from 3rd party."><img src="/images/images_Dashboard/info.png" style=" width: 12px;" /></i>
+
+                        <div class="up_sec_fol">
+                            <div class="custom-file-upload">
+                                <input type="file" id="flCrossCheque" name="myfiles[]" />
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <em>PAN Card</em>&nbsp;<i data-toggle="tooltip" title="We require self-attested copy for Offline CKYC"><img src="/images/images_Dashboard/info.png" style=" width: 12px;" /></i>
+
+                        <div class="up_sec_fol">
+                            <div class="custom-file-upload">
+                                <input type="file" id="flPanCard" name="myfiles[]" />
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <em>Address Proof.</em>&nbsp;<i data-toggle="tooltip" title="We require self-attested copy for Offline CKYC"><img src="/images/images_Dashboard/info.png" style=" width: 12px;" /></i>
+
+                        <div class="up_sec_fol">
+                            <div class="custom-file-upload">
+                                <input type="file" id="flAddressProof" name="myfiles[]" />
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <em>Investment Form</em>&nbsp;<i data-toggle="tooltip" title="AMC's require the scan copy of the transaction form for their records"><img src="/images/images_Dashboard/info.png" style=" width: 12px;" /></i>
+
+                        <div class="up_sec_fol">
+                            <div class="custom-file-upload">
+                                <input type="file" id="flInvestmentForm" name="myfiles[]" />
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <em>Wealth Clock Form </em>&nbsp;<i data-toggle="tooltip" title="We need to upload the documents to setup your account with BSE"><img src="/images/images_Dashboard/info.png" style=" width: 12px;" /></i>
+
+                        <div class="up_sec_fol">
+                            <div class="custom-file-upload">
+                                <input type="file" id="flWealthClockForm" name="myfiles[]" />
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+<script type="text/javascript">
+    $("body").on("change", "#flKYCform", function () {
+
+        debugger;
+        var data = new FormData();
+        var files = $("#flKYCform").get(0).files;
+        if (files.length > 0) {
+            data.append("KYCform", files[0]);
+        }
+        var tp = "KYC";
+        fileUpload(data, tp);
+    });
+
+    $("body").on("click", ".anc_delDoc", function (e) {
+        e.preventDefault();
+        var docutype = $(this).data('type');
+        $.confirm({
+            title: 'Confirm!',
+            content: 'Want to Delete this?',
+            buttons: {
+                confirm: function () {
+                    $.post("/Myaccount/DeleteUploadedDocuemtn", { DocumentType: docutype }, function (result) {
+                        if (result != "") {
+                            Jresult = result.split('|');
+                            $(".ui-loader").addClass("hide");
+                            $.confirm({
+                                title: Jresult[0],
+                                content: Jresult[1],
+                                buttons: {
+                                    okay: function () {
+                                        location.reload();
+                                    }
+                                }
+                            });
+                        }
+                    })
+                },
+                cancel: function () {
+                }
+            }
+        });
+    })
+
+    $("body").on("change", "#flCrossCheque", function () {
+        var data = new FormData();
+        var files = $("#flCrossCheque").get(0).files;
+        if (files.length > 0) {
+            data.append("CrossChequeform", files[0]);
+        }
+        var tp = "CrossCheque";
+        fileUpload(data, tp);
+    });
+
+    $("body").on("change", "#flPanCard", function () {
+        var data = new FormData();
+        var files = $("#flPanCard").get(0).files;
+        if (files.length > 0) {
+            data.append("PanCardform", files[0]);
+        }
+        var tp = "PanCard";
+        fileUpload(data, tp);
+    });
+    $("body").on("change", "#flAddressProof", function () {
+        var data = new FormData();
+        var files = $("#flAddressProof").get(0).files;
+        if (files.length > 0) {
+            data.append("AddressProofform", files[0]);
+        }
+        var tp = "AddressProof";
+        fileUpload(data, tp);
+    });
+    $("body").on("change", "#flInvestmentForm", function () {
+        var data = new FormData();
+        var files = $("#flInvestmentForm").get(0).files;
+        if (files.length > 0) {
+            data.append("InvestmentForm", files[0]);
+        }
+        var tp = "InvestmentForm";
+        fileUpload(data, tp);
+    });
+    $("body").on("change", "#flWealthClockForm", function () {
+        var data = new FormData();
+        var files = $("#flWealthClockForm").get(0).files;
+        if (files.length > 0) {
+            data.append("WealthClockForm", files[0]);
+        }
+        var tp = "WealthClockForm";
+        fileUpload(data, tp);
+    });
+    function fileUpload(data, tp) {
+        debugger;
+        $(".ui-loader").removeClass("hide");
+        $.ajax({
+            url: "/GenericFileUpload/FileUpload.ashx?type=" + tp,
+            type: "POST",
+            processData: false,
+            contentType: false,
+            data: data,
+            success: function (response) {
+                $(".ui-loader").addClass("hide");
+                // console.log(response);
+                if (response != "") {
+                    //$.alert({
+                    //    title: 'Success!',
+                    //    content: response,
+                    //    buttons: {
+                    //        okay: function () {
+                    //            location.reload();
+                    //        }
+                    //    }
+                    //});
+
+                    $.confirm({
+                        title: 'Success!',
+                        content: response,
+                        buttons: {
+                            okay: function () {
+                                debugger;
+                                $(".ui-loader").removeClass("hide");
+                                $.post("/Myaccount/SendAllDataMail", { DocumentType: tp }, function (result) {
+                                    if (result != "") {
+                                        debugger;
+                                        Jresult = result.split('|');
+                                        $(".ui-loader").addClass("hide");
+                                        $.confirm({
+                                            title: Jresult[0],
+                                            content: Jresult[1],
+                                            buttons: {
+                                                okay: function () {
+                                                    location.reload();
+                                                }
+                                            }
+                                        });
+                                    }
+                                })
+                                //location.reload();
+                            }
+                        }
+                    });
+                }
+            },
+            error: function (er) {
+                $.alert({
+                    title: 'Alert!',
+                    content: "Something went wrong.",
+                });
+            }
+
+        });
+    }
+
+
+    $('#btn_Save').click(function (e) {
+        $(".ui-loader").removeClass("hide");
+        $.post("/Myaccount/SendAllDataMail", function (result) {
+            if (result != "") {
+                Jresult = result.split('|');
+                $(".ui-loader").addClass("hide");
+                $.confirm({
+                    title: Jresult[0],
+                    content: Jresult[1],
+                    buttons: {
+                        okay: function () {
+                            location.reload();
+                        }
+                    }
+                });
+            }
+        })
+    })
+
+
+</script>
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>

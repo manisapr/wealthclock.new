@@ -1,0 +1,185 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAbout.cshtml";
+}
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+        margin-bottom: 3px;
+    }
+</style>
+<!-- banner -->
+<section class="bannr-sec contact-us">
+    <div class="bannr-outr">
+        <div class="container">
+            <div class="bannr-innr wow fadeInUp" data-wow-delay="0.5s">
+                <h1>Contact us</h1>
+            </div>
+        </div>
+    </div>
+    <!-- end banner -->
+    <!-- new mouse start -->
+    <div class="ng-scope" id="content-view">
+        <div style="display: block;" class="ng-scope" id="mouse-scroll">
+            <div><span class="unu"> </span> <span class="doi"> </span> <span class="trei"> </span> </div>
+        </div>
+    </div>
+    <!-- new mouse ends -->
+</section>
+
+<!-- contact-us -->
+<section class="contact-sec">
+    <div class="container">
+        <div class="commn-outr">
+            <div class="row">
+                <div class="col-sm-5 col-md-5">
+                    <div class="contact-us-innr">
+                        <h2>Queries / Suggestion</h2>
+                        <div class="contact-us-inpt">
+                            <label>Full Name<sup style="color:red;">*</sup></label>
+                            <input type="text" class="custon-input" id="txt_Name" placeholder="Please insert your full name" />
+                            <label id="span_Name" class="errormsg hide">Please insert your full name.</label>
+                            <label id="span_NameVal" class="errormsg hide">Please insert a valid  full name.</label>
+                        </div>
+                        <div class="contact-us-inpt">
+                            <label>Email<sup style="color:red;">*</sup></label>
+                            <input type="email" required class="custon-input" id="txt_Email" autocomplete="off" placeholder="Please insert your email" value="" maxlength="100" />
+                            <label id="span_email" class="errormsg hide">Please insert your email.</label>
+                            <label id="span_emailVal" class="errormsg hide">Please insert a valid  email.</label>
+                        </div>
+                        <div class="contact-us-inpt">
+                            <label>Mobile number<sup style="color:red;">*</sup></label>
+                            <input type="tel" required class="custon-input" id="txt_Mobile" placeholder="Please insert your mobile" maxlength="10" />
+                            <label id="span_MobNo" class="errormsg hide">Please insert your mobile.</label>
+                            <label id="span_MobNoVal" class="errormsg hide">Please insert a valid  mobile number.</label>
+                        </div>
+                        <div class="contact-us-inpt">
+                            <label>Your Comments<sup style="color:red;">*</sup></label>
+                            <textarea id="txtcomments" placeholder="Enter your comment..."></textarea>
+                            <label id="span_comments" class="errormsg hide">Enter your comment.</label>
+                        </div>
+                        <div class="contact-us-inpt">
+
+                            <img src="~/Admin/images/GetCaptchaImage.png" />
+
+                        </div>
+                        <div class="contact-us-inpt">
+                            <input type="text" id="CaptchaInputText" value="" />
+                            <label id="span_captcha" class="errormsg hide">Enter above captcha.</label>
+                        </div>
+                        <div class="contact-us-inpt">
+                            <input class="commn-bttn" id="ContactUsClick" type="submit" value="submit" />
+                        </div>
+                    </div>
+                </div>
+                <!-- == -->
+                <div class="col-sm-7 col-md-7">
+                    <div class="contact-us-map">
+                        <div id="map"></div>
+                        <br />
+
+                        <h6>Wealthclock Advisors</h6>
+                        <br />
+                        <h6>Mumbai Office : </h6>
+                        <p>205, Regal Diamond Center, Opera House, Mumbai, Maharashtra 400004</p>
+                        <p>Mobile: +91 80970 11188</p>
+                        <br />
+                        <h6>Indore Office : </h6>
+                        <p>17- B Scheme No. 71, Main Road  Indore - 452009 Madhya Pradesh</p>
+                        <p>Mobile: +91 97022 33617</p>
+                        <br />
+                        <h6>Delhi Office : </h6>
+                        <p> F-14/71, Model Town Phase II Delhi -110009 </p>
+                        <p>Mobile: +91 99907 30005</p>
+                        <br />
+                        <h6>Kolkata Office : </h6>
+                        <p>Plot no. 146, 19/7, Sahapur Colony, Bankim  Mukherjee Sarani, Block J , Kolkata, West Bengal - 700053</p>
+                        <p>Mobile: +91 99038 66366</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="alert alert-danger hide" id="div_error" role="alert" style="margin-top:1%;text-align:center">
+            <strong id="txt_error"></strong>
+        </div>
+        <div class="alert alert-success hide" id="div_success" role="alert" style="margin-top:1%;text-align:center">
+            <strong id="txt_success"></strong>
+        </div>
+    </div>
+</section>
+<script>
+
+
+    var locations = [
+  ['Mumbai Office', 19.131179, 72.833865, 'Manish Mahal, Off Veera Desai Road,<br/> Jeevan Nagar, Andheri West,<br/> Mumbai - 400053 Maharashtra'],
+  ['Indore Office', 22.701799, 75.838709, '17- B Scheme No. 71, Main Road <br/>Indore - 452009 Madhya Pradesh'],
+  ['Delhi Office ', 28.707743, 77.190805, 'F-14/71, Model Town <br/>Phase II Delhi -110009'],
+  ['Kolkata Office', 22.51218, 88.328494, 'Plot no. 146, 19/7,<br/> Sahapur Colony, Bankim Mukherjee Sarani, Block J , <br/>Kolkata, West Bengal - 700053']
+    ];
+
+    function initMap() {
+
+        var myOptions = {
+            zoom: 4.4,
+            center: new google.maps.LatLng(21.145800, 79.088155)
+
+
+        };
+        var map = new google.maps.Map(document.getElementById("map"),
+            myOptions);
+
+        setMarkers(map, locations)
+
+    }
+
+
+
+    function setMarkers(map, locations) {
+
+        var marker, i
+
+        for (i = 0; i < locations.length; i++) {
+
+            var loan = locations[i][0]
+            var lat = locations[i][1]
+            var long = locations[i][2]
+            var add = locations[i][3]
+
+            latlngset = new google.maps.LatLng(lat, long);
+
+            var marker = new google.maps.Marker({
+                map: map, title: loan, icon: 'https://wealthclockadvisors.com/images/images_Dashboard/profile-logo.png', position: latlngset
+            });
+            map.setCenter(marker.getPosition())
+
+
+            var content = "<div style='color:black;'>Address: " + add + "</div>"
+
+            var infowindow = new google.maps.InfoWindow()
+
+            google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
+                return function () {
+                    infowindow.setContent(content);
+                    infowindow.open(map, marker);
+                };
+            })(marker, content, infowindow));
+
+        }
+    }
+</script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5OpYZ5uTQKmHTx8WySXGDzvD9iw949Mg&callback=initMap">
+
+</script>
+<script src="@Url.Content("~/js/jquery-1.11.3.js")"></script>
+
+
+
+
+

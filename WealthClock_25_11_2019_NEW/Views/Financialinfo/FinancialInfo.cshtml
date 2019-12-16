@@ -1,0 +1,2287 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+
+<section class="financial_info finn-inn">
+    <div class="container-fluid">
+        <div class="financial_info_outer">
+            <div id="parentHorizontalTab_3">
+                <ul class="resp-tabs-list hor_1 test tab-listing clearfix" id="topTab">
+                    <li>
+                        <span><img src="/images/images_Dashboard/cash-hv.png" alt="" /></span>Life Insurance
+                    </li>
+                    <li>
+                        <span><img src="/images/images_Dashboard/real-state-hv.png" alt="" /></span> Health Insurance
+                    </li>
+                    <li>
+                        <span><img src="/images/images_Dashboard/fixed-icm-hv.png" alt="" /></span> Motor Insurance
+                    </li>
+                    <li>
+                        <span><img src="/images/images_Dashboard/loan-icn-hv.png" alt="" /></span>	Accidental Insurance
+                    </li>
+                    <li>
+                        <span><img src="/images/images_Dashboard/other-icn-hv.png" alt="" /></span>	Others
+                    </li>
+
+                </ul>
+                <div class="resp-tabs-container hor_1 heading4 clearfix">
+                    <div>
+
+                        <div id="ChildVerticalTab_6" class="child_martop">
+                            <div class="clearfix innr-tab">
+                                <ul class="resp-tabs-list ver_1 cash_flow clearfix" id="insurance">
+                                </ul>
+                                <div class="assu_filters">
+                                    <a href="javascrip:void(0)" class="cl_filters" id="insurancefilter"><i class="fa fa-filter" aria-hidden="true"></i>Filters</a>
+
+                                </div>
+                            </div>
+                            <div class="resp-tabs-container ver_1 child_tab">
+                                <div id="lifeinsurance">
+
+                                    <div class="life_insu_tbl_out">
+                                        <div class="real_estate_tbl" id="insurancelifechild">
+                                            <div class="real_estate_row header">
+                                                <div class="real_estate_coll">
+                                                    Customer Name
+                                                </div>
+                                                <div class="real_estate_coll">
+
+                                                    Policy No.
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    <span>Company Name</span>
+                                                    <em>Policy Name</em>
+                                                </div>
+
+                                                <div class="real_estate_coll">
+                                                    Premium paid
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Sum<br> Assured
+                                                </div>
+                                                <div class="real_estate_coll">
+
+                                                    Premium Amount
+
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Premium<br>  Mode
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Inception Date
+
+                                                </div>
+
+
+
+                                                <div class="real_estate_coll">
+                                                    Edit
+                                                </div>
+                                            </div>
+                                            <div class="real_estate_row">
+                                                <div class="real_estate_coll">
+                                                    Total
+                                                </div>
+                                                <div class="real_estate_coll">
+
+                                                </div>
+                                                <div class="real_estate_coll">
+
+                                                </div>
+                                                <div class="real_estate_coll">
+
+                                                </div>
+
+                                                <div class="real_estate_coll">
+                                                    0
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    0
+                                                </div>
+                                                <div class="real_estate_coll">
+
+                                                </div>
+
+
+                                                <div class="real_estate_coll">
+
+                                                </div>
+                                                <div class="real_estate_coll">
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="real_estate_note real_estate_note1">
+                                            <p>
+                                                • Maturity amount figure is calculated based on the assumption that your invested amount will grow as per the projected rate mentioned by you in assumption segment. Your actual returns may vary based on the performance of the scheme in which you have invested.
+                                            </p>
+                                            <p>
+                                                • Surrender value shown are the approximation, actual surrender value may vary.
+                                            </p>
+                                            <p>
+                                                • It is advised to go for a term plan before surrendering the policies so that cover remains intact. It is highly recommended to consult your advisor before surrendering the policies.
+                                            </p>
+                                            <p>
+                                                • Reinvested value shows the future amount assuming if policy is surrendered and the proceeds and all the future commitments towards the are invested in Equity mutual funds.
+                                            </p>
+                                        </div>
+                                        <div class="cash_flow_btn">
+                                            <a href="/Dashboard/Lifeinsurance" id="lifeaddnew" data-clientcode="System.Collections.Generic.List`1[WealthClock.Models.UserDetails]">Add New</a>
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        $(function (e) {
+                                            //    Insert
+                                            $(".lifeedit").click(function (e) {
+                                                e.preventDefault();
+
+                                                var id = $(this).data('id');
+
+                                                //alert(id);
+                                                $.ajax({
+                                                    url: "/Dashboard/lifeeditdata",
+                                                    type: 'POST',
+                                                    data: { 'id': id },
+                                                    success: function (result) {
+                                                        alert("success");
+                                                        window.location.href = "/dashboard/lifeeditdata/" + id;
+                                                        //some code if success
+                                                    },
+                                                    error: function () {
+                                                        //some code if failed
+                                                    }
+                                                });
+                                                return false;
+                                            });
+                                        });
+
+                                    </script>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+                        <div class="app_dt real_estate clearfix">
+                            <div class="clearfix">
+                                <div class="assu_filters">
+                                    <a href="javascript:void(0)" class="cl_filters" id="btnrealestatefilter"><i class="fa fa-filter" aria-hidden="true"></i>Filters</a>
+
+                                </div>
+                            </div>
+                            <div id="realestate">
+                                <div class="real_estate_outer low_risk_outer high_risk_outer">
+                                    <div class="life_insu_tbl_out">
+                                        <div class="real_estate_tbl">
+                                            <div class="real_estate_row header">
+                                                <div class="real_estate_coll">
+                                                    Insured Person Name
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Premium Date
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Insurance Firm
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Scheme Name
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Policy No.
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    <span>Start Date</span>
+
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Sum Assured
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Premium Amount
+                                                </div>
+                                                <div class="real_estate_coll">
+                                                    Edit
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="cash_flow_btn">
+                                            <a href="/dashboard/healthinsurance" id="btnMedicalCoverAddNew">Add New</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <script>
+                                    $(function (e) {
+                                        //    Insert
+                                        $(".btnMedicalCoverEdit").click(function (e) {
+                                            e.preventDefault();
+
+                                            var id = $(this).data('id');
+
+                                            //alert(id);
+                                            $.ajax({
+                                                url: "/dashboard/healthedit",
+                                                type: 'POST',
+                                                data: { 'id': id },
+                                                success: function (result) {
+                                                    alert("success");
+                                                    window.location.href = "/dashboard/healtheditdata/" + id;
+                                                    //some code if success
+                                                },
+                                                error: function () {
+                                                    //some code if failed
+                                                }
+                                            });
+                                            return false;
+                                        });
+                                    });
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="app_dt real_estate clearfix">
+                            <div class="clearfix">
+                                <div class="assu_filters">
+                                    <a href="javascript:void(0)" class="cl_filters" id="btnrealestatefilter"><i class="fa fa-filter" aria-hidden="true"></i>Filters</a>
+
+                                </div>
+                            </div>
+                            <div id="realestate">
+                                <div class="real_estate_outer low_risk_outer">
+                                    <div class="real_estate_tbl">
+                                        <div class="real_estate_row header">
+                                            <div class="real_estate_coll">
+                                                Member Name
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Vehicle
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Company
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Premium amount
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Edit
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cash_flow_btn">
+
+
+                                        <a href="/dashboard/motorinsurance" id="btnVehicleAddNew">Add New</a>
+
+                                    </div>
+
+
+                                </div>
+
+                                <script type="text/javascript">
+
+
+                                    $('body').on('click', '#btnDeleteVehicle', function (result) {
+                                        debugger;
+                                        $('.ui-loader').removeClass('hide');
+                                        var clientCode = $(this).data('clientCode');
+                                        var id = $(this).data('id');
+                                        type = 'Vehicle';
+                                        $.post("/Dashboard/PartialDelete", { type: type, id: id }, function (result) {
+                                            debugger;
+                                            $('#exampleModalLong4').html('');
+                                            $('#exampleModalLong4').html(result);
+                                            $('.ui-loader').addClass('hide');
+                                            $('#anc_openModal6').trigger('click');
+
+                                        })
+                                    })
+
+                                </script>
+                                <script>
+                                    $(function (e) {
+                                        //    Insert
+                                        $(".btnEditVehicle").click(function (e) {
+                                            e.preventDefault();
+
+                                            var id = $(this).data('id');
+
+                                            //alert(id);
+                                            $.ajax({
+                                                url: "/dashboard/healthedit",
+                                                type: 'POST',
+                                                data: { 'id': id },
+                                                success: function (result) {
+                                                    alert("success");
+                                                    window.location.href = "/dashboard/healtheditdata/" + id;
+                                                    //some code if success
+                                                },
+                                                error: function () {
+                                                    //some code if failed
+                                                }
+                                            });
+                                            return false;
+                                        });
+                                    });
+
+                                </script>;
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="app_dt real_estate clearfix">
+                            <div class="clearfix">
+                                <div class="assu_filters">
+                                    <a href="javascript:void(0)" class="cl_filters" id="btnrealestatefilter"><i class="fa fa-filter" aria-hidden="true"></i>Filters</a>
+                                    <a href="javascript:void(0)" class="dn_excel"><i class="fa fa-file-excel-o" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div id="realestate">
+                                <div class="life_insu_tbl_out">
+                                    <div class="real_estate_tbl">
+                                        <div class="real_estate_row header">
+                                            <div class="real_estate_coll">
+                                                Customer Name
+                                            </div>
+
+                                            <div class="real_estate_coll">
+                                                Company Name
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Policy Name
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Policy Number
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Inception Date
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Sum Assured
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Premium Amount
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Paid
+                                            </div>
+
+                                            <div class="real_estate_coll">
+                                                Edit
+                                            </div>
+                                        </div>
+                                        <div class="real_estate_row">
+                                            <div class="real_estate_coll">
+                                                Total
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                0
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                0
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cash_flow_btn">
+                                        <a href="/Dashboard/Accidentalinsure" id="generaladdnew">Add New</a>
+                                    </div>
+                                </div>
+                                <script>
+                                    $(function (e) {
+                                        //    Insert
+                                        $(".geneditt").click(function (e) {
+                                            e.preventDefault();
+
+                                            var id = $(this).data('id');
+
+                                            //alert(id);
+                                            $.ajax({
+                                                url: "/dashboard/generaledit",
+                                                type: 'POST',
+                                                data: { 'id': id },
+                                                success: function (result) {
+
+                                                    window.location.href = "/dashboard/generalinsurance/" + id;
+                                                    //some code if success
+                                                },
+                                                error: function () {
+                                                    //some code if failed
+                                                }
+                                            });
+                                            return false;
+                                        });
+                                    });
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="app_dt real_estate clearfix">
+                            <div class="clearfix">
+                                <div class="assu_filters">
+                                    <a href="javascript:void(0)" class="cl_filters" id="btnrealestatefilter"><i class="fa fa-filter" aria-hidden="true"></i>Filters</a>
+                                    <a href="javascript:void(0)" class="dn_excel"><i class="fa fa-file-excel-o" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div id="realestate">
+                                <div class="life_insu_tbl_out">
+                                    <div class="real_estate_tbl">
+                                        <div class="real_estate_row header">
+                                            <div class="real_estate_coll">
+                                                Customer Name
+                                            </div>
+
+                                            <div class="real_estate_coll">
+                                                Company Name
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Policy Name
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Policy Number
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Inception Date
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Sum Assured
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Premium Amount
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                Paid
+                                            </div>
+
+                                            <div class="real_estate_coll">
+                                                Edit
+                                            </div>
+                                        </div>
+                                        <div class="real_estate_row">
+                                            <div class="real_estate_coll">
+                                                Total
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                0
+                                            </div>
+                                            <div class="real_estate_coll">
+                                                0
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+                                            <div class="real_estate_coll">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cash_flow_btn">
+                                        <a href="/Dashboard/Accidentalinsure" id="generaladdnew">Add New</a>
+                                    </div>
+                                </div>
+                                <script>
+                                    $(function (e) {
+                                        //    Insert
+                                        $(".geneditt").click(function (e) {
+                                            e.preventDefault();
+
+                                            var id = $(this).data('id');
+
+                                            //alert(id);
+                                            $.ajax({
+                                                url: "/dashboard/generaledit",
+                                                type: 'POST',
+                                                data: { 'id': id },
+                                                success: function (result) {
+
+                                                    window.location.href = "/dashboard/generalinsurance/" + id;
+                                                    //some code if success
+                                                },
+                                                error: function () {
+                                                    //some code if failed
+                                                }
+                                            });
+                                            return false;
+                                        });
+                                    });
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+</section>
+
+
+<div class="modal fade signup_pop1" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Assumptions - Expected Rate Of Return </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="assu_expt_outer">
+                    <div class="assu_expt_tbl">
+                        <div class="assu_expt_row header">
+                            <div class="assu_expt_cell">
+
+                            </div>
+                            <div class="assu_expt_cell">
+                                Growth Rate (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                Indian Rate (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                Global Rate (%)
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                Inflation Rate (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="6">
+                            </div>
+                            <div class="assu_expt_cell">
+                                7
+                            </div>
+                            <div class="assu_expt_cell">
+                                4
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                Education Inflation (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="10">
+                            </div>
+                            <div class="assu_expt_cell">
+                                10
+                            </div>
+                            <div class="assu_expt_cell">
+                                7
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                Equity (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="15">
+                            </div>
+                            <div class="assu_expt_cell">
+                                15
+                            </div>
+                            <div class="assu_expt_cell">
+                                12
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                Balanced (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="12">
+                            </div>
+                            <div class="assu_expt_cell">
+                                12
+                            </div>
+                            <div class="assu_expt_cell">
+                                8
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                High Risk Debt (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="13">
+                            </div>
+                            <div class="assu_expt_cell">
+                                11
+                            </div>
+                            <div class="assu_expt_cell">
+                                4
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                Low Risk Debt (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="9">
+                            </div>
+                            <div class="assu_expt_cell">
+                                8
+                            </div>
+                            <div class="assu_expt_cell">
+                                3
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                Real Estate (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="8">
+                            </div>
+                            <div class="assu_expt_cell">
+                                8
+                            </div>
+                            <div class="assu_expt_cell">
+                                4
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                ULIP (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="5">
+                            </div>
+                            <div class="assu_expt_cell">
+                                7
+                            </div>
+                            <div class="assu_expt_cell">
+                                N.A.
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                Endowment (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="8">
+                            </div>
+                            <div class="assu_expt_cell">
+                                5
+                            </div>
+                            <div class="assu_expt_cell">
+                                N.A.
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                Salary Growth (%)
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="10">
+                            </div>
+                            <div class="assu_expt_cell">
+                                10
+                            </div>
+                            <div class="assu_expt_cell">
+                                3
+                            </div>
+                        </div>
+                        <div class="assu_expt_row">
+                            <div class="assu_expt_cell">
+                                Life Expectancy
+                            </div>
+                            <div class="assu_expt_cell">
+                                <input type="text" value="80">
+                            </div>
+                            <div class="assu_expt_cell">
+                                75
+                            </div>
+                            <div class="assu_expt_cell">
+                                80
+                            </div>
+                        </div>
+                    </div>
+                    <div class="assu_notes">
+                        Note:- Growth Rate column is editable, other columns are for your reference
+                    </div>
+                    <div class="asssu_btn">
+                        <a href="">Save</a>
+                        <a href="">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="anc_openModal5" data-toggle="modal" data-target="#exampleModalLong2" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+
+<button id="anc_openModal" data-toggle="modal" data-target="#exampleModalLong3" class="hide"></button>
+
+<div class="modal fade signup_pop1" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+<button id="anc_openModal2" data-toggle="modal" data-target="#exampleModalLong8" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModal3" data-toggle="modal" data-target="#exampleModalLong10" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModal4" data-toggle="modal" data-target="#exampleModalLong11" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+</div>
+<button id="anc_openModal6" data-toggle="modal" data-target="#exampleModalLong4" class="hide"></button>
+<div class="modal fade signup_pop1 filter_pop" id="exampleModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+<div class="modal fade signup_pop1" id="exampleModalLong5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Real State</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="income_edt">
+                    <div class="income_edt_input">
+                        <label>
+                            Owner Name<span>*</span>
+                        </label>
+                        <select id="income_nm_2" multiple>
+                            <option value="1">Sd</option>
+                            <option value="2">ab</option>
+                            <option value="3">ac</option>
+                        </select>
+                    </div>
+                    <div class="income_edt_input">
+                        <label>
+                            Property Usage<span>*</span>
+                        </label>
+                        <select id="Prop_us">
+                            <option value="">Property Usage</option>
+                            <option value="1">Self Use</option>
+                            <option value="2">Investment</option>
+                            <option value="3">Parental</option>
+                        </select>
+                    </div>
+                    <div class="income_edt_input">
+                        <label>
+                            Type<span>*</span>
+                        </label>
+                        <select id="Pro_type">
+                            <option value="">Type</option>
+                            <option value="1">1 HK</option>
+                            <option value="2">1 BHK</option>
+                            <option value="3">1.5 BHK</option>
+                            <option value="4">2 BHK</option>
+                            <option value="5">2.5 BHK</option>
+                            <option value="6">3 BHK</option>
+                            <option value="7">4 BHK</option>
+                            <option value="8">5 BHK</option>
+                            <option value="9">Pent House</option>
+                            <option value="10">Bunglow</option>
+                            <option value="11">Commercial</option>
+                            <option value="12">Plot</option>
+                            <option value="13">Farm House</option>
+                            <option value="14">Agricultur Land</option>
+                        </select>
+                    </div>
+                    <div class="income_edt_input">
+                        <label>
+                            Property Name<span>*</span>
+                        </label>
+                        <input type="text" value="Home">
+                    </div>
+                    <div class="income_edt_input clearfix">
+                        <div class="pro_loc">
+                            <label>
+                                Location
+                            </label>
+                            <input type="text" value="Versova-Mumbai Andheri-Dahisar">
+                        </div>
+                        <div class="rd_auto">
+                            <div class="rd_inner">
+                                <input type="radio" id="test1" name="radio-group" checked>
+                                <label for="test1">Auto</label>
+                            </div>
+                            <div class="rd_inner">
+                                <input type="radio" id="test2" name="radio-group">
+                                <label for="test2">Manual</label>
+                            </div>
+                            <span>Select Manual if your location is not available in the auto list </span>
+                        </div>
+                    </div>
+                    <div class="income_edt_input clearfix">
+                        <div class="pro_loc sqft">
+                            <label>
+                                Built-Up Area<em>[Sq.Ft.]<span>*</span></em>
+                            </label>
+                            <input type="text" value="750">
+                        </div>
+                        <div class="rd_auto">
+                            <b>Price per sq. ft [Rs.18488 - 24055]/- </b>
+                        </div>
+                    </div>
+                    <div class="income_edt_input">
+                        <label>
+                            Current Value<span>*</span>
+                        </label>
+                        <input type="text" value="1,59,53,625" readonly style="background:#e3e3e3;">
+                    </div>
+                    <div class="income_edt_input clearfix">
+                        <div class="pro_loc sqft" id="datetimepicker4">
+                            <label>
+                                Purchase Date
+                            </label>
+                            <input data-format="dd-MM-yyyy" autocomplete="off" type="text" name="dob" id="dob">
+                        </div>
+                        <div class="rd_auto p_amt">
+                            <label>
+                                Purchase<br> Amount
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="income_edt_input">
+                        <label>
+                            Nominee Name<span>*</span>
+                        </label>
+                        <select id="income_nm_3" multiple>
+                            <option value="1">Sd</option>
+                            <option value="2">ab</option>
+                            <option value="3">ac</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="apply_btn">
+                    <a href="">Save</a>
+                    <a href="">Cancel</a>
+                </div>
+                <div class="mande">
+                    Note : Fields marked with asterisk (*) are mandatory.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="anc_openModalLowRisk" data-toggle="modal" data-target="#exampleModalLong6" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+
+
+
+
+<button id="anc_openModal7" data-toggle="modal" data-target="#exampleModalLong12" class="hide"></button>
+
+<div class="modal fade signup_pop1" id="exampleModalLong12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModalHighRisk" data-toggle="modal" data-target="#exampleModalLong13" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+
+
+
+
+<button id="anc_openModalLowRiskFilter" data-toggle="modal" data-target="#exampleModalLong15" class="hide"></button>
+<div class="modal fade signup_pop1 filter_pop" id="exampleModalLong15" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+<div class="modal fade signup_pop1 filter_pop" id="exampleModalLong17" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body realpop">
+                <div class="holder_out">
+                    <div class="holder_mat">
+                        <label>Holder Name</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                    <div class="holder_mat">
+                        <label>Script Name</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                </div>
+                <div class="holder_out">
+                    <div class="holder_mat">
+                        <label>Exchange</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                    <div class="holder_mat">
+                        <label>Broker</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                </div>
+                <div class="apply_btn">
+                    <a href="">Apply</a>
+                    <a href="">Clear All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade signup_pop1" id="exampleModalLong18" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Equity</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="equity_tabs">
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Holder Name<span>*</span>
+                            </label>
+                            <select id="income_nm16" multiple>
+                                <option value="">Select</option>
+                                <option value="1">Monthly</option>
+                                <option value="2">Quaterly</option>
+                                <option value="3">Half yearly</option>
+                                <option value="4">Annually</option>
+                            </select>
+                        </div>
+                        <div class="equity_holds_bro">
+                            <label>
+                                Broker<span>*</span>
+                            </label>
+                            <select id="Prop_us">
+                                <option value="">Select</option>
+                                <option value="1">Monthly</option>
+                                <option value="2">Quaterly</option>
+                                <option value="3">Half yearly</option>
+                                <option value="4">Annually</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Exchange<span>*</span>
+                            </label>
+                            <select id="">
+                                <option value="">Select</option>
+                                <option value="1">Monthly</option>
+                                <option value="2">Quaterly</option>
+                                <option value="3">Half yearly</option>
+                                <option value="4">Annually</option>
+                            </select>
+                        </div>
+                        <div class="equity_holds_bro">
+                            <label>
+                                Script Name<span>*</span>
+                            </label>
+                            <input type="text" value="EASTERN TRED">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Current Value<span>*</span>
+                            </label>
+                            <input type="text" value="51">
+                        </div>
+                    </div>
+
+                    <div class="buy_details">
+                        <div class="buy_details_outer">
+                            <div class="buy_mat">
+                                <select id="">
+                                    <option value="1">Buy</option>
+                                    <option value="2">Sell</option>
+                                    <option value="3">Dividend</option>
+                                </select>
+                            </div>
+                            <div class="buy_mat" id="datetimepicker4">
+                                <input data-format="dd-MM-yyyy" autocomplete="off" type="text" name="mtdt1" id="mtdt1" value="26-09-2018">
+                            </div>
+                            <div class="buy_mat">
+                                <input type="text">
+                            </div>
+                            <div class="buy_mat">
+                                <input type="text">
+                            </div>
+                            <div class="buy_mat">
+                                <button class="add_field_button" id="add_btn_d">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="buy_mat">
+                                <button class="remove_field">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apply_btn">
+                        <a href="">Save</a>
+                        <a href="">Cancel</a>
+                    </div>
+                    <div class="mande">
+                        <span> *Please check on NSE, BSE site to get the correct scheme name. </span>
+                        Note : Fields marked with asterisk (*) are mandatory.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade signup_pop1" id="exampleModalLong19" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Equity</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="equity_tabs">
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Holder Name<span>*</span>
+                            </label>
+                            <select id="income_nm17" multiple>
+                                <option value="">Select</option>
+                                <option value="1">Monthly</option>
+                                <option value="2">Quaterly</option>
+                                <option value="3">Half yearly</option>
+                                <option value="4">Annually</option>
+                            </select>
+                        </div>
+                        <div class="equity_holds_bro">
+                            <label>
+                                Broker<span>*</span>
+                            </label>
+                            <select id="Prop_us">
+                                <option value="">Select</option>
+                                <option value="1">Monthly</option>
+                                <option value="2">Quaterly</option>
+                                <option value="3">Half yearly</option>
+                                <option value="4">Annually</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Exchange<span>*</span>
+                            </label>
+                            <select id="">
+                                <option value="">Select</option>
+                                <option value="1">Monthly</option>
+                                <option value="2">Quaterly</option>
+                                <option value="3">Half yearly</option>
+                                <option value="4">Annually</option>
+                            </select>
+                        </div>
+                        <div class="equity_holds_bro">
+                            <label>
+                                Script Name<span>*</span>
+                            </label>
+                            <input type="text" value="EASTERN TRED">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Current Value<span>*</span>
+                            </label>
+                            <input type="text" value="51">
+                        </div>
+                    </div>
+
+                    <div class="buy_details">
+                        <div class="buy_details_outer">
+                            <div class="buy_mat">
+                                <select id="">
+                                    <option value="1">Buy</option>
+                                    <option value="2">Sell</option>
+                                    <option value="3">Dividend</option>
+                                </select>
+                            </div>
+                            <div class="buy_mat" id="datetimepicker4">
+                                <input data-format="dd-MM-yyyy" autocomplete="off" type="text" name="mtdt1" id="mtdt1" value="26-09-2018">
+                            </div>
+                            <div class="buy_mat">
+                                <input type="text">
+                            </div>
+                            <div class="buy_mat">
+                                <input type="text">
+                            </div>
+                            <div class="buy_mat">
+                                <button class="add_field_button" id="add_btn_d">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="buy_mat">
+                                <button class="remove_field">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apply_btn">
+                        <a href="">Save</a>
+                        <a href="">Cancel</a>
+                    </div>
+                    <div class="mande">
+                        <span> *Please check on NSE, BSE site to get the correct scheme name. </span>
+                        Note : Fields marked with asterisk (*) are mandatory.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade signup_pop1" id="exampleModalLong20" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="eqty_pop_out">
+                    <div class="eqty_pop">
+                        <div class="eqty_pop_top clearfix">
+                            <div class="eqty_pop_lft">
+                                <label>
+                                    Holder Name :-
+                                </label>
+                                <span>Siddharth </span>
+                            </div>
+                            <div class="eqty_pop_rgt">
+                                <label>
+                                    Current Qty :-
+                                </label>
+                                <span>100 </span>
+                            </div>
+                        </div>
+                        <div class="eqty_pop_top clearfix">
+                            <div class="eqty_pop_lft">
+                                <label>
+                                    Broker :-
+                                </label>
+                                <span>Others </span>
+                            </div>
+                            <div class="eqty_pop_rgt">
+                                <label>
+                                    Current Price :-
+                                </label>
+                                <span>51 </span>
+                            </div>
+                        </div>
+                        <div class="eqty_pop_top clearfix">
+                            <div class="eqty_pop_lft">
+                                <label>
+                                    Script Name :-
+                                </label>
+                                <span>EASTERN TRED </span>
+                            </div>
+                            <div class="eqty_pop_rgt">
+                                <label>
+                                    Current Value :-
+                                </label>
+                                <span>5,100 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eqty_pop_outer">
+                        <div class="eqty_pop_tbl">
+                            <div class="eqty_pop_row">
+                                <div class="eqty_pop_cell">
+                                    Date
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Transaction Type
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Buy Qty
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Buy Rate
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Buy Value
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Sell Qty
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Sell Rate
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Sell Value
+                                </div>
+                            </div>
+                            <div class="eqty_pop_row">
+                                <div class="eqty_pop_cell">
+                                    Total
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade signup_pop1" id="exampleModalLong21" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Mutual Funds </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="equity_tabs">
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Holder Name<span>*</span>
+                            </label>
+                            <select id="income_nm18" multiple>
+                                <option value="">Select</option>
+                                <option value="1">Ab</option>
+                                <option value="2">Ac</option>
+                                <option value="3">ad</option>
+                                <option value="4">An</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                AMC Name<span>*</span>
+                            </label>
+                            <select id="">
+                                <option value="">Select</option>
+                                <option value="1">Monthly</option>
+                                <option value="2">Quaterly</option>
+                                <option value="3">Half yearly</option>
+                                <option value="4">Annually</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Scheme Name<span>*</span>
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Folio No.<span>*</span>
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Plan<span>*</span>
+                            </label>
+                            <select id="">
+                                <option value="">Select</option>
+                                <option value="1">Monthly</option>
+                                <option value="2">Quaterly</option>
+                                <option value="3">Half yearly</option>
+                                <option value="4">Annually</option>
+                            </select>
+                        </div>
+                        <div class="equity_holds_bro">
+                            <label>
+                                NAV
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Purchase Date<span>*</span>
+                            </label>
+                            <input data-format="dd-MM-yyyy" autocomplete="off" type="text" name="pod" id="pod">
+                        </div>
+                        <div class="equity_holds_bro">
+                            <label>
+                                Invested Amt<span>*</span>
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Current Units<span>*</span>
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Current Value
+                            </label>
+                            <input type="text">
+                        </div>
+                        <div class="equity_holds_bro">
+                            <label>
+                                Profit/Loss
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                NAV
+                            </label>
+                            <input type="text">
+                        </div>
+                        <div class="equity_holds_bro">
+                            <label>
+                                Plan<span>*</span>
+                            </label>
+                            <select id="">
+                                <option value="">Select</option>
+                                <option value="1">Monthly</option>
+                                <option value="2">Quaterly</option>
+                                <option value="3">Half yearly</option>
+                                <option value="4">Annually</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="apply_btn">
+                        <a href="">Save</a>
+                        <a href="">Cancel</a>
+                    </div>
+                    <div class="mande">
+                        Note : Fields marked with asterisk (*) are mandatory.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade signup_pop1 filter_pop" id="exampleModalLong22" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body realpop">
+                <div class="holder_out">
+                    <div class="holder_mat">
+                        <label>Holder Name</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                    <div class="holder_mat">
+                        <label>AMC</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                </div>
+                <div class="holder_out">
+                    <div class="holder_mat">
+                        <label>Scheme</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                    <div class="holder_mat">
+                        <label>Type</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                </div>
+                <div class="holder_out">
+                    <div class="holder_mat">
+                        <label>Plan</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                    <div class="holder_mat">
+                        <label>Source</label>
+                        <input type="text" placeholder="Type Here">
+                    </div>
+                </div>
+                <div class="apply_btn">
+                    <a href="">Apply</a>
+                    <a href="">Clear All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="anc_openModalRealEstateFilter" data-toggle="modal" data-target="#exampleModalLong14" class="hide"></button>
+<div class="modal fade signup_pop1 filter_pop" id="exampleModalLong14" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+</div>
+<div class="modal fade signup_pop1" id="exampleModalLong23" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="eqty_pop_out">
+                    <div class="eqty_pop">
+                        <div class="eqty_pop_top clearfix">
+                            <div class="eqty_pop_lft">
+                                <label>
+                                    Holder Name :-
+                                </label>
+                                <span>Siddharth </span>
+                            </div>
+                            <div class="eqty_pop_rgt">
+                                <label>
+                                    Folio No :-
+                                </label>
+                                <span>488182175564 (MFrog)</span>
+                            </div>
+                        </div>
+                        <div class="eqty_pop_top clearfix">
+                            <div class="eqty_pop_lft">
+                                <label>
+                                    Scheme Name :-
+                                </label>
+                                <span>Reliance Liquid Fund -Growth Plan </span>
+                            </div>
+                        </div>
+                        <div class="eqty_pop_top clearfix">
+                            <div class="eqty_pop_lft">
+                                <label>
+                                    Erstwhile :-
+                                </label>
+                                <span>Reliance Liquid Fund-Treasury Plan -Growth Option</span>
+                            </div>
+                        </div>
+                        <div class="eqty_pop_top clearfix">
+                            <div class="eqty_pop_lft">
+                                <label>
+                                    Start Date :-
+                                </label>
+                                <span> </span>
+                            </div>
+                            <div class="eqty_pop_rgt">
+                                <label>
+                                    End Date :-
+                                </label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="eqty_pop_top clearfix">
+                            <div class="eqty_pop_lft">
+                                <label>
+                                    Deduction Date :-
+                                </label>
+                                <span>1st </span>
+                            </div>
+                            <div class="eqty_pop_rgt">
+                                <label>
+                                    NAV
+                                </label>
+                                <span>4372.491</span>
+                            </div>
+                        </div>
+                        <div class="assu_filters mutual_excl">
+                            <a href="" class="dn_excel hide">
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="eqty_pop_outer">
+                        <div class="eqty_pop_tbl">
+                            <div class="eqty_pop_row">
+                                <div class="eqty_pop_cell">
+                                    Transaction Date
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Transaction Type
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Transaction NAV/Div per unit
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Transaction Amt
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Transaction Units
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Balance Units
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Curr Value
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Curr Value
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Dividend Recd
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    P/L
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Abs(%)
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    CAGR(%)
+                                </div>
+                            </div>
+                            <div class="eqty_pop_row mufun_row">
+                                <div class="eqty_pop_cell">
+                                    01-11-2017
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Purchase
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    4110.2026
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    100
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    0.0240
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    0.0240
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    105
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    326
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    0
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    5
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    5.00
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    5.61
+                                </div>
+                            </div>
+                            <div class="eqty_pop_row mufun_row whitespace1">
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                            </div>
+                            <div class="eqty_pop_row">
+                                <div class="eqty_pop_cell">
+                                    Total
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    100
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    0.0240
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    105
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    0
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    5
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                            </div>
+                            <div class="eqty_pop_row">
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    Total Gain
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    5
+                                </div>
+                            </div>
+                            <div class="eqty_pop_row">
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    XIRR
+                                </div>
+                                <div class="eqty_pop_cell">
+                                    5.53%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button id="anc_openModalLoanFilter" data-toggle="modal" data-target="#exampleModalLong24" class="hide"></button>
+<div class="modal fade signup_pop1 filter_pop" id="exampleModalLong24" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModalLoanAddNew" data-toggle="modal" data-target="#exampleModalLong25" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong25" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModalBullionsAddNew" data-toggle="modal" data-target="#exampleModalLong26" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong26" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+<div class="modal fade signup_pop1" id="exampleModalLong27" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Bullion</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="equity_tabs">
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Holder Name
+                            </label>
+                            <select id="income_nm21" multiple>
+                                <option value="">Select</option>
+                                <option value="1">Ab</option>
+                                <option value="2">Ac</option>
+                                <option value="3">ad</option>
+                                <option value="4">An</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Bullion Type
+                            </label>
+                            <select id="">
+                                <option value="">Select</option>
+                                <option value="1">Gold</option>
+                                <option value="2">Silver</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Karat
+                            </label>
+                            <select id="">
+                                <option value="">Select</option>
+                                <option value="1">22</option>
+                                <option value="2">24</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Measure [Kg/gms]
+                            </label>
+                            <select id="">
+                                <option value="">Select</option>
+                                <option value="1">Gms</option>
+                                <option value="2">Kgs</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Quantity
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Current Value
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pri_alt">
+                    Set Price Alert/Edit Price Alert
+                </div>
+
+                <div class="apply_btn">
+                    <a href="">Save</a>
+                    <a href="">Cancel</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade signup_pop1" id="exampleModalLong28" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Bank Account Balance</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="equity_tabs">
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Holder Name
+                            </label>
+                            <select id="income_nm22" multiple>
+                                <option value="">Select</option>
+                                <option value="1">Ab</option>
+                                <option value="2">Ac</option>
+                                <option value="3">ad</option>
+                                <option value="4">An</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Bank Name
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Account Number
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Account Type
+                            </label>
+                            <select id="">
+                                <option value="">Select</option>
+                                <option value="1">Savings</option>
+                                <option value="2">Current</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Interest Rate(%)
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Current Balance
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Balance Date
+                            </label>
+                            <input data-format="dd-MM-yyyy" autocomplete="off" type="text" name="pod12" id="pod12">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Nominee Name
+                            </label>
+                            <select id="income_nm23" class="income_nm" multiple>
+                                <option value="">Select</option>
+                                <option value="1">Ab</option>
+                                <option value="2">Ac</option>
+                                <option value="3">ad</option>
+                                <option value="4">An</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="apply_btn">
+                    <a href="">Save</a>
+                    <a href="">Cancel</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<button id="anc_openModalBank" data-toggle="modal" data-target="#exampleModalLong29" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong29" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModalCashInHand" data-toggle="modal" data-target="#exampleModalLong30" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong30" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+<div class="modal fade signup_pop1" id="exampleModalLong31" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Cash In Hand</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="equity_tabs">
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Member Name
+                            </label>
+                            <select id="income_nm23" class="income_nm" multiple>
+                                <option value="">Select</option>
+                                <option value="1">Ab</option>
+                                <option value="2">Ac</option>
+                                <option value="3">ad</option>
+                                <option value="4">An</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Amount
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Remark
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="apply_btn">
+                    <a href="">Save</a>
+                    <a href="">Cancel</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade signup_pop1" id="exampleModalLong32" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Vechile</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="equity_tabs">
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Member Name
+                            </label>
+                            <select id="income_nm23" class="income_nm" multiple>
+                                <option value="">Select</option>
+                                <option value="1">Ab</option>
+                                <option value="2">Ac</option>
+                                <option value="3">ad</option>
+                                <option value="4">An</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Select Vehicle Type
+                            </label>
+                            <select id="" class="">
+                                <option value="">Select</option>
+                                <option value="1">Car</option>
+                                <option value="2">Bike</option>
+                                <option value="3">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Vehicle Company
+                            </label>
+                            <input type="text" value="Maruti">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                IDV(Insured Declared Value)
+                            </label>
+                            <input type="text" value="50,000">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="apply_btn">
+                    <a href="">Save</a>
+                    <a href="">Cancel</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<button id="anc_openModalVehicle" data-toggle="modal" data-target="#exampleModalLong33" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong33" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModalArtwork" data-toggle="modal" data-target="#exampleModalLong34" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong34" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+<div class="modal fade signup_pop1" id="exampleModalLong35" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Others</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="equity_tabs">
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Member Name
+                            </label>
+                            <select id="income_nm23" class="income_nm" multiple>
+                                <option value="">Select</option>
+                                <option value="1">Ab</option>
+                                <option value="2">Ac</option>
+                                <option value="3">ad</option>
+                                <option value="4">An</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Name
+                            </label>
+                            <input type="text" value="paiting">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Value
+                            </label>
+                            <input type="text" value="50,000">
+                        </div>
+                    </div>
+                    <div class="equity_tabs_out clearfix">
+                        <div class="equity_holds">
+                            <label>
+                                Remark
+                            </label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="apply_btn">
+                    <a href="">Save</a>
+                    <a href="">Cancel</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<button id="anc_openModalOthers" data-toggle="modal" data-target="#exampleModalLong36" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong36" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModaLifeInsurance" data-toggle="modal" data-target="#exampleModalLong37" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong37" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModalinsfilter" data-toggle="modal" data-target="#exampleModalLong38" class="hide"></button>
+<div class="modal fade signup_pop1 filter_pop" id="exampleModalLong38" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModaMedicalCover" data-toggle="modal" data-target="#exampleModalLong39" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong39" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+<button id="anc_openModalGeneralInsurance" data-toggle="modal" data-target="#exampleModalLong40" class="hide"></button>
+<div class="modal fade signup_pop1" id="exampleModalLong40" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+</div>
+
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>

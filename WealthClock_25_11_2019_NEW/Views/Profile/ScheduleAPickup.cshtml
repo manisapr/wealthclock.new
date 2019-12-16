@@ -1,0 +1,133 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+<section class="inner-page">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li>
+                Schedule a Pick up
+            </li>
+        </ul>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default rounded-box">
+                <div class="panel-heading header-t" role="tab" id="headingOne">
+                    <h2 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Schedule a Pick up </a></h2>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <div class="doc-upload-area">
+                            <ul>
+                                <li>
+                                    <div class="remember-me">
+                                        <input type="checkbox" value="Account Opening form" class="ChkSP" id="opening" name="check" />
+
+                                        <label for="opening"><span></span>Account Opening form</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="remember-me">
+
+                                        <input type="checkbox" value="Investment Form" class="ChkSP" id="investment" name="check" />
+
+                                        <label for="investment"><span></span>Investment Form</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="remember-me">
+
+                                        <input type="checkbox" value="Additional Form" class="ChkSP" id="additional" name="check" />
+
+                                        <label for="additional"><span></span>Additional Form</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="remember-me">
+                                        <input type="checkbox" value="Cheque" class="ChkSP" id="cheque" name="check" />
+                                        <label for="cheque"><span></span>Cheque</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="singlerow-per clearfix">
+                            <button type="button" class="logbut" id="IDSchedulePickUp"><img id="SPLoader" class="hide" src="/images/spinner.gif" alt="loader" style="width:30px" />Schedule a Pick up</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    $("body").on("click", "#IDSchedulePickUp", function (e) {
+        if ($(".ChkSP").is(":checked")) {
+            var Items = $('.ChkSP:checked').map(function () {
+                return this.value;
+            }).get().join('|')
+            if (Items != "") {
+                $("#IDSchedulePickUp").prop("disabled", true);
+                $("#SPLoader").removeClass("hide");
+                $.post("/Myaccount/SchedulePickUp", { selectedItem: Items }, function (data) {
+                    $("#SPLoader").addClass("hide");
+                    $("#IDSchedulePickUp").prop("disabled", false);
+                    if (data != "") {
+                        if (data.split('!')[0] == "Success") {
+                            //$.alert({
+                            //    title: 'Mail Alert!',
+                            //    content: data.split('!')[1],
+                            //});
+                            $.confirm({
+                                title: 'Mail Alert!',
+                                content: data.split('!')[1],
+                                buttons: {
+                                    Okay: function () {
+                                        location.reload();
+                                    }
+                                }
+                            });
+                        }
+                        else {
+                            $.alert({
+                                title: 'Alert!',
+                                content: data,
+                            });
+                        }
+                    }
+                    else {
+                        $.alert({
+                            title: 'Alert!',
+                            content: 'No response from server!',
+                        });
+                    }
+                });
+            }
+            else {
+                $.alert({
+                    title: 'Alert!',
+                    content: 'Please select atleast one item!',
+                });
+            }
+        }
+        else {
+            $.alert({
+                title: 'Alert!',
+                content: 'Please select atleast one item!',
+            });
+        }
+    });
+</script>
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>

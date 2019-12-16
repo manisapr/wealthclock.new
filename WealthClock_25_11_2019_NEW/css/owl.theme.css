@@ -1,0 +1,38 @@
+.owl-theme .owl-controls{text-align:center;width:100%;bottom:0;right:0;left:0;margin:auto;}
+.owl-theme .owl-controls .owl-buttons div{color:#FFF;display:inline-block;zoom:1;*display:inline;opacity:0.5;}
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{filter:Alpha(Opacity=100);opacity:1;text-decoration:none;}
+.owl-theme .owl-controls .owl-page{display:inline-block;zoom:1;*display:inline;border:1px solid transparent;padding:3px;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;height:19px;width:19px;margin:5px 3px;display:inline-table;transition:all 0.5s;-moz-transition:all 0.5s;-webkit-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;}
+.owl-theme .owl-controls .owl-page span{display:table-cell;width:8px;height:8px;filter:Alpha(Opacity=50);-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;background:#acacac;border:0;transition:all 0.5s;-moz-transition:all 0.5s;-webkit-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;}
+.owl-theme .owl-controls .owl-page.active{/*border:1px solid #00b5ff;*/}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{filter:Alpha(Opacity=100);opacity:1;background:#e82d00;}
+.owl-theme .owl-controls .owl-page span.owl-numbers{height:auto;width:auto;color:#FFF;padding:2px 10px;font-size:12px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;}
+.owl-item.loading{min-height:150px;background:url(AjaxLoader.html) no-repeat center center}
+
+#owl-demo .owl-prev{background:url("../images/arrow-L.png") no-repeat scroll 0 0;height:39px;position:absolute;width:21px;text-indent:-9999px;margin:auto;left:-50px;top:50%;transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+#owl-demo .owl-next{background:url("../images/arrow-R.png") no-repeat scroll 0 0;height:39px;position:absolute;width:21px;text-indent:-9999px;margin:auto;right:-50px;top:50%;transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+#owl-demo .owl-pagination {margin: 30px 0 0;}
+#owl-demo.owl-theme .owl-controls .owl-page{margin:0;}
+#owl-demo.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span{background: #0caea3;}
+
+#owl-demo1 .owl-prev{background:url("../images/arrow-L.png") no-repeat scroll 0 0;height:39px;position:absolute;width:21px;text-indent:-9999px;margin:auto;left:-50px;top:50%;transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+#owl-demo1 .owl-next{background:url("../images/arrow-R.png") no-repeat scroll 0 0;height:39px;position:absolute;width:21px;text-indent:-9999px;margin:auto;right:-50px;top:50%;transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+#owl-demo1 .owl-pagination {margin: 30px 0 0;}
+#owl-demo1.owl-theme .owl-controls .owl-page{margin:0;}
+#owl-demo1.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span{background: #0caea3;}
+
+#owl-demo2 .owl-prev{background:url("../images/arrow-L.png") no-repeat scroll 0 0;height:39px;position:absolute;width:21px;text-indent:-9999px;margin:auto;left:-50px;top:50%;transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+#owl-demo2 .owl-next{background:url("../images/arrow-R.png") no-repeat scroll 0 0;height:39px;position:absolute;width:21px;text-indent:-9999px;margin:auto;right:-50px;top:50%;transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+#owl-demo2 .owl-pagination {margin: -45px 0 20px;position: relative;z-index: 10;text-align: left; padding: 0 0 0 18%;}
+#owl-demo2.owl-theme .owl-controls .owl-page{margin:0;}
+#owl-demo2.owl-theme .owl-controls .owl-page span{border:1px solid #ffffff;background: none;}
+#owl-demo2.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span{background: #ffffff;}
+
+#owl-demo4 .owl-prev{background:url("../images/arrow-L.png") no-repeat scroll 0 0;height:39px;position:absolute;width:21px;text-indent:-9999px;margin:auto;left:-50px;top:50%;transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+#owl-demo4 .owl-next{background:url("../images/arrow-R.png") no-repeat scroll 0 0;height:39px;position:absolute;width:21px;text-indent:-9999px;margin:auto;right:-50px;top:50%;transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+#owl-demo4 .owl-pagination {margin: 30px 0 0;}
+#owl-demo4.owl-theme .owl-controls .owl-page{margin:0;}
+#owl-demo4.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span{background: #0caea3;}
+
+
+

@@ -1,0 +1,2692 @@
+﻿@charset "utf-8";
+
+
+
+@media (max-width: 1600px) {
+	.calculator-area {
+		padding: 20px 0;
+	}
+
+	.calculator-text {
+		width: 250px;
+	}
+
+		.calculator-text.right {
+			right: 20px;
+		}
+
+	.icon-tools-left {
+		width: 100px;
+	}
+
+	.right-delayed-figure {
+		margin-right: 10%;
+	}
+
+	.cost-text.extra-t {
+		width: 400px;
+	}
+
+	.cost-text {
+		width: 400px;
+		padding-top: 0px;
+	}
+
+	.goal-single .slider-outer {
+		width: 250px;
+	}
+
+	.goal-single .range-top .col-top {
+		font-size: 11px;
+	}
+
+	.goal-single .range-top {
+		left: -25px;
+		right: -25px;
+	}
+	/*25-01-2019*/
+	.gol_addgoal .adgoal_btn {
+		padding: 0 30px;
+	}
+	#parentHorizontalTab_105 .resp-tabs-list li {
+		width: calc( (100% / 7) - 30px );
+	}
+      .goal-sec {
+    padding: 35px 6%;
+    }
+    .dash-goal-txt h5 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    .dash-goal-txt p {
+        font-size: 20px;
+    }
+    .add-more-goal a {
+        font-size: 21px;
+    }
+    .add-more-goal a em {
+        width: 24px;
+        height: 24px;
+    }
+.house-txt h4 {
+    font-size: 21px;
+    margin-bottom: 8px;
+    }
+    .house-pic {
+    width: 90px;
+    height: 90px;
+    }
+    .house-pic img {
+        width: 100%;
+        padding: 15px;
+    }
+    .house-txt p {
+        font-size: 14px;
+    }
+    .house-link ul li {
+    padding: 0 5px;
+}
+.house-link {
+    margin-top: 9px;
+}
+    .goal-status-innr {
+        padding: 20px 22px 20px;
+    }
+    .target-value h6 {
+        font-size: 21px;
+    }
+    .target-value p {
+        font-size: 13px;
+    }
+    .target-value {
+        padding: 10px 15px;
+        margin-right: 10px;
+    }
+    .tr-innr {
+    padding: 20px 0 20px;
+}
+    .target-bottom-innr h3 {
+        font-size: 16px;
+    }
+    .status-complete p {
+        font-size: 25px;
+    }
+    .sts-txt p span {
+    font-size: 20px;
+}
+    .status-complete img {
+    width: 120px;
+}
+    .status-complete h6 {
+        font-size: 13px;
+    }
+    .goal-outr .goal-clm {
+    margin-bottom: 50px;
+    }
+	.goal-sec {
+   padding-top: 140px;
+}
+}
+
+@media (max-width: 1440px) {
+	div#fb-root .fa {
+	font-size: 16px!important;
+}
+	div#fb-root {
+	line-height: 28px!important;
+}
+	.btn-face, .btn-google {
+	font-size: 13px;
+	padding: 15px 10px;
+	height: 28px;
+	font-weight: 400!important;
+}
+     .goal-top-innr {
+       padding-right: 35px;
+    }
+}
+
+@media (max-width: 1399px) {
+	.calculator-area {
+		padding: 20px 0;
+	}
+
+	.calculator-text {
+		width: 200px;
+	}
+
+		.calculator-text.right {
+			right: 20px;
+		}
+   
+}
+
+@media (max-width: 1366px) {
+	.row-tools .toolssingle {
+		width: 33.333%;
+	}
+
+	.sort-list ul li a {
+		padding: 10px 15px;
+	}
+
+	.fltr-show, .fltr-srch, .fltr-group {
+		margin: 0 10px 0 0;
+		font-size: 14px;
+	}
+
+	.goal-amnt .slider-outer {
+		width: 190px;
+	}
+
+	.goal-period .slider-outer {
+		width: 305px;
+	}
+	/*24-07-2018*/
+	.fam_view_out > li {
+	margin-right: 19px;
+}
+/* Arnab-28.2.19 */
+.loginpg_sec .container-fluid {
+	padding: 30px 40px;
+}
+	.login-body .inner-bdy {
+		padding: 40px 30px;
+		width: 480px;
+	}
+	.loginpg_sec h4 { font-size:16px;}
+	.btn-face, .btn-google {
+	font-size: 15px;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 18px;
+	height: 28px;
+	border-radius: 2px;
+}
+	.btn-face i, .btn-google i {
+	font-size: 24px;
+	margin-right: 15px;
+}
+	.sibnup-flx .btn {
+		font-size: 18px;
+		font-weight: 600;
+		padding: 10px 45px;
+	}
+	.sibnup-flx span { font-size:16px;}
+	h2.loginform-title {
+font-size: 34px;
+padding-bottom: 12px;
+margin-bottom: 26px;
+}
+	.loginpg_sec input.form-control {
+		height:30px;
+	}
+
+	/*Sutanu*/
+	.btn-google{
+		font-size:13px;
+		justify-content:flex-start;
+		padding-left: 7px;
+	}
+	.btn-google i{
+		font-size:19px;
+		margin-right:20px;
+	}
+   
+}
+
+@media (max-width: 1280px) {
+	.life-goal .nav-tabs > li a {
+		min-height: 120px;
+	}
+	.life-goal .nav-tabs > li a .life-goal-inn {
+		width: 46px;
+	}
+	/*24-07-2018*/
+	.fam_view_out > li {
+	margin-right: 16px;
+}
+	/*22-01-2019*/
+	.cmn_hdr.cmn_mar {
+	margin-bottom: 25px;
+}
+	.option_1 {
+		width: 120px;
+	}
+	.tax_savings_mf {
+	padding: 140px 0 15px;
+}
+	/*25-01-2019*/
+	.modal-dialog.goal_modal {
+		width: 1000px;
+	}
+	/* Arnab- 28-2-19 */
+	.loginpg_sec {
+	background-position: top center;
+	background-size: cover;
+}
+	ul.tab-listing li {
+		padding: 15px 20px !important;
+	}
+	.financial_info_outer .resp-tabs-list li {
+	font-size: 16px;
+}
+	.income_row.header {
+	font-size: 18px;
+}
+	.income_row:nth-child(2n) .income_cell {
+	font-size: 16px;
+}
+
+}
+
+@media (max-width: 1199px) {
+	.headerbottom ul li {
+		width: auto;
+	}
+
+		.headerbottom ul li a {
+			font-size: 16px;
+		}
+
+	.innerbox .left-blog {
+		width: 60px;
+	}
+
+	.right-blog::after {
+		right: 10px;
+	}
+
+	.tabcontrol > .steps > ul:after {
+		width: 725px;
+	}
+
+	.tabcontrol > .steps > ul > li {
+		margin: 0 52px;
+	}
+
+	.calculator-area {
+		padding: 20px 0;
+	}
+
+	.calculator-text {
+		width: auto;
+		position: relative;
+		margin-bottom: 5px;
+	}
+	.calculator-text h3 br{
+		display: none;
+	}
+		.calculator-text.right {
+			right: auto;
+		}
+
+	.icon-tools-left {
+		width: 80px;
+	}
+
+	.right-delayed-figure {
+		margin-right: 2%;
+	}
+
+	.wealth-recomenhdr {
+		margin: 0 0 10px;
+	}
+
+		.wealth-recomenhdr h3 {
+			font-size: 18px;
+			padding: 0 10px 5px;
+		}
+
+	.wealth-recomen ul li {
+		margin: 0 20px 10px;
+	}
+
+	.wealth-perform h4 {
+		font-size: 15px;
+	}
+
+	.wealth-recomen .bttns-sec {
+		margin: 10px 0;
+	}
+
+	.wealth-recomen .bttns {
+		padding: 6px 14px;
+		font-size: 15px;
+	}
+
+	.wealth-recomen ul li {
+		margin: 0 10px 10px;
+	}
+
+	.wealth-perform {
+		padding: 0 10px;
+	}
+
+	.risk-analyse {
+		padding: 0;
+	}
+
+	.tab-sec .nav-tabs > li > a {
+		font-size: 15px;
+	}
+
+	.fltr-srch input {
+		width: 102px;
+	}
+
+	.fltr-group a {
+		padding: 10px 8px 13px;
+		font-size: 14px;
+	}
+
+	.tab-sec .nav > li > a {
+		padding: 10px 5px;
+		font-size: 14px;
+	}
+
+	.fltr-show label {
+		font-size: 14px;
+	}
+
+	.incep-btn-pic {
+		padding: 0 5px;
+		width: 36px;
+	}
+
+	.incep-btn-txt h3 {
+		font-size: 18px;
+	}
+
+	.incep-btn-txt p {
+		font-size: 14px;
+	}
+
+	.incep-btn span {
+		font-size: 17px;
+	}
+
+	.tab-content .record-outr {
+		overflow: auto;
+	}
+
+		.tab-content .record-outr .all-funds {
+			width: 520px;
+		}
+
+	.filter-sec {
+		float: none;
+		text-align: center;
+	}
+
+	.goal-period .slider-outer {
+		width: 240px;
+	}
+
+	.life-goal .nav > li > a {
+		padding: 15px 10px 10px;
+	}
+
+	.accordion-toggle > p {
+		margin: 0;
+	}
+/***12-4-18***/
+.video-inner {
+	height: 315px;
+}
+/*24-07-2018*/
+	.fam_view_out > li {
+	width: 48%;
+	margin-right: 33px;
+}
+.fam_view_out > li:nth-child(2n) {
+	margin-right: 0;
+}
+.fam_view_out > li:nth-child(3n) {
+	margin-right: auto;
+}
+/*06-12-2018*/
+.your_sip {
+	margin-bottom: 30px;
+}
+	.your_sip h2, .sip_ydt {
+	font-size: 26px;
+	}
+	.sipss_in h3 {
+	font-size: 20px;
+	}
+	.sipss_in p {
+	font-size: 18px;
+	padding-bottom:5px;
+	}
+	.monsip_in {
+	padding: 10px 25px;
+}
+	.financial_info {
+		font-size:13px;		
+	}
+	.real_estate_outer.low_risk_outer {
+		overflow:auto;
+	}
+	.low_high_tbl_outer, .real_estate_tbl_outtera, .loan_tbl_outer, .life_insu_tbl_out {
+		width: 1190px;
+	}
+	#lifeinsurance, #generalinsurance {
+		overflow:auto;
+	}
+	.cmn_hdr.cmn_mar.text-center h3 {
+	font-size: 20px;
+}
+	.cmn_hdr.cmn_mar {
+	margin-bottom: 15px;
+}
+	.bene_para p {
+	font-size: 16px;
+	line-height: 26px;
+}
+	.opt_to h4 {
+		font-size: 18px;
+	}
+	.opt_to p {
+		font-size: 15px;
+	}
+	.bene_para p {
+	font-size: 15px;
+	line-height: 24px;
+}
+	.bene_para {
+	margin-bottom: 25px;
+}
+	.tax_sav_in {
+	padding: 0 10%;
+}
+	.col_1 {
+	font-size: 14px;
+}
+	.tbl_pra {
+		font-size: 15px;
+		line-height: 20px;}
+	}    
+.bld-wealth.text-center {
+		overflow:auto;
+	}
+/*25-01-2019*/
+	#parentHorizontalTab_105 .resp-tabs-list li img {
+		margin: 0 auto;
+		display: block;    
+	}
+	#parentHorizontalTab_105 .resp-tabs-list li {
+		line-height: 25px;   
+		padding: 7px 0!important; 
+		width: calc( (100% / 7) - 22px );
+	}
+	#parentHorizontalTab_105 .resp-tab-active {
+		padding: 5px 0!important;
+	}
+	.goal_amt input {
+		width: 60%;
+	}
+	.gol_addgoal .adgoal_btn {
+	padding: 0 10px;
+	font-size: 16px;
+}
+    .signuplft h6 {
+   font-size: 14px;
+   line-height: 16px;
+}
+.signup_lft h5 {
+   font-size: 17px;
+   margin-bottom: 17px;
+}
+.conti_google a {
+   font-size: 14px;
+   padding: 10px 12px;
+}
+.input_group input {
+   height: 19px;
+}
+.forgatea a {
+   font-size: 14px;
+}
+.creyorac a {
+   font-size: 14px;
+   padding: 7px 12px;
+}
+.alreac,.alreac a {
+   font-size: 14px;
+}
+.input_group .fa {
+   top: 20px;
+}
+.container {
+    width: 95%;
+}
+
+.universal-innr h5 {
+    font-size: 12px;
+    padding: 7px 10px;
+}
+
+.prt-hdr h1 {
+    font-size: 16px;
+}
+
+.bttn-all a {
+    font-size: 12px;
+}
+
+.anal-tbl-innr tbody tr td {
+    padding: 10px 10px 5px !important;
+}
+
+    .anal-tbl-innr tbody tr td span {
+        font-size: 12px;
+    }
+
+.graph-return-innr {
+    width: 280px;
+}
+
+.aggressive-margin-outr {
+    padding-bottom: 40px;
+}
+}
+@media (max-width: 1150px) {
+	
+	#exampleModalLong23 .modal-body, #exampleModalLong20  .modal-body{
+		overflow:auto;
+	}
+	.eqty_pop_out {
+		display:table;
+		width: 1150px;
+	}
+	/*Arnab*/
+	.financial_info_outer .cash_flow li {
+		margin-right: 60px;
+	}
+  
+}
+/* Arnab-26.3.19 */
+@media (max-width: 1080px) {
+	.remember-me {
+		margin: 0 10px 0 0;
+	}
+	.loginpg_sec input.form-control { padding:15px 0; }
+	ul.tab-listing li {
+		padding: 15px 15px !important;
+	}
+}
+/* Arnab-26.3.19 */
+@media (max-width: 1024px) {
+	.real_estate_outer {
+		overflow:auto;
+	}
+	.real_estate_tbl_outeraa, .bank_act_tbl_outer {
+		width: 1025px;
+	}
+	/*25-01-2019*/
+	.modal-dialog.goal_modal {
+		width: 900px;
+	}
+	.goal_amt select {
+		width: 70%;
+	}
+	/* Arnab-28-2-19 */
+	h2.loginform-title {
+		font-size: 36px;
+	}
+	.login-body .inner-bdy {
+		padding: 35px 25px;
+		width: 455px;
+	}
+	.btn-face i, .btn-google i {
+		font-size: 20px;
+		margin-right: 10px;
+		padding-bottom: 0;
+	}
+	.loginpg_sec input.form-control {
+		padding:15px 0;
+	}
+	.loginpg_sec h4 { margin:20px 0;}
+}
+
+@media (max-width: 991px) {
+	.left-log {
+		width: 400px;
+	}
+
+	.left-log-top {
+		padding: 40px 30px;
+	}
+
+	.righttext {
+		width: 300px;
+	}
+
+	.top-box-right {
+		padding: 60px 30px 0 30px;
+	}
+
+	.page-mid {
+		width: 100%;
+	}
+
+	.overview {
+		padding-bottom: 10px;
+	}
+
+		.overview .borderarea {
+			margin-bottom: 20px;
+		}
+
+	.perches-area {
+		padding-bottom: 10px;
+	}
+
+		.perches-area .innerbox {
+			margin-bottom: 20px;
+		}
+
+	.boxleft-support {
+		width: 100%;
+	}
+
+	.support-area {
+		position: relative;
+	}
+
+	.cover-img-text {
+		position: absolute;
+		background-color: rgba(255, 255, 255, 0.85);
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	.boxleft-support {
+		position: relative;
+		z-index: 2;
+	}
+
+	.headerbottom {
+		display: inherit;
+		position: fixed;
+		top: 0;
+		z-index: 99;
+		transform: translateX(-280px);
+		-moz-transform: translateX(-280px);
+		-webkit-transform: translateX(-280px);
+		transition: 0.2s;
+		-moz-transition: 0.2s;
+		-webkit-transition: 0.2s;
+		bottom: 0;
+		width: 280px;
+		background-color: #f4f9f9;
+		border-right: 1px solid #b2b2b2;
+		overflow: auto;
+	}
+
+	.sidebar-active .headerbottom {
+		transform: translateX(0px);
+		-moz-transform: translateX(0px);
+		-webkit-transform: translateX(0px);
+	}
+
+	.sidebar-active .nav-cross {
+		transform: translateX(279px);
+		-moz-transform: translateX(279px);
+		-webkit-transform: translateX(279px);
+	}
+
+	.headerbottom ul {
+		display: inherit;
+	}
+
+		.headerbottom ul li {
+			display: block;
+			position: relative;
+		}
+
+	.mobile-logo {
+		display: block;
+	}
+
+	.nav > li > a.strapicon {
+		display: inline-block;
+	}
+
+	.logo-portion {
+		position: relative;
+	}
+
+	.headerbottom ul li {
+		text-align: left;
+		padding: 5px 20px;
+		border-width: 1px;
+	}
+
+		.headerbottom ul li a svg {
+			margin-right: 10px;
+			margin-top: 0px;
+			float: left;
+		}
+
+		.headerbottom ul li span {
+			display: inline-block;
+		}
+
+		.headerbottom ul li a {
+			border: 0;
+		}
+
+		.headerbottom ul li span .caret {
+			position: absolute;
+			right: 15px;
+			top: 23px;
+		}
+
+		.headerbottom ul li span {
+			padding-top: 3px;
+		}
+
+	.nav-cross {
+		display: block;
+	}
+
+	.navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
+		background-color: #ffffff;
+		border: 1px solid #c0c0c0;
+	}
+
+	.tabcontrol > .steps > ul:after {
+		width: 540px;
+	}
+
+	.tabcontrol > .steps > ul > li {
+		margin: 0 34px;
+	}
+
+		.tabcontrol > .steps > ul > li > a > em {
+			font-size: 13px;
+		}
+
+	.inner-page {
+		margin-top: 52px;
+	}
+
+	.overview {
+		margin-top: 40px;
+	}
+
+	.doc-upload-area ul li {
+		border-bottom: 1px solid #eaeaea;
+		overflow: hidden;
+		padding: 10px 0;
+		font-size: 15px;
+		width: auto;
+		float: none;
+	}
+
+		.doc-upload-area ul li:nth-child(2n) {
+			margin-left: 0;
+		}
+
+	.wheel-area-outer {
+		overflow: auto;
+	}
+
+	.row-tools .toolssingle {
+		width: 50%;
+	}
+
+	.right-delayed-figure {
+		display: none;
+	}
+
+	.right-delayed {
+		float: left;
+		padding: 10px 15%;
+		text-align: center;
+		margin-right: 0;
+		width: 100%;
+	}
+
+	.plan-bttn {
+		margin: 0 15px;
+	}
+
+	.details-cell {
+		display: block;
+	}
+
+	.details-cell-rght {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+
+	.topp {
+		top: 35px;
+	}
+
+	.record-outr {
+		overflow: auto;
+	}
+
+		.record-outr .all-funds {
+			width: 520px;
+		}
+
+	.select-box label {
+		min-height: 30px;
+	}
+
+	.select-box label {
+		min-height: auto;
+	}
+
+	.avail-cell {
+		font-size: 16px;
+		padding: 10px 20px;
+	}
+
+	.cellhdr {
+		font-size: 15px;
+	}
+
+	.avail-sec p {
+		padding: 10px 20px;
+	}
+
+	.wealth-recomenhdr h3 {
+		font-size: 16px;
+	}
+
+	.wealth-recomen ul li > span {
+		float: none;
+	}
+
+	.wealth-perform ul li span {
+		float: left;
+	}
+
+	.wealth-recomen > ul li {
+		margin: 0 7px 7px;
+	}
+
+	.wealth-perform h4 {
+		font-size: 14px;
+	}
+
+	.wealth-perform {
+		padding: 0 5px;
+	}
+
+	.risk-range {
+		padding: 20px;
+	}
+
+	.risk-hdr h3 {
+		font-size: 24px;
+	}
+
+	.up-arrow .fa {
+		font-size: 16px;
+	}
+
+	.filter-sec .bootstrap-select > .dropdown-toggle {
+		padding-right: 20px;
+	}
+
+	.fltr-show {
+		display: inline-block;
+		margin: 0 10px 10px;
+	}
+
+	.fltr-srch {
+		display: inline-block;
+		margin: 0 10px 10px;
+	}
+
+	.fltr-group {
+		display: inline-block;
+		margin: 0 10px 10px;
+	}
+
+	.fltr-outr {
+		display: inline-block;
+		margin: 0 10px 10px;
+	}
+
+	.incep-btn {
+		margin: 0 0 5px;
+	}
+
+	.inception-scheme h5 {
+		display: block;
+		width: 100%;
+		margin: 0 0 5px;
+	}
+
+	.inception-scheme .fltr-show {
+		width: 100%;
+	}
+
+	.incep-graph {
+		margin: 0 0 20px;
+	}
+
+	.life-goal h3 {
+		font-size: 22px;
+	}
+
+	.life-goal-cell {
+		display: block;
+		border-right: 0;
+		border-bottom: 1px solid #d7d7d7;
+	}
+
+	.goal-amnt .slider-outer, .goal-rate .slider-outer, .goal-period .slider-outer {
+		width: 100%;
+	}
+
+	.life-goal-inn {
+		min-height: 40px;
+	}
+
+		.life-goal-inn img {
+			width: 36px;
+		}
+
+	.life-goal-cell h5 {
+		font-size: 18px;
+	}
+
+	.goal-result h3 {
+		font-size: 18px;
+	}
+
+	.life-goal .bttns-sec {
+		margin: 15px 0;
+	}
+
+	.active-sip .all-funds {
+		width: 100%;
+	}
+
+	.goalbox .goal-single {
+		width: 100%;
+	}
+
+	.box-goal {
+		width: 100%;
+	}
+	/*****profile-page*****/
+	.profile-name h4 {
+		font-size: 16px;
+	}
+
+	.profile-innr-lft, .profile-innr-rght {
+		display: block;
+		width: 100%;
+	}
+
+	.profile-innr-rght-main, .profile-innr-login {
+		padding: 20px;
+	}
+
+		.profile-innr-login .select-box {
+			margin: 0 0 10px;
+		}
+
+	.applicat-row {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.applicat-cell {
+		display: block;
+		padding: 5px 10px;
+		border: 0;
+		line-height: normal;
+	}
+	.life-goal-tble{padding: 0 30px;}
+	.port-modal .modal-dialog {width: 96%;height: 260px;}
+	.bld-wealth-inn{padding: 20px;}
+	/*24-07-2018*/
+	.fam_view_out > li {
+	margin-right: 24px;
+}
+.fammem_name {
+	font-size: 16px;
+}	
+.pic_names {
+	padding: 10px 10px;
+	margin-bottom: 10px;
+}
+/*06-12-2018*/
+.siptop_mat h3 {
+	font-size: 22px;
+	}
+	.monsip_in img {
+	width: 12px;
+	}
+	.monsip_in span {
+	font-size: 22px;
+	}
+	.actcell:nth-child(3) {
+	width: 40%;
+}
+.actcell:nth-child(4) {
+	width: 17%;
+}
+.siptop_mat {
+	margin-bottom: 25px;
+}
+.active_monsip {
+	margin-bottom: 30px;
+}
+.act_sips h4 {
+	margin-bottom: 20px;
+}
+/*26-12-2018*/
+.inve_surplus {
+	padding: 80px 0 40px;
+}
+.inve_surpout {
+	margin-bottom: 30px;
+}
+/*22-01-2019*/
+.financial_info {
+	padding: 70px 0 20px;
+}
+.page-rght {
+	right: 0
+}
+.paginate-bttns > a {
+	font-size: 18px;
+}
+.paginate-bttns > a img {
+	width: 60px;
+}
+.tax_savings_mf {
+	padding: 80px 0 15px;
+}
+	.with_other_tax {
+	padding: 0 0 30px;
+}
+	.comn_btn .crea_now {
+		font-size:16px;
+	}
+	.modal {
+	top: 0!important;
+	bottom: 0!important;
+	transform: translateY(0)!important;
+	-ms-transform: translateY(0)!important;
+	-webkit-transform: translateY(0)!important;
+}
+	#parentHorizontalTab_105 .resp-tabs-list li {
+		width: calc( (100% / 7) - 5px );    
+	}
+	.gol_addgoal .adgoal_btn {
+		padding: 0 20px;
+		font-size: 14px; 
+		display: inline-block;  
+		height: 50px;
+line-height: 50px; 
+	}
+	.gol_addgoal {
+		position: static;
+		text-align: center;  
+		margin-top: 15px;  
+	}
+	.modal-dialog.goal_modal {
+		width: 700px;
+	}
+	.goaltbl_out {
+		overflow: auto;
+	}
+	.goaltbl {
+		width: 850px;
+	}
+	.goal_amt {
+		width: 100%;
+		margin-bottom: 15px;    
+	}
+	.goal_amtyr {
+		flex-wrap: wrap;
+	}
+	.goal_amtyr {
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+	}
+	.goal_amt label {
+	font-size: 14px;
+	display: block;
+}
+	.goal_amt select, .goal_amt input {
+	width: 100%;
+}
+ .sveclose {
+	margin-bottom: 20px;
+}
+ .newgoal-tbl {
+	width: 90%;
+}
+ .newgoal-list ul li {
+	font-size: 14px;
+	margin: 0 10px 0 0;
+} 
+ .logbut {
+	 margin-right: 0px;
+	 font-size:14px;
+ }  
+/*Arnab-26.3 */
+.show-pwd {
+	right: 30px;
+}
+.btn-google { width:auto; }
+.financial_info_outer .resp-tabs-list li {
+	font-size: 14px;
+}
+.financial_info_outer .cash_flow li { margin-right: 60px; }
+/*Arnab-26.3 */
+}
+
+@media (max-width: 980px) {
+	.five-buttons {
+		display: block;
+		float: left;
+		width: 49%;
+	}
+	.five-buttons:last-child {
+		padding: 0 15px 0 0;
+	}
+	.subpie .highcharts-container, .highcharts-root{
+		padding: 0 10px;
+	}
+	/***12-4-18***/
+  .video-inner {
+	height: 335px;
+}
+  .profilebut {
+	padding: 25px 16px 22px;
+}
+.monsip_in {
+	padding: 10px 5px;
+	margin: 0 5px;
+}
+.conti_google a {
+   font-size: 12px;
+   padding: 8px 12px;
+}
+.upsinghrgt {
+   padding: 0 30px;
+}
+.singup_rec {
+   width: 80%;
+}
+   .left-log-top h1 {
+       font-size: 19px;
+   }
+   .left-log-top p {
+   font-size: 14px;
+}
+   .forgot a {
+       font-size: 14px;
+   }
+
+}
+/*Arnab*/
+@media (max-width: 900px) {
+	.financial_info_outer .resp-tabs-list li {
+		font-size: 12px;
+	}
+	ul.tab-listing li {
+		padding: 12px 10px !important;
+	}
+	.tab-listing .resp-tab-active {
+		padding: 12px 10px !important;
+	}
+	.income_row.header {
+		font-size: 15px;
+	}
+	.income_row:nth-child(2n) .income_cell {
+		font-size: 14px;
+	}
+	.income_row:last-child { font-size:15px; }
+	.cash_flow_btn a {
+		padding: 12px 30px;
+		font-size: 16px;
+	}
+	#ChildVerticalTab_1, #ChildVerticalTab_2, #ChildVerticalTab_6, #ChildVerticalTab_5 {
+		margin-top: 0 !important;
+	}
+}
+@media (max-width: 900px) {
+	.cash_flow_btn a {
+		padding: 12px 24px;
+		font-size: 15px;
+	}
+	.financial_info_outer .cash_flow li {
+		margin-right: 35px;
+	}
+}
+@media (max-width: 991px) {
+	.sibnup-flx .btn {
+		font-size: 16px;
+		padding: 10px 40px;
+	}
+	.radioinfo label, .radioinfo a { font-size:15px; }
+}
+
+@media (max-width: 768px) {
+	h2.resp-accordion.hor_1 img {
+		width: 20px!important; 
+		margin: 0 10px 0 0;
+	}
+	#parentHorizontalTab_105 .resp-tab-active {
+		padding: 10px 15px !important;
+	}
+	.gol_addgoal {
+		margin-top: 10px;
+	}
+	.modal-dialog.goal_modal {
+		width: auto;
+	}
+	.resp-accordion.hor_1 em {
+		font-style: normal;
+	}
+	.gol_trakrint h3 {
+		margin-bottom:15px;
+	}
+	#parentHorizontalTab_105 .resp-tab-active {
+		line-height:20px;
+	}
+	#parentHorizontalTab_105 h2.resp-accordion {        
+		height:50px;
+		line-height:20px;
+	}
+	.newgoal_out {
+	margin-top: 10px;
+	overflow:auto;
+}
+.newgoal-tbl {
+	width: 700px;
+}
+	.logbut {
+		padding 0 5px;
+	}
+	/*Arnab*/
+	.financial_info .financial_info_outer .resp-tab-active {
+		padding: 15px 15px !important;
+	}
+	h2.resp-accordion.hor_1 img {
+		height: 20px;
+	}
+	.resp-accordion.ver_1.resp-tab-active {
+		background: #d7af85 !important;
+		color: #fff;
+		font-size: 13px;
+		font-weight: 500;
+	}
+	.resp-tab-content h2.resp-tab-active span.resp-arrow {
+		border-bottom: 12px solid #FFF !important;
+	}
+	.financial_info .resp-accordion.ver_1.resp-tab-active {
+		background: #0caeb1 !important;
+	}
+	.cash_flow_btn {
+		border-right: none;
+	}
+	/*Arnab*/
+}
+
+@media (max-width: 767px) {
+	.left-log {
+		width: auto;
+		display: block;
+	}
+
+	.left-log-top {
+		padding: 20px;
+	}
+
+	.righttext {
+		width: auto;
+		display: block;
+	}
+
+	.top-box-right {
+		padding: 20px;
+	}
+
+	.righttext p {
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+
+	.map-icon {
+		padding-top: 0;
+	}
+
+	.righttext span {
+		font-size: 20px;
+	}
+
+	.righttext h2 {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+
+	.page-mid {
+		width: 100%;
+		transform: none;
+		-moz-transform: none;
+		-webkit-transform: none;
+		position: relative;
+		left: auto;
+		top: 10px;
+	}
+
+	.forgot-input {
+		width: 100%;
+	}
+
+	.navbar-nav > .search-sec {
+		position: absolute;
+		left: 0px;
+		right: 0;
+		top: 50px;
+		margin: 0;
+		padding: 10px 10px 10px 60px;
+		background-color: #d9eaea;
+	}
+
+	.navbar-custom-menu > .navbar-nav > li.search-sec {
+		position: absolute;
+	}
+
+	.borderarea {
+		margin-bottom: 20px;
+	}
+
+	.eq-height {
+		margin-bottom: 20px;
+	}
+
+	.support-section {
+		padding-bottom: 10px;
+	}
+
+	.nav > li {
+		display: inline-block;
+	}
+
+	.navbar-nav {
+		margin: 0px 0;
+	}
+
+		.navbar-nav > li > a {
+			padding: 13px 8px;
+			font-size: 13px;
+		}
+
+	.nav > li.user-menu > a {
+		padding-right: 30px;
+	}
+
+	.mobile-logo {
+		display: block;
+		width: 30px;
+		margin: 11px 8px 11px 15px;
+	}
+
+	.count-msg-noti {
+		width: 20px;
+		height: 20px;
+		right: -3px;
+		top: 2px;
+		line-height: 16px;
+		font-size: 9px;
+	}
+
+	.headertop {
+		margin-bottom: 30px;
+	}
+
+	.navbar-nav > .search-sec > .input-top {
+		width: 100%;
+	}
+
+	.navbar-nav > .search-sec .input-but-top {
+		top: 13px;
+		right: 10px;
+	}
+
+	.nav > li > a.strapicon {
+		/*left: 10px;
+		top: 6px;*/
+		left: -28px;
+		top: -29px;
+	}
+
+	.navbar-nav > .notifications-menu > .dropdown-menu,
+	.navbar-nav > .messages-menu > .dropdown-menu {
+		width: 280px;
+	}
+
+	.row-custom .col-sm-4 {
+		margin-bottom: 10px;
+	}
+
+	.only-text {
+		padding-top: 15px;
+	}
+
+	.tabcontrol > .steps > ul > li > a > em {
+		display: none;
+	}
+
+	.tabcontrol > .steps > ul:after {
+		display: none;
+	}
+
+	.tabcontrol > .steps > ul > li {
+		margin: 0 10px;
+	}
+
+	.tabcontrol > .steps > ul > li {
+		line-height: 33px;
+		width: 33px;
+		height: 33px;
+	}
+
+	.tabcontrol > .steps > ul {
+		padding-top: 20px;
+	}
+
+		.tabcontrol > .steps > ul:after {
+			width: 100%;
+		}
+
+	.rounded-box {
+		padding: 10px;
+	}
+
+	.content-area-box {
+		padding: 0;
+	}
+
+	.rounded-box p {
+		margin-bottom: 15px;
+	}
+
+	.singlerow-radio {
+		margin-bottom: 15px;
+	}
+
+	.row-custom {
+		margin-bottom: 20px;
+	}
+
+	.logbut {
+		padding: 0 5px;
+	}
+
+	.inner-page {
+		margin-top: 95px;
+		padding: 10px 0px 40px;
+	}
+
+	.search-mail-top {
+		width: 200px;
+	}
+
+	.navbar-custom-menu > .navbar-nav > li.messages-menu > .dropdown-menu {
+		left: -120px;
+		right: auto;
+		top: 55px;
+	}
+
+		.navbar-custom-menu > .navbar-nav > li.messages-menu > .dropdown-menu:before {
+			right: auto;
+			left: 40px;
+		}
+
+	.navbar-custom-menu > .navbar-nav > li.notifications-menu > .dropdown-menu {
+		left: -140px;
+		right: auto;
+		top: 55px;
+	}
+
+		.navbar-custom-menu > .navbar-nav > li.notifications-menu > .dropdown-menu:before {
+			right: auto;
+			left: 80px;
+		}
+
+	h2 {
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+
+	.perches-area {
+		padding: 10px 0 0;
+	}
+
+	.calculator-area {
+		padding: 20px 0;
+	}
+
+	.back-green-but {
+		line-height: 20px;
+		text-align: center;
+		margin: 0 -10px;
+		font-size: 16px;
+		padding: 8px 15px;
+	}
+
+	.bld-wealth h3 {
+		font-size: 22px;
+		margin: 0 0 15px;
+	}
+
+	.bld-wealth-inn {
+		padding: 20px 55px;
+	}
+
+	.bld-monthly {
+		margin: 0 25px 0 0;
+		min-width: 155px;
+	}
+
+		.bld-monthly p {
+			font-size: 15px;
+		}
+
+	.rounded-box p {
+		margin-bottom: 5px;
+	}
+
+	.box-inpt input {
+		font-size: 18px;
+		width: 108px;
+		padding: 0 10px;
+	}
+
+	.paginate {
+		padding: 20px 0;
+	}
+
+	.bld-wealth-inn {
+		padding: 20px;
+		margin: 0 0 60px;
+	}
+
+	.panel-title h5 {
+		font-size: 18px;
+	}
+
+	.totl-sec h5 {
+		font-size: 22px;
+	}
+
+	.plan-bttn a {
+		margin: 0 10px 5px;
+		display: block;
+	}
+
+	.show-scheme .remember-me {
+		margin: 0 0 5px;
+	}
+
+	.all-funds.mn-width .record-area-row .record-area-cell:first-child {
+		min-width: 250px;
+	}
+
+	.avail-cell:first-child {
+		width: auto;
+	}
+
+	.sel-redeem .select-box {
+		margin: 0 0 10px;
+	}
+
+	.review-box h3 {
+		font-size: 18px;
+	}
+
+	.review-sec {
+		padding: 10px 20px;
+	}
+
+	.micro-cap {
+		margin: 0 0 15px;
+	}
+
+	.risk-recomend {
+		text-align: center;
+	}
+
+	.risk-pic {
+		display: inline-block;
+		width: 100%;
+		padding: 0 0 10px;
+	}
+
+	.risk-txt {
+		display: inline-block;
+		width: 100%;
+		text-align: left;
+	}
+
+		.risk-txt h2 {
+			font-size: 24px;
+		}
+
+		.risk-txt h4 {
+			font-size: 18px;
+			margin: 0 0 10px;
+		}
+
+	.selec-tbl p {
+		width: 8%;
+	}
+
+	.sort-list {
+		margin: 0 0 10px;
+	}
+
+		.sort-list .navbar-collapse {
+			width: 100%;
+		}
+
+		.sort-list ul li {
+			display: block;
+			width: 100%;
+		}
+
+	.arrows-sec {
+		position: static;
+	}
+
+	.col-sm-1 {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.calculator-text h3 {
+		font-size: 20px;
+	}
+
+	.mainpaichart {
+		margin-top: 0;
+	}
+
+	.select-box {
+		margin: 0 0 10px;
+	}
+
+	.life-goal .nav-tabs > li a {
+		padding: 20px 5px 0;
+		min-height: 108px;
+	}
+
+		.life-goal .nav-tabs > li a .life-goal-inn {
+			height: 44px;
+			margin: 0 auto 5px;
+		}
+	/***12-4-18***/
+	.video-inner {
+		height: 325px;
+		margin-bottom: 20px;
+	}
+
+	.youtube-bxx {
+		margin-bottom: 15px;
+	}
+	/*24-07-2018*/
+	.fam_view_out > li {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.dash_btn_mem {
+		margin-top: 10px;
+	}
+
+	.fam_pics {
+		width: 15%;
+	}
+
+	.inception-model .modal {
+		top: 0% !important;
+		transform: translateY(0%);
+	}
+
+	.inception-model .modal-content {
+		margin: 0;
+	}
+
+	.inception-model .modal-dialog {
+		padding: 0 5%;
+	}
+
+	.inception-model .modal-dialog {
+		width: 100%;
+		top: 0%;
+		margin: auto;
+		transform: translateY(0%) !important;
+		-ms-transform: translateY(0%) !important;
+		-webkit-transform: translateY(0%) !important;
+		margin: 20px auto;
+	}
+
+	.inception-model .modal.fade.in {
+		height: 100%;
+	}
+	/*06-12-2018*/
+	.sipss_mat {
+		display: block;
+	}
+
+	.sipss_in {
+		width: 100%;
+	}
+
+	.actout_sip {
+		overflow: auto;
+	}
+
+	.acttbl {
+		width: 700px;
+	}
+
+	.active_monsip {
+		display: block;
+	}
+
+	.monsip_in {
+		margin-bottom: 15px;
+	}
+	/**/
+	.assumptions_inner, .income_outer {
+		overflow: auto;
+	}
+
+	.assumptions_tbl, .income_tbl {
+		width: 750px;
+	}
+
+	.holder_mat {
+		display: block;
+	}
+
+		.holder_mat label {
+			display: block;
+			margin: 0 0 15px 0;
+		}
+
+		.holder_mat input {
+			width: 100%;
+		}
+
+	.holder_out {
+		margin-bottom: 25px;
+	}
+
+	.income_edt_input select, .income_edt_input input {
+		width: 100%;
+	}
+
+	.select2-container {
+		width: 100% !important;
+	}
+
+	.pro_loc, .equity_holds, .equity_holds_bro {
+		float: none;
+		margin: 0 0 10px;
+		width: 100%;
+	}
+
+	.rd_auto, {
+		float: none;
+		width: 100%;
+	}
+
+		.rd_auto.p_amt label, .equity_tabs_out label {
+			width: 100%;
+		}
+
+			.rd_auto.p_amt label br {
+				display: none;
+			}
+
+		.rd_auto.p_amt input {
+			width: 100%;
+		}
+
+	.income_edt {
+		margin-bottom: 30px;
+	}
+
+	#exampleModalLong15 .modal-dialog, #exampleModalLong17 .modal-dialog, #exampleModalLong22 .modal-dialog, #exampleModalLong14 .modal-dialog, #exampleModalLong24 .modal-dialog, #exampleModalLong38 .modal-dialog {
+		width: auto;
+	}
+
+	.modal-body.realpop label {
+		width: auto;
+		text-align: left;
+		margin: 0 0 5px;
+	}
+
+	.modal-body.realpop input {
+		width: 100%;
+	}
+
+	.equity_tabs_out select, .equity_tabs_out input {
+		width: 100%;
+	}
+
+	.equity_tabs_out {
+		margin-bottom: 10px;
+	}
+
+	.buy_details {
+		overflow: auto;
+	}
+
+	.buy_details_outer {
+		width: 600px;
+		margin: 0 auto;
+	}
+
+	.assu_filters {
+		margin: 10px 0 10px 0;
+	}
+
+	.cmn_hdr.cmn_mar.text-center h3 {
+		font-size: 18px;
+	}
+
+	.bene_para p {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.tax_sav_in {
+		padding: 0;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	.opt_to {
+		margin-bottom: 15px;
+		width: 100%;
+	}
+
+	.tbl_invest_out {
+		overflow: auto;
+	}
+
+	.tbl_invest {
+		width: 767px;
+	}
+
+	.option_1 {
+		width: 80px;
+	}
+
+	.bld-wealth.text-center span {
+		font-size: 18px !important;
+	}
+
+	.customTransactChart {
+		width: 767px;
+	}
+
+	.monsip_in:last-child {
+		text-align: left;
+	}
+
+	.row-custom .col-sm-2.select-box label, .for_dv label {
+		display: none;
+	}
+
+	.selec-tbl p {
+		display: block;
+	}
+
+	.col-sm-3.select-box {
+		padding-bottom: 0;
+	}
+
+	.row-custom .select-box {
+		margin: 0;
+	}
+
+	.logbut {
+		margin-top: 10px;
+	}
+
+	.bannr-sec.top-picks {
+		padding-top: 75px;
+	}
+	.bannr-innr h1 {
+		font-size: 26px;
+		margin-bottom: 10px;
+	}
+	.money-mar {
+	margin-top: 10px!important;
+}
+	.select-box .bttns {
+	margin-top: 15px;
+}
+	#globalUl_Message::after {
+		right: 140px;
+	}
+	#globalUl_notification:after {
+		right: 120px;
+	}
+	.radio-inline {
+	width: 125px;
+}
+	h2.resp-accordion.hor_1 img {
+		width: 20px!important; 
+		margin: 0 10px 0 0;
+	}
+	#parentHorizontalTab_105 .resp-tab-active {
+		padding: 10px 15px !important;
+	}
+	.gol_addgoal {
+		margin-top: 10px;
+	}
+	#addgoal .modal-dialog {
+		width: auto;
+	}
+	.resp-accordion.hor_1 em {
+		font-style: normal;
+	}
+	.gol_trakrint h3 {
+		margin-bottom:15px;
+	}
+	/* Arnab- 28-2-19 */
+	.loginpg_sec h4.background span {
+		padding:0 10px;
+	}
+	.login-body .inner-bdy {
+	width: 400px;
+}
+	.btn-face, .btn-google { font-size:12px;}
+	.btn-face i, .btn-google i {
+	font-size: 18px;
+	margin-right: 8px;
+	padding-bottom: 0;
+}
+	h2.loginform-title {
+	font-size: 32px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+	.loginpg_sec h4 {
+	font-size: 14px;
+}
+	.loginpg_sec h4.background span {
+	padding: 0px 6px;
+}
+	.loginpg_sec .form-group label {
+		font-size:14px;
+	}
+	.radioinfo label, .radioinfo a, .sibnup-flx span {
+	font-size: 14px;
+}
+	.sibnup-flx .btn { font-size:14px; }
+	.radioinfo { margon: 15px 0;}
+	.show-pwd { right: 15px; }
+	.radioinfo label {
+	font-size: 14px;
+	line-height: 16px;
+}
+	.loginpg_sec .remember-me label span {
+		width:16px;
+		height:16px;
+		border-radius:2px;
+	}
+	.logo img {
+	width: 160px;
+}
+/* Arnab-26.3.19 */
+.btn-google {
+	justify-content: center;
+	padding-left: 0;
+}
+.social-icon {
+	display: block;
+	text-align: center;
+}
+.social-icon div:not(:last-child) {
+	margin-bottom:8px;
+}
+.fb_reset {
+	display: ruby;
+}
+.btn-google {
+	width: 200px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.singlerow-log {
+   margin: 0 -10px 7px;
+}
+/* Arnab-26.3.19 */
+}
+
+@media (max-width: 667px) {
+	.view-status {
+		margin: 0 0 15px;
+	}
+
+	.active-sip .all-funds {
+		width: 520px;
+	}
+
+	.system-cell h4 {
+		margin: 0;
+		font-size: 16px;
+	}
+
+	.system-cell h5 {
+		font-size: 24px;
+	}
+
+	.system-cell span {
+		font-size: 15px;
+	}
+
+	.system-cell {
+		display: block;
+		margin: 0 0 10px;
+		border-bottom: 1px solid #ccc;
+	}
+
+		.system-cell:last-child {
+			margin: 0;
+			border-bottom: 0;
+		}
+
+	.scale1-box h5, .scale2-box h5, .scale3-box h5 {
+		margin: 0 0 10px;
+	}
+
+	.scale-outr {
+		padding-top: 57px;
+	}
+
+	.scale-outr {
+		overflow: auto;
+	}
+
+		.scale-outr .goal-tble {
+			width: 420px;
+		}
+
+	.scale1-box, .scale2-box, .scale3-box {
+		bottom: 60px;
+		left: 0;
+		right: 0;
+		width: 420px;
+	}
+	/*****profile-page*****/
+	.investor-detail h2, .mode-hold h3, .mode-hold h2 {
+		font-size: 22px;
+		margin: 0 0 10px;
+	}
+
+	.mode-hold h5 {
+		margin: 0 0 10px;
+	}
+
+	.investor-detail {
+		margin: 0 0 20px;
+	}
+
+	.mode-hold h6 {
+		float: none;
+		text-align: left;
+	}
+	.investor-detail h2 span {float: none;margin: 0 0 0 10px;font-size: 16px;}
+	.avail-cell{line-height:24px;}
+	.bld-wealth{padding: 0;}
+	#maintable{overflow: auto;}
+	.inner-page {
+		margin-top: 70px;
+	}
+	.breadcrumb{
+		display: flex;
+	}
+	.breadcrumb > li {
+		display: flex;
+	}
+	sub {
+		bottom: 0;
+	}
+	.risk-recomend-pic{display: block;width: 100%;padding: 0 0 20px;}
+	.risk-recomend-txt h2{font-size: 26px;}
+	.risk-recomend-txt h4{margin: 0 0 15px;font-size: 18px;}
+	.bld-wealth-inn{padding: 0 0 40px ;margin:auto;}
+	.risk-recomend-txt .bttns-sec{text-align: center;}
+}
+@media (max-width: 600px) {
+	.active_monsip {
+		display:block;
+	}
+	.monsip_in {
+		margin-bottom: 20px;
+		border-bottom:1px solid #ddd;
+	}
+	.monsip_in:last-child {
+		margin-bottom: 10px;
+		border-bottom:none;
+	}
+	.your_sip {
+	margin-bottom: 10px;
+}
+	.sip_ydt {
+	margin: 0 0 30px 30px;
+}
+	.radio-inline {
+	width: 96px;
+}
+    .upsinghrgt {
+   padding: 0 20px;
+}
+
+}
+
+@media (max-width: 568px) {
+	.singleblog-log {
+		float: none;
+		width: 100%;
+		margin-bottom: 12px;
+	}
+	.singlerow-log {
+		margin: 0 -10px 0px;
+	}
+	.row-tools .toolssingle {
+		width: 100%;
+	}
+	.bld-monthly {
+		margin: 0 0 15px;
+		min-width: auto;
+		display: block;
+	}
+	.plan-bttn {
+		margin: 0;
+		text-align: center;
+	}
+	.plan-bttn a {
+		margin: 0 5px 5px;
+	}
+	.recom-lft {
+		display: block;
+		margin: 0 0 10px;
+		text-align: center;
+		vertical-align: middle;
+		width: 100%;
+	}
+	.panel-title h5 {
+		display: block;
+		padding: 0;
+		text-align: center;
+	}
+	.icon-sec {
+		margin: 15px 0;
+	}
+	.icon-inn {
+		margin: 0 0 10px 0;
+		display: block;
+	}
+	.avail-sec {
+		overflow: auto;
+	}
+	.avail-tble {
+		width: 420px;
+	}
+	.review-box .bttns-sec {
+		text-align: center;
+	}
+	.bttns-sec a:first-child {
+		margin: 0 0 10px;
+	}
+	.rev-sumry span {
+		padding: 0;
+	}
+	.sort-list ul li {
+		display: block;
+	}
+	.risk-hdr h3 {
+		font-size: 18px;
+		line-height: normal;
+	}
+	.risk-range .slider-outer {
+		width: 470px;
+	}
+	.risk-range .slider-outer {
+		width: 320px;
+	}
+	.risk-range .range-top .col-top {
+		font-size: 12px;
+	}
+	.paginate-bttns > a {
+		font-size: 14px;
+	}
+	.paginate-bttns img {
+		width: 45px;
+	}
+	.risk-range .pagination > li > a, .risk-range .pagination > li > span {
+		padding: 3px 5px;
+		font-size: 12px;
+	}
+	.fltr-show {
+		display: block;
+		margin: 0 0 10px;
+	}
+	.fltr-srch {
+		display: block;
+		margin: 0 0 10px;
+	}
+	.fltr-srch input {
+		margin: 4px 0 0;
+		width: 100%;
+	}
+	.fltr-group {
+		display: block;
+		margin: 0 0 10px;
+	}
+	.fltr-outr {
+		display: block;
+		margin: 0 0 10px;
+	}
+	.fltr-group a {
+		display: block;
+		margin: 2px 0;
+	}
+	.scale1-box, .scale2-box, .scale3-box {
+		width: 320px;
+	}
+	.paginate ul{padding: 0;}
+	.incep-port{padding:0;}
+	.five-buttons {
+		display: block;
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+	.five-buttons:last-child {
+		padding: 0;
+	}
+	
+	.clsdebt,.clsequity{display: block;width: 100%;}
+	.submainpaichart{height:auto!important;}
+	.slider-ui-single{padding-right:0;}
+	.irs-with-grid{margin-left: 0;}
+	.port-modal .modal-dialog {height: 240px;}
+    .singup_rec {
+       width: 100%;
+   }
+   .signup_lft h5 {
+       font-size: 15px;
+   }
+   .signuplft h6 {
+   font-size: 13px;
+   line-height: 15px;
+}
+}
+
+@media (max-width: 484px) {
+	.irs-single{left:0!important;right:0!important;width:100%;}
+	.dataTables_wrapper .dataTables_paginate .paginate_button{padding: 0.4em .5em;}
+	.calculator-text h3{font-size:18px;}
+	.slider-outer {width: 100%;}
+	.uploadfile{margin: 10px auto 0;float: none;}
+	/*06-12-2018*/
+	.siptop_mat {
+		display:block;
+		text-align:center;
+	}
+	.siptop_mat h3 {
+		margin-bottom:20px;
+	}
+	.show-scheme .remember-me {
+		display: block;
+	}
+	.radio-inline {
+	width: 49%!important;
+}
+		.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+			margin-left:0;
+		}
+		.add_red_more {
+	top: 5px;
+	right: 10px;
+}
+		.add_red_more a {
+	padding: 10px 10px;
+	margin-right: 5px;
+	width: 100px;
+}
+/* Arnab */
+.cash_flow_btn a {
+	padding: 10px 20px;
+	font-size: 13px;
+}
+.income_row:last-child {
+	font-size: 13px;
+}
+.loginpg_sec {
+	background-position: top center;
+	background-size: cover;
+}
+.rowsa {
+       flex-wrap: wrap;
+       padding:0 0 10px;
+   }
+   .upsinghlft,.upsinghrgt {
+   width: 100%;
+}
+   .loginpg_sec {
+       height: auto;
+   }
+/*Arnab*/
+}
+
+@media (max-width: 420px) {
+	.risk-range .slider-outer {
+		width: 260px;
+	}
+   .profile-innr-rght-main, .profile-innr-login {
+	   padding: 10px;
+   }
+
+   .investor-detail h2, .mode-hold h3, .mode-hold h2 {
+	   font-size: 20px;
+   }
+
+   .applicat-cell {
+	   padding: 5px;
+	   font-size: 12px;
+   }
+	.activate-account a{
+		float: none;
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin: 0 0 5px;
+	}
+	.support-top h3, .support-top h2 {
+		float: none;
+	}
+	.navbar-nav > li > a {padding: 13px 4px;}
+	.nav > li > a.strapicon{font-size: 22px;}
+	.dropdown-toggle em img{width:18px;}
+	/*24-07-2018*/
+	.fam_pics {
+	width: 30%;
+	}
+	.fam_pics_in {
+	width: 50px;
+	height: 50px;
+	}
+	.fammem_name {
+	font-size: 14px;
+}
+.fam_inve_dtls em {
+	font-size: 14px;
+}
+.fam_view_out > li {
+   padding: 10px 10px;
+}
+.add_red_more {
+	top: 230px;
+	right: 0;
+	left: 0;
+	text-align: center;
+}
+.goal_amt label {
+		display: block;
+	}
+	.goal_amt input {
+		width: 100%;    
+	}
+	/*Arnab-26.3*/
+	.show-pwd {
+		right: 25px;
+	}
+}
+/********20.09.2018****************/
+@media (max-width: 800px) {
+.up_wel_fl.modal {
+   top: 40%;
+}
+.up_wel_fl .modal-dialog {
+   width: auto;
+}
+.up_wel_fl .fol_upload {
+   padding: 10px 15px;
+}
+.up_wel_fl .doc_title {
+   margin-right: 0;
+   margin-bottom: 5px;
+}
+.documents-field {
+   display: block;
+}
+.doco_type_box {
+   margin-bottom: 15px;
+}
+.doc_title,.doc_title_field{
+display: block;
+}
+.doc_title{
+margin-bottom: 10px;
+margin-right: 0;
+}
+
+}
+@media (max-width: 767px) {
+.wel_lock .uplod_docu {
+   padding: 30px 0;
+}
+.wel_lock .yur_dashe {
+   margin: 0 5%;
+}
+
+}
+
+@media (max-width: 484px) {
+.uplod_docu_anch {
+   display: block;
+   margin-bottom: 20px;
+   margin-right:0;
+}
+.up_sec {
+   display: block;
+}
+.uplod_docu {
+   padding: 20px 0 0;
+}
+.lock_hdr {
+   margin: 10px 0 15px;
+}
+.lock_hdr h4 {
+   font-size: 22px;
+   text-align: center;
+}
+.lock_hdr .fa {
+   font-size: 34px;
+}
+/* Arnab-28-2-19 */
+
+.show-pwd {
+	right: 25px;
+}
+.radioinfo { margin:15px 0; }
+/*Arnab*/
+}
+
+@media (max-width: 420px) {
+.nav > li > a.strapicon {
+   top: -27px;
+}
+.navbar-nav > li > a {
+   padding: 13px 5px;
+}
+.bld-wealth.text-center span {
+	display:block;
+}
+}
+@media (max-width: 400px) {
+	.login-body .inner-bdy {
+	width: 95%;
+}
+	.logo {
+	text-align: center;
+}
+	.social-icon {
+		display:block;
+	}
+	.social-icon a {
+		margin-top:5px;
+	}
+	.show-pwd {
+	right: 25px;
+}
+	.sibnup-flx { display:block;}
+	.sibnup-flx .btn {
+	width: 100%;
+	margin-bottom: 10px;
+}
+	.login-body {
+	   top: 68%;
+	}
+	/* Arnab-26.3 */
+	.remember-me input[type="checkbox"]:checked + label span::after {
+		top: 2px;
+		left: 3px;
+	}
+}
+@media (max-width: 384px) {
+	.mobile-logo {
+	width: 25px;
+	margin: 11px 8px 11px 5px;
+}
+	.navbar-nav > li > a {
+	padding: 11px 3px;
+}
+	/*27-12-2018*/
+	.commn-bttn.rtake_ques, .btn_outer_div .bttns-sec {
+	float: none;
+}
+	.commn-bttn.rtake_ques {
+		margin-bottom:15px;
+	}
+	/*22-01-2019*/
+	.dropdown.user-menu span {
+		font-size:12px;
+	}
+	.navbar-custom-menu > .navbar-nav > li {
+		margin-right: -2px;
+	}
+	.income_row.header {
+		font-size: 13px;
+	}
+	.income_cell {
+		padding: 10px 10px;
+	}
+    .forgot {
+   padding: 20px 0 0;
+}
+}
+
+@media (max-width: 280px) {
+	.mobile-logo {
+		width: 25px;
+		margin: 13px 8px 11px 10px;
+	}
+
+	.nav > li > a.strapicon {
+		left: -25px;
+		top: -27px;
+	}
+
+	.nav > li.user-menu > a {
+		padding-right: 20px;
+	}
+
+	.user-menu::after {
+		right: 5px;
+	}
+
+	.headertop {
+		height: 48px;
+	}
+
+	.navbar-nav > li > a {
+		padding: 13px 4px;
+	}
+	/*--customized--*/
+	.collapse {
+		display: block;
+	}
+}
+
+
+@media (max-width: 991px) {
+	.sur_text {
+	padding: 0 15%;
+}
+}
+
+@media (max-width: 800px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+	.sur_text {
+	padding: 0;
+}
+.inve_surpout {
+	display:block;
+}
+.invemat_sur {
+	width: 100%;
+	margin-bottom: 15px;
+}
+}
+
+@media (max-width: 640px) {
+	
+}
+@media (max-width: 600px) {
+}
+@media (max-width: 568px) {
+}
+@media (max-width: 480px) {
+	.invemat_sur {
+		padding: 15px 10px;
+	}
+}
+@media (max-width: 420px) {
+}
+
+@media (max-width: 320px) {
+}
+
+
+
+
+

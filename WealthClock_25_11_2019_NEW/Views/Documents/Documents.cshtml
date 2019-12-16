@@ -1,0 +1,168 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+
+<section class="wel_lock">
+    <div class="container">
+        <div class="lock_hdr">
+            <i class="fa fa-file" aria-hidden="true"></i>
+            <h4>
+                WealthLocker
+            </h4>
+        </div>
+        <div class="yur_dashe">
+            <div class="yur_dashe_in">
+                <h4>Your Dashboard</h4>
+                <div class="uplod_docu">
+                    <a href="/MyAccount/UploadedDocuments" class="uplod_docu_anch">
+                        <em>0</em>
+                        <span>Uploaded Documents</span>
+                    </a>
+                    <div class="up_sec">
+
+                        <button class="upload_btnn" data-toggle="modal" data-target="#exampleModalLong2"> Upload File</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<div class="modal model_pop_up fade up_wel_fl" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- <div class="modal-header"> -->
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+            <!-- </button> -->
+            <!-- </div> -->
+            <div class="modal-body">
+                <h4>Uploaded Documents</h4>
+                <div class="fol_upload">
+
+
+
+                    <div class="store_document-outr">
+
+                        <div class="documents-field">
+                            <div class="doco_type_box">
+                                <div class="doc_title">Document Type:</div>
+                                <div class="doc_title_field">
+                                    <div class="select-box">
+
+
+                                        <select class="form-control" id="dctype">
+                                            <option>Select Document Type</option>
+                                            <option value="Pan">Pan</option>
+                                            <option value="Adhar">Aadhar</option>
+                                            <option value="Passport">Passport</option>
+                                            <option value="Driving Licence">Driving Licence</option>
+                                            <option value="LIC">LIC</option>
+                                            <option value="Mediclaim">Mediclaim</option>
+                                            <option value="Voter Id card">Voter Id card</option>
+                                            <option value="Company Identity card">Company Identity card</option>
+                                        </select>
+                                        <label id="span_redeemType" class="errormsg hide">Please select redeemption type.</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doco_type_box">
+                                <div class="doc_title">Document Title:</div>
+                                <div class="doc_title_field"><input type="text" placeholder="" id="docName" /></div>
+
+                            </div>
+                            <div class="doco_type_box">
+                                <div class="up_sec_fol">
+                                    <div class="custom-file-upload">
+                                        <input type="file" id="file" name="myfiles[]" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $("body").on("change", "#file", function () {
+        var data = new FormData();
+        var files = $("#file").get(0).files;
+        if (files.length > 0) {
+            data.append("DigiLocker", files[0]);
+            var tp = "DigiLocker";
+            var res1 = fileUpload(data, tp);
+        }
+    });
+
+
+    function fileUpload(data, tp) {
+
+        var DocName = $('#dctype').val();
+        var Doctype = $('#docName').val();
+        $(".ui-loader").removeClass("hide");
+        $.ajax({
+            url: "/GenericFileUpload/FileUpload.ashx?type=" + tp,
+            type: "POST",
+            processData: false,
+            contentType: false,
+            data: data,
+            success: function (response) {
+                if (response != "") {
+                    var res = response.split('|');
+                    if (res[0] == 'Success') {
+                        $.post("/Myaccount/ImageUploadForDigiLocker", { FilePath: res[1], Ext: res[2], Doctype: Doctype, DocName: DocName }, function (data) {
+                            $('.uiloader').addClass('hide');
+                            var arr = data.split('!');
+                            if (arr[0] == "Success") {
+                                $.alert({
+                                    title: 'Alert!',
+                                    content: 'File Uploaded Successully!',
+                                });
+                                setTimeout(function () {
+                                    location.reload();
+                                }, 2000);
+                            }
+                            else {
+                                $.alert({
+                                    title: 'Alert!',
+                                    content: 'Insert only .png or .jpg file only',
+                                });
+                                $("#txtImg").prop('disabled', false);
+                            }
+                        });
+                    }
+                    else {
+                        $(".ui-loader").addClass("hide");
+                    }
+                }
+                else {
+                    $(".ui-loader").addClass("hide");
+                }
+            },
+            error: function (er) {
+                $(".ui-loader").addClass("hide");
+                $.alert({
+                    title: 'Alert!',
+                    content: "Something went wrong.",
+                });
+            }
+
+        });
+    }
+</script>
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>
+
