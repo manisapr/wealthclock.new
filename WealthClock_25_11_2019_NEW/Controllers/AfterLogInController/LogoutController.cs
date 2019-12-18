@@ -16,6 +16,7 @@ namespace WealthClock_25_11_2019_NEW.Controllers.AfterLogInController
         }
         public ActionResult Logout()
         {
+            Session.Abandon();
             FormsAuthentication.SignOut();
             return Json("logout",JsonRequestBehavior.AllowGet);
         }

@@ -75,6 +75,7 @@ namespace WealthClock_25_11_2019_NEW.CodeFile
             }
             catch (Exception ex)
             {
+                res = "not found";
                 return res;
             }
             

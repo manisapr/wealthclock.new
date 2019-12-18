@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -1018,6 +1021,7 @@
     <Content Include="js\utils.js" />
     <Content Include="js\woco.accordion.min.js" />
     <Content Include="js\wow.js" />
+    <Content Include="MailTemplate\NewRegistration.html" />
     <Content Include="Scripts\dropzone\basic.css" />
     <Content Include="Scripts\dropzone\basic.min.css" />
     <Content Include="Scripts\dropzone\dropzone-amd-module.js" />
@@ -1043,6 +1047,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CodeFile\AccountCodeFile.cs" />
+    <Compile Include="CodeFile\Mail.cs" />
     <Compile Include="Controllers\AfterLogInController\DashboardController.cs" />
     <Compile Include="Controllers\AfterLogInController\DocumentsController.cs" />
     <Compile Include="Controllers\AfterLogInController\FinancialinfoController.cs" />
