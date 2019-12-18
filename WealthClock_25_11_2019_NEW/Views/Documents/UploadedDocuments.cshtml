@@ -1,0 +1,133 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
+}
+<script src="DropzoneJs_scripts/jquery.min.js"></script>
+<script src="DropzoneJs_scripts/dropzone.js"></script>
+<link href="DropzoneJs_scripts/dropzone.css" rel="stylesheet" />
+<link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<section class="wel_lock">
+    <div class="container">
+        <div class="lock_hdr">
+            <i class="fa fa-file" aria-hidden="true"></i>
+            <h4>
+                WealthLocker
+            </h4>
+        </div>
+
+        <div class="yur_dashe">
+            <div class="yur_dashe_in">
+                <h4>Your Documents</h4>
+                <table class="table" id="example">
+                    <thead>
+                        <tr>
+                            <td>Document_Type</td>
+                            <td>Document_Title</td>
+                            <td>Image</td>
+                            <td>Action</td>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/dropzone/dropzone.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Scripts/dropzone/dropzone.min.css" rel="stylesheet" />
+<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+
+<div class="ui-loader ui-loader-default hide">
+    <span class="ui-icon ui-icon-loading"></span>
+</div>
+<div class="kyc-loader kyc-loader-default hide">
+    <span class="kyc-icon kyc-icon-loading"></span>
+</div>
+<script type="text/javascript">
+       $(document).ready(function () {
+
+           $.ajax({
+               type: "POST",
+               url: '@Url.Action("getAlldetails","Documents")',
+               contentType: 'application/json;charset=utf-8',
+               async: false,
+               cache: false,
+               success: function (data) {
+
+                   if (data.length > 0) {
+                       $.each(data, function (Index, value) {
+                           $("#example tbody").append('<tr><td><h3>' + value.Document_Type + '</h3></td><td>' + value.Document_Title + '</td><td><img src="' + value.Document_Path + '"height="250px" width="300px" /></td><td> <input type="button" value="Delete" id="btndel" data-id=' + value.Docs_ID + ' /></td></tr>');
+                   })
+                   }
+
+               },
+               error: function () {
+
+               }
+           })
+       })
+</script>
+<script>
+       $(document).ready(function () {
+           $('#example').DataTable();
+       });
+
+</script>
+<script type="text/javascript">
+    $(document).on("click", "#btndel", function () {
+        var id = $(this).data('id');
+        //test
+        swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+             if (window.FormData !== undefined) {
+            var fdata = new FormData();
+            fdata.append("_id", id);
+            $.ajax({
+            type: "POST",
+            url: '@Url.Action("Delete","Documents")',
+            contentType: false,
+            processData: false,
+            data: fdata,
+            dataType: "Json",
+            success: function (data) {
+                if (data = "data deleted") {
+                        swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                        });
+                        setTimeout(function(){
+                             location.reload();
+                         }, 2000);
+                    }
+                    else {
+                        alert("Not");
+                    }
+                },
+                error: function () {
+
+                }
+        })
+        }
+
+        } else {
+            swal("Your imaginary file is safe!");
+        }
+        });
+        //test
+
+    })
+</script>
+

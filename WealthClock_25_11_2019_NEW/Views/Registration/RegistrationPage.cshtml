@@ -209,44 +209,7 @@
         </div>
     </section>
     <script src="../js/js_Dashboard/jquery-ui.js" type="text/javascript"></script>
-    <script type="text/javascript">
 
-        $("#txtSearchByName").autocomplete({
-            source: function (request, response) {
-                debugger;
-                $.ajax({
-
-                    url: "/Account/GetAllRm",
-                    type: "POST",
-                    dataType: "json",
-                    data: { Prefix: request.term },
-                    success: function (data) {
-                        debugger;
-                        response($.map(data, function (item) {
-                            return { label: item.Emp_Name, value: item.Emp_Name, hidden: item.ClientCode };
-                        }))
-
-                    }
-                })
-            },
-            messages: {
-                noResults: "", results: ""
-            }
-        });
-        //$('#txtSearchByName').on('autocompleteselect', function (e, ui) {
-        //    $('.ui-loader').removeClass('hide');
-        //    var btn_val = ui.item.hidden
-        //    $.post("/Admin/ClientResource/SearchByPrefix", { pageCount: 0, key: btn_val, isPrefix: 0 }, function (data) {
-        //        if (data != "") {
-        //            $('.investrs').html('');
-        //            $('.investrs').html(data);
-
-        //            $('.ui-loader').addClass('hide');
-        //        }
-        //    })
-
-        //});
-    </script>
     <!--Send Data To Controller-->
     <script type="text/javascript">
         $(document).ready(function () {
@@ -329,12 +292,33 @@
     <script src="../js/js_Dashboard/jquery-confirm.min.js" type="text/javascript"></script>
     <!-- custom js -->
     <script src="../js/js_Dashboard/custom.js" type="text/javascript"></script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--Preloader-->
     <script>
         var loader = document.getElementById("overlay");
         window.addEventListener("load", function () {
             loader.style.display = "none";
+        });
+    </script>
+    <!--Auto complete search-->
+    <script src="/js/js_Dashboard/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $("#txtSearchByName").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("setSearchvalue","Registration")',
+                    dataType: "Json",
+                    data: { search: $("#txtSearchByName").val() },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            
+                            return { label: item.Emp_Name, value: item.Emp_Name };
+                        }));
+                        console.log(data);
+                    }
+                })
+            }
         });
     </script>
     <script type="text/javascript">

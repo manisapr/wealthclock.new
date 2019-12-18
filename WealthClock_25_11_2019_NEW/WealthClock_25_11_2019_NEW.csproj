@@ -1018,6 +1018,14 @@
     <Content Include="js\utils.js" />
     <Content Include="js\woco.accordion.min.js" />
     <Content Include="js\wow.js" />
+    <Content Include="Scripts\dropzone\basic.css" />
+    <Content Include="Scripts\dropzone\basic.min.css" />
+    <Content Include="Scripts\dropzone\dropzone-amd-module.js" />
+    <Content Include="Scripts\dropzone\dropzone-amd-module.min.js" />
+    <Content Include="Scripts\dropzone\dropzone.css" />
+    <Content Include="Scripts\dropzone\dropzone.js" />
+    <Content Include="Scripts\dropzone\dropzone.min.css" />
+    <Content Include="Scripts\dropzone\dropzone.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -1025,6 +1033,11 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="UploadedDocument\Doc\2ead30da-c523-455b-9a70-31904db943f6_WC72D94FA6.jpg" />
+    <Content Include="UploadedDocument\Doc\47a0f828-680f-4309-8f53-432d08102915_WC2E94FA5H.jpg" />
+    <Content Include="UploadedDocument\Doc\4e18face-bb27-43f8-b059-0fc300e44c5b_WC2E94FA5H.jpg" />
+    <Content Include="UploadedDocument\Doc\710fc4c4-4fd2-4f56-a1cb-23f1a484c317_WC72D94FA6.jpg" />
+    <Content Include="UploadedDocument\Doc\daf194c3-f976-42dd-b1da-859dbeeb4536_WC2E94FA5H.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1050,6 +1063,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\SQLHelper.cs" />
+    <Compile Include="Helper\Utility.cs" />
+    <Compile Include="Models\Contact_US.cs" />
+    <Compile Include="Models\DocDetails .cs" />
+    <Compile Include="Models\GetRmDetails.cs" />
+    <Compile Include="Models\Resultinfo.cs" />
     <Compile Include="Models\UserRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1104,6 +1123,7 @@
     <Content Include="Views\MutualFund\FamilyAccountView.cshtml" />
     <Content Include="Views\Profile\ScheduleAPickup.cshtml" />
     <Content Include="Views\Profile\UploadDocuments.cshtml" />
+    <Content Include="Views\Documents\UploadedDocuments.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

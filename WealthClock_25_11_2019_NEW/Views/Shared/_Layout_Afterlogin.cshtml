@@ -92,10 +92,10 @@
                         <li><a href="javascript:void(0)" class="strapicon"><i class="fa fa-bars"></i></a></li>
 
 
-                        <li class="dropdown messages-menu">
+                        @*<li class="dropdown messages-menu">
                             <a href="#" class="dropdown-toggle" aria-expanded="false" title="Digital Locker"> <em><img src="/images/images_Dashboard/l4.png" alt="" /></em> <span class="count-msg-noti color-msg hide" id="message_count2"></span> </a>
 
-                        </li>
+                        </li>*@
 
                         <li class="dropdown messages-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="anc_ProfileMessage" title="Message"> <em><img src="/images/images_Dashboard/mailicon.png" alt="" /></em> <span class="count-msg-noti color-msg hide" id="message_count"></span> </a>
@@ -422,15 +422,15 @@
         <script type="text/javascript">
         $(document).on("click", "#logout", function () {
             //test
-            swal({
-            title: "Are you sure?",
-            //text: "Once deleted, you will not be able to recover this imaginary file!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-            })
-            .then((willDelete) => {
-                if (willDelete) {
+            //swal({
+            //title: "Are you sure?",
+            ////text: "Once deleted, you will not be able to recover this imaginary file!",
+            //icon: "warning",
+            //buttons: true,
+            //dangerMode: true,
+            //})
+            //.then((willDelete) => {
+            //    if (willDelete) {
                      $.ajax({
                 type: "POST",
                 url: '@Url.Action("Logout","Logout")',
@@ -446,8 +446,8 @@
 
                 }
             });
-                    }
-                    });
+                    //}
+                    //});
             //test
 
         })
