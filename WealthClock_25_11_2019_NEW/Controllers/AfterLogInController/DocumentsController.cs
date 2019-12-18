@@ -82,7 +82,8 @@ namespace WealthClock_25_11_2019_NEW.Controllers.AfterLogInController
                         com.Parameters.AddWithValue("@Document_Type", doctype);
                         com.Parameters.AddWithValue("@Document_Title", doctitle);
                         string filename = Guid.NewGuid() + "_" + ClientCode + file_exe;
-                        com.Parameters.AddWithValue("@Document_Path", "http://localhost:50092/" + "UploadedDocument/Doc/" + filename);
+                        com.Parameters.AddWithValue("@Document_Path", "https://hih7.azurewebsites.net/" + "UploadedDocument/Doc/" + filename);
+                        //com.Parameters.AddWithValue("@Document_Path", "http://localhost:50092/" + "UploadedDocument/Doc/" + filename);
                         com.Parameters.AddWithValue("@DateTime", DateTime.Now);
                         com.Parameters.AddWithValue("@ImageName", filename);
                         SqlDataAdapter rdr = new SqlDataAdapter(com);
