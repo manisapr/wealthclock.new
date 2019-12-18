@@ -27,11 +27,14 @@ namespace WealthClock_25_11_2019_NEW.Controllers.AfterLogInController
             {
                 string ClientCode = User.Identity.Name.Split('|')[0];
                 string User_Email = User.Identity.Name.Split('|')[1];
-                SqlCommand com = new SqlCommand("select count(*) from UserDocs where User_email=@Email", conn);
+                SqlCommand com = new SqlCommand("select count(*) from user_docs where User_email=@Email", conn);
                 com.Parameters.AddWithValue("@Email", User_Email);
                 conn.Open();
                 ViewBag.documentCount = com.ExecuteScalar();
                 conn.Close();
+                //DataSet ds = new DataSet();
+                //SqlDataAdapter rdr = new SqlDataAdapter(com);
+                //rdr.Fill(ds);
                 return View();
             }
             else
