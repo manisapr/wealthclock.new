@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using WealthClock_25_11_2019_NEW.Models;
+using System.IO;
 
 namespace WealthClock_25_11_2019_NEW.CodeFile
 {
@@ -97,5 +98,58 @@ namespace WealthClock_25_11_2019_NEW.CodeFile
             }
             return otp;
         }
+
+        //***
+        public string DeleteUserDocsByID(string ID)
+        {
+            string res = "";
+            int id = Convert.ToInt32(ID);
+            //file path
+            SqlCommand com2 = new SqlCommand("select ImageName from UserDocs where Docs_ID='" + id + "'", conn);
+            DataSet ds = new DataSet();
+            SqlDataAdapter rdr = new SqlDataAdapter(com2);
+            rdr.Fill(ds);
+            string imagepath = ds.Tables[0].Rows[0]["ImageName"].ToString();
+            //file path
+            SqlCommand com = new SqlCommand("delete from UserDocs where Docs_ID='" + id + "'", conn);
+            conn.Open();
+            int i = Convert.ToInt32(com.ExecuteNonQuery());
+            conn.Close();
+            if (i > 0)
+            {
+                return res = imagepath;
+            }
+            else
+            {
+                return res = "not";
+            }
+        }
+        public string DeleteFile(string filepath)
+        {
+            string res = "";
+
+            if (File.Exists(filepath))
+            {
+                File.Delete(filepath);
+                res = "File deleted";
+                return res;
+            }
+            else
+            {
+                res = "File not deleted";
+                return res;
+            }
+
+        }
+        public DataTable GetDocDetailsByClientID(string ClientCode)
+        {
+            string res = "";
+            SqlCommand com = new SqlCommand("select Docs_ID,Document_Type,Document_Title,Document_Path from UserDocs where ClientCode='" + ClientCode + "'", conn);
+            DataTable dt = new DataTable();
+            SqlDataAdapter rdr = new SqlDataAdapter(com);
+            rdr.Fill(dt);
+            return dt;
+        }
+        
     }
 }

@@ -1,7 +1,9 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout_Afterlogin.cshtml";
 }
-
+<script src="DropzoneJs_scripts/jquery.min.js"></script>
+<script src="DropzoneJs_scripts/dropzone.js"></script>
+<link href="DropzoneJs_scripts/dropzone.css" rel="stylesheet" />
 <section class="wel_lock">
     <div class="container">
         <div class="lock_hdr">
@@ -14,7 +16,7 @@
             <div class="yur_dashe_in">
                 <h4>Your Dashboard</h4>
                 <div class="uplod_docu">
-                    <a href="/MyAccount/UploadedDocuments" class="uplod_docu_anch">
+                    <a href="/Documents/UploadedDocuments" class="uplod_docu_anch">
                         <em>@ViewBag.documentCount</em>
                         <span>Uploaded Documents</span>
                     </a>
@@ -30,7 +32,9 @@
     </div>
 </section>
 
-
+<script src="~/Scripts/dropzone/dropzone.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Scripts/dropzone/dropzone.min.css" rel="stylesheet" />
 <div class="modal model_pop_up fade up_wel_fl" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -74,95 +78,132 @@
 
                             </div>
                             <div class="doco_type_box">
-                                <div class="up_sec_fol">
-                                    <div class="custom-file-upload">
-                                        <input type="file" id="file" name="myfiles[]" />
+                                <input type="button" value="Close" id="btncls" />
+                                @*<div class="up_sec_fol">
+                                        <div class="custom-file-upload">
+                                            <input type="file" id="file" name="myfiles[]" />
+                                        </div>
+                                    </div>*@
+
+                            </div>
+                            <!--Test-->
+                            @*<div class="doco_type_box">
+                                    <div class="doc_title">Document Type:</div>
+                                    <div class="doc_title_field">
+                                        <div class="jumbotron">
+                                            <form action="~/Home/Upload"
+                                                  class="dropzone"
+                                                  id="dropzoneJsForm"
+                                                  style="background-color:#00BFFF"></form><button id="submit-all">
+                                                Submit All Files
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>*@
+                            <!--Test-->
+                        </div>
+                        <!--Test2-->
+                        <div class="documents-field">
+                            <div class="doco_type_box">
+                                <div class="doc_title">Document Type:</div>
+                                <div class="doc_title_field">
+                                    <div class="jumbotron" style="background-color:white">
+                                        <form action="~/Documents/Upload"
+                                              class="dropzone"
+                                              id="dropzoneJsForm"
+                                              style="background-color:cornsilk"></form>@*<button id="submit-all">
+                                                Submit All Files
+                                            </button>*@
+                                        </div>
                                     </div>
                                 </div>
 
                             </div>
+                            <!--Test2-->
+
                         </div>
 
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-</div>
-<script type="text/javascript">
-
-    $("body").on("change", "#file", function () {
-        var data = new FormData();
-        var files = $("#file").get(0).files;
-        if (files.length > 0) {
-            data.append("DigiLocker", files[0]);
-            var tp = "DigiLocker";
-            var res1 = fileUpload(data, tp);
-        }
-    });
 
 
-    function fileUpload(data, tp) {
+    <div class="ui-loader ui-loader-default hide">
+        <span class="ui-icon ui-icon-loading"></span>
+    </div>
+    <div class="kyc-loader kyc-loader-default hide">
+        <span class="kyc-icon kyc-icon-loading"></span>
+    </div>
+    <script type="text/javascript">
+        $(document).on("click", "#btncls", function () {
+            //$("#dropzoneJsForm").empty();
+            window.location.reload();
+        })
+    </script>
+    <script type="text/javascript">
+    //for dropdown
+    $(document).ready(function () {
+        $("#dctype").change(function () {
+            var doctype = $(this).val();
+            if (window.FormData !== undefined) {
+                var fdata = new FormData();
+                fdata.append("_dctype",doctype);
+                $.ajax({
+                type: "POST",
+                    url: '@Url.Action("forDropDown","Documents")',
+                    contentType: false,
+                    processData: false,
+                    data: fdata,
+                    dataType: "Json",
+                    success: function (data) {
+                        //alert(data);
+                    },
+                    error: function () {
 
-        var DocName = $('#dctype').val();
-        var Doctype = $('#docName').val();
-        $(".ui-loader").removeClass("hide");
-        $.ajax({
-            url: "/GenericFileUpload/FileUpload.ashx?type=" + tp,
-            type: "POST",
-            processData: false,
-            contentType: false,
-            data: data,
-            success: function (response) {
-                if (response != "") {
-                    var res = response.split('|');
-                    if (res[0] == 'Success') {
-                        $.post("/Myaccount/ImageUploadForDigiLocker", { FilePath: res[1], Ext: res[2], Doctype: Doctype, DocName: DocName }, function (data) {
-                            $('.uiloader').addClass('hide');
-                            var arr = data.split('!');
-                            if (arr[0] == "Success") {
-                                $.alert({
-                                    title: 'Alert!',
-                                    content: 'File Uploaded Successully!',
-                                });
-                                setTimeout(function () {
-                                    location.reload();
-                                }, 2000);
-                            }
-                            else {
-                                $.alert({
-                                    title: 'Alert!',
-                                    content: 'Insert only .png or .jpg file only',
-                                });
-                                $("#txtImg").prop('disabled', false);
-                            }
-                        });
                     }
-                    else {
-                        $(".ui-loader").addClass("hide");
-                    }
-                }
-                else {
-                    $(".ui-loader").addClass("hide");
-                }
-            },
-            error: function (er) {
-                $(".ui-loader").addClass("hide");
-                $.alert({
-                    title: 'Alert!',
-                    content: "Something went wrong.",
-                });
+            })
             }
 
-        });
-    }
-</script>
+        })
+        //for doctitle
+        $("#docName").blur(function () {
+            var docTitle = $(this).val();
+             if (window.FormData !== undefined) {
+                var fdata = new FormData();
+                fdata.append("_docTitle",docTitle);
+                $.ajax({
+                type: "POST",
+                    url: '@Url.Action("DocTitle","Documents")',
+                    contentType: false,
+                    processData: false,
+                    data: fdata,
+                    dataType: "Json",
+                    success: function (data) {
+                        //alert(data);
+                    },
+                    error: function () {
 
-<div class="ui-loader ui-loader-default hide">
-    <span class="ui-icon ui-icon-loading"></span>
-</div>
-<div class="kyc-loader kyc-loader-default hide">
-    <span class="kyc-icon kyc-icon-loading"></span>
-</div>
+                    }
+            })
+            }
+        })
+    })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#exampleModalLong2").on('hide.bs.modal', function () {
+                window.location.reload();
+                //actions you want to perform after modal is closed.
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).on("click", "#btn1", function () {
+            alert("Hi");
+            window.location.reload();
+        })
+
+    </script>
 
