@@ -142,7 +142,7 @@ namespace WealthClock_25_11_2019_NEW.Controllers.AfterLogInController
         {
             var id = Request.Form.Get("_id");
             AccountCodeFile acf = new AccountCodeFile();
-            string res = acf.DeleteUserDocsByID(id).ToString();
+            string res = acf.Deleteuser_docsByID(id).ToString();
             //delete file
             var fullPath = Server.MapPath("~/UploadedDocument/Doc/" + res);
             res = acf.DeleteFile(fullPath);

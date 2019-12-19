@@ -100,18 +100,18 @@ namespace WealthClock_25_11_2019_NEW.CodeFile
         }
 
         //***
-        public string DeleteUserDocsByID(string ID)
+        public string Deleteuser_docsByID(string ID)
         {
             string res = "";
             int id = Convert.ToInt32(ID);
             //file path
-            SqlCommand com2 = new SqlCommand("select ImageName from UserDocs where Docs_ID='" + id + "'", conn);
+            SqlCommand com2 = new SqlCommand("select ImageName from user_docs where Docs_ID='" + id + "'", conn);
             DataSet ds = new DataSet();
             SqlDataAdapter rdr = new SqlDataAdapter(com2);
             rdr.Fill(ds);
             string imagepath = ds.Tables[0].Rows[0]["ImageName"].ToString();
             //file path
-            SqlCommand com = new SqlCommand("delete from UserDocs where Docs_ID='" + id + "'", conn);
+            SqlCommand com = new SqlCommand("delete from user_docs where Docs_ID='" + id + "'", conn);
             conn.Open();
             int i = Convert.ToInt32(com.ExecuteNonQuery());
             conn.Close();
