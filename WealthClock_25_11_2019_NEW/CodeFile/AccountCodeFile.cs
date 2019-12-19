@@ -144,7 +144,7 @@ namespace WealthClock_25_11_2019_NEW.CodeFile
         public DataTable GetDocDetailsByClientID(string ClientCode)
         {
             string res = "";
-            SqlCommand com = new SqlCommand("select Docs_ID,Document_Type,Document_Title,Document_Path from UserDocs where ClientCode='" + ClientCode + "'", conn);
+            SqlCommand com = new SqlCommand("select Docs_ID,Document_Type,Document_Title,Document_Path from user_docs where ClientCode='" + ClientCode + "'", conn);
             DataTable dt = new DataTable();
             SqlDataAdapter rdr = new SqlDataAdapter(com);
             rdr.Fill(dt);

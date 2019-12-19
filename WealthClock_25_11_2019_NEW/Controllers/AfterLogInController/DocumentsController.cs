@@ -79,7 +79,7 @@ namespace WealthClock_25_11_2019_NEW.Controllers.AfterLogInController
                         if (!isExists) System.IO.Directory.CreateDirectory(pathString);
                         //Path save into the database(Begin)
                         DataSet ds = new DataSet();
-                        SqlCommand com = new SqlCommand("insert into UserDocs(ClientCode,User_email,Document_Type,Document_Title,Document_Path,DateTime,ImageName) values (@ClientCode,@User_email,@Document_Type,@Document_Title,@Document_Path,@DateTime,@ImageName)", conn);
+                        SqlCommand com = new SqlCommand("insert into user_docs(ClientCode,User_email,Document_Type,Document_Title,Document_Path,DateTime,ImageName) values (@ClientCode,@User_email,@Document_Type,@Document_Title,@Document_Path,@DateTime,@ImageName)", conn);
                         com.Parameters.AddWithValue("@ClientCode", ClientCode);
                         com.Parameters.AddWithValue("@User_email", User_Email);
                         com.Parameters.AddWithValue("@Document_Type", doctype);
