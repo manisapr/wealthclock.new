@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using WealthClock_25_11_2019_NEW.Models;
 using WealthClock_25_11_2019_NEW.CodeFile;
+using WealthClock_25_11_2019_NEW.Helper;
 using System.Web.Security;
 
 
@@ -51,6 +52,18 @@ namespace WealthClock_25_11_2019_NEW.Controllers.BeforeLoginController
                 return Json("already exist", JsonRequestBehavior.AllowGet);
             }
             
+        }
+        public ActionResult setSearchvalue(string search)
+        {
+            GetRmDetails obj = new GetRmDetails();
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
+            SqlCommand com = new SqlCommand("select Emp_ID,Emp_Name from Admin_Employee where Emp_Name like @prefix", conn);
+            com.Parameters.AddWithValue("@prefix", search + "%");
+            DataTable dt = new DataTable();
+            SqlDataAdapter rdr = new SqlDataAdapter(com);
+            rdr.Fill(dt);
+            List<GetRmDetails> lst = Utility.ConvertDataTableToClassObjectList<GetRmDetails>(dt);
+            return Json(lst,JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using WealthClock_25_11_2019_NEW.Models;
+using System.IO;
 
 namespace WealthClock_25_11_2019_NEW.CodeFile
 {
@@ -17,7 +18,7 @@ namespace WealthClock_25_11_2019_NEW.CodeFile
         {
             try {
                 DataTable dt = new DataTable();
-                SqlCommand com = new SqlCommand("select * from User_auth where User_Email=@User_Email and Password=@Password", conn);
+                SqlCommand com = new SqlCommand("select * from user_details where User_Email=@User_Email and Password=@Password", conn);
                 com.Parameters.AddWithValue("@User_Email",user.email);
                 com.Parameters.AddWithValue("@Password",user.pass);
                 SqlDataAdapter rdr = new SqlDataAdapter(com);
@@ -38,7 +39,7 @@ namespace WealthClock_25_11_2019_NEW.CodeFile
         {
             int i = 0;
             string CLIENTCODE = "WC" + GenerateOTP();
-            SqlCommand com = new SqlCommand("insert into User_auth (ClientCode,User_Email,Password,UserName,User_Mobile,User_Regdate,Advisor,IsActive,KycStatus,IsIsipActive,IsXsipActive,BSEImageUpload_Status,Status) values (@ClientCode,@User_Email,@Password,@UserName,@User_Mobile,@User_Regdate,@Advisor,@IsActive,@KycStatus,@IsIsipActive,@IsXsipActive,@BSEImageUpload_Status,@Status)", conn);
+            SqlCommand com = new SqlCommand("insert into user_details (ClientCode,User_Email,Password,UserName,User_Mobile,User_Regdate,Advisor,IsActive,KycStatus,IsIsipActive,IsXsipActive,BSEImageUpload_Status,Status) values (@ClientCode,@User_Email,@Password,@UserName,@User_Mobile,@User_Regdate,@Advisor,@IsActive,@KycStatus,@IsIsipActive,@IsXsipActive,@BSEImageUpload_Status,@Status)", conn);
             conn.Open();
             com.Parameters.AddWithValue("@ClientCode",CLIENTCODE);
             com.Parameters.AddWithValue("@User_Email",user.email);
@@ -64,7 +65,7 @@ namespace WealthClock_25_11_2019_NEW.CodeFile
             string res = "";
             try {
                 
-                SqlCommand com = new SqlCommand("select * from user_auth where User_Email=@User_Email", conn);
+                SqlCommand com = new SqlCommand("select * from user_details where User_Email=@User_Email", conn);
                 DataTable dt = new DataTable();
                 com.Parameters.AddWithValue("@User_Email", email);
                 SqlDataAdapter rdr = new SqlDataAdapter(com);
@@ -97,5 +98,58 @@ namespace WealthClock_25_11_2019_NEW.CodeFile
             }
             return otp;
         }
+
+        //***
+        public string Deleteuser_docsByID(string ID)
+        {
+            string res = "";
+            int id = Convert.ToInt32(ID);
+            //file path
+            SqlCommand com2 = new SqlCommand("select ImageName from user_docs where Docs_ID='" + id + "'", conn);
+            DataSet ds = new DataSet();
+            SqlDataAdapter rdr = new SqlDataAdapter(com2);
+            rdr.Fill(ds);
+            string imagepath = ds.Tables[0].Rows[0]["ImageName"].ToString();
+            //file path
+            SqlCommand com = new SqlCommand("delete from user_docs where Docs_ID='" + id + "'", conn);
+            conn.Open();
+            int i = Convert.ToInt32(com.ExecuteNonQuery());
+            conn.Close();
+            if (i > 0)
+            {
+                return res = imagepath;
+            }
+            else
+            {
+                return res = "not";
+            }
+        }
+        public string DeleteFile(string filepath)
+        {
+            string res = "";
+
+            if (File.Exists(filepath))
+            {
+                File.Delete(filepath);
+                res = "File deleted";
+                return res;
+            }
+            else
+            {
+                res = "File not deleted";
+                return res;
+            }
+
+        }
+        public DataTable GetDocDetailsByClientID(string ClientCode)
+        {
+            string res = "";
+            SqlCommand com = new SqlCommand("select Docs_ID,Document_Type,Document_Title,Document_Path from user_docs where ClientCode='" + ClientCode + "'", conn);
+            DataTable dt = new DataTable();
+            SqlDataAdapter rdr = new SqlDataAdapter(com);
+            rdr.Fill(dt);
+            return dt;
+        }
+        
     }
 }
